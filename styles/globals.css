@@ -3,18 +3,13 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "Mukta";
-  src: url("../public/fonts/Mukta/Mukta-Medium.ttf");
-}
-
-@font-face {
   font-family: "MyRoboto";
-  src: url("../public/fonts/Roboto/Roboto-Regular.ttf");
+  src: url("fonts/Roboto/Roboto-Regular.ttf");
 }
 
 @font-face {
   font-family: "Yesteryear";
-  src: url("../public/fonts/Yesteryear/Yesteryear-Regular.ttf");
+  src: url("fonts/Yesteryear/Yesteryear-Regular.ttf");
 }
 
 html,
