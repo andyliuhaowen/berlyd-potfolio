@@ -5,7 +5,8 @@ import { motion } from 'framer-motion'
 const bounceTransition = {
   y: {
     duration: 0.8,
-    yoyo: Infinity,
+    repeat: Infinity,
+    repeatType: 'reverse',
     ease: 'easeOut'
   }
 }

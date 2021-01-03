@@ -22,6 +22,8 @@ module.exports = {
   rules: {
     'react/react-in-jsx-scope': 'off',
     indent: 'off',
-    '@typescript-eslint/indent': ['error', 2]
+    '@typescript-eslint/indent': ['error', 2],
+    'no-use-before-define': 'off',
+    '@typescript-eslint/no-use-before-define': ['error']
   }
 }
