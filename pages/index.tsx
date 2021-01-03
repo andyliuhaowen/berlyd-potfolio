@@ -39,24 +39,26 @@ export default function Home () {
         </div>
 
         {/* Mojo */}
-        <div className="flex items-center bg-mojo_bg h-screen">
-          <div className="mr-4">
-            <PageSelector color="mojo_text" page={1}></PageSelector>
+        <div className="bg-mojo_bg h-screen relative">
+          <div className={styles.big_positioning_landing}>
+            <div className={[styles.mojo_title, styles.title].join(' ')}>Mojo</div>
           </div>
-          <div className="flex flex-row flex-grow mr-8" style={{ height: '90%' }}>
+          <div className="flex items-center h-full w-full left-0 top-0 absolute">
+            <div className="mr-4">
+              <PageSelector color="mojo_text" page={1}></PageSelector>
+            </div>
             <div className="w-64">
-              <div className={styles.big_positioning_landing}>
-                <div className={[styles.mojo_title, styles.title].join(' ')}>Mojo</div>
-              </div>
               <div className="text-mojo_text text-3xl my-2">Mojito</div>
               <div className="text-mojo_text my-2">a delightful taste from Havana</div>
               <CustomButton href="mojo" text="View Project" color="mojo_text" />
             </div>
-            <div className="flex-grow h-full relative">
-              <div className="m-8 absolute top-8 left-8 bottom-8 right-8">
-                <Image src="/mojo.png" alt="Mojo photo" layout="fill" objectFit="cover" objectPosition="center"></Image>
+            <div className="flex flex-row flex-grow mr-8" style={{ height: '90%' }}>
+              <div className="flex-grow h-full relative">
+                <div className="m-8 absolute top-8 left-8 bottom-8 right-8">
+                  <Image src="/mojo.png" alt="Mojo photo" layout="fill" objectFit="cover" objectPosition="center"></Image>
+                </div>
+                {/* <div className="object-cover object-left"></div> */}
               </div>
-              {/* <div className="object-cover object-left"></div> */}
             </div>
           </div>
         </div>
