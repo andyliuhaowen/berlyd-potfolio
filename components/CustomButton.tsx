@@ -7,10 +7,14 @@ class ButtonProps {
 }
 
 export default function CustomButton (props: ButtonProps) {
+  const borderColor = 'border-' + props.color
+  const textColor = 'text-' + props.color
   return (
-    <div className={'text-' + props.color}>
+    <div className={[borderColor, textColor, 'border-2', 'inline-block', 'my-2'].join(' ')}>
       <Link href={props.href}>
-        {props.text}
+        <div className="m-1 font-bold">
+          {props.text}
+        </div>
       </Link>
     </div>
   )
