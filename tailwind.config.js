@@ -7,12 +7,31 @@ module.exports = {
       mojo_bg: '#efe8e1',
       mojo_text: '#728397'
     },
-    flexGrow: {
-      0: 0,
-      DEFAULT: 1,
-      1: 1
+    fontFamily: {
+      roboto: ['MyRoboto', 'ui-sans-serif'],
+      yesteryear: ['Yesteryear', 'ui-sans-serif']
     },
-    extend: {}
+    extend: {
+      fontSize: {
+        40: '10rem',
+        48: '12rem',
+        52: '13rem',
+        60: '15rem'
+      },
+      width: {
+        '7/20': '35%'
+      },
+      height: {
+        '65vh': '65vh'
+      },
+      margin: {
+        '8vh': '8vh'
+      },
+      inset: {
+        '1/5': '20%',
+        '8p': '8%'
+      }
+    }
   },
   variants: {
     extend: {}
