@@ -5,8 +5,8 @@ import { Fragment } from 'react'
 export default function Header () {
   return (
     <header className="absolute flex h-36 items-center mt-4 z-50 w-full">
-      <div className="ml-16 w-16"><Image src="/logo.png" alt="Logo" height={128} width={128} layout="responsive"></Image></div>
-      <div className="mr-16 ml-auto">
+      <div className="ml-10 xl:ml-16 w-16"><Image src="/logo.png" alt="Logo" height={128} width={128} layout="responsive"></Image></div>
+      <div className="mr-10 xl:mr-16 ml-auto">
         <Fragment>
           <span className="mr-2">
             <Link href="about">About</Link>

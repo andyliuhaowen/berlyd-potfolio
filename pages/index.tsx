@@ -41,7 +41,7 @@ export default function Home () {
         </div>
 
         {/* Mojo */}
-        <LandingContent name="mojo" />
+        <LandingContent name="mojo" title="Mojo" tagline="Mojito" desc="a delightful taste from Havana" image="/mojo.png" />
       </main>
       <footer>
       </footer>

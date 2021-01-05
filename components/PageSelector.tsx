@@ -9,8 +9,8 @@ type PageSelectorProps = {
 
 export default function PageSelector ({ color, page }: PageSelectorProps) {
   return (
-    <div className="flex flex-col w-48">
-      <div className="my-4 ml-16">
+    <div className=" flex-col w-48 hidden lg:flex">
+      <div className="my-4 ml-10 xl:ml-16">
         <div className={'text-' + color + ' my-4 text-sm'}>Packaging</div>
         <div className="w-4 my-3">
           <FontAwesomeIcon icon={page === 1 ? faCircle : farCircle} className={'fill-current text-' + color}></FontAwesomeIcon>
@@ -22,7 +22,7 @@ export default function PageSelector ({ color, page }: PageSelectorProps) {
           <FontAwesomeIcon icon={page === 3 ? faCircle : farCircle} className={'fill-current text-' + color}></FontAwesomeIcon>
         </div>
       </div>
-      <div className="my-4 ml-16">
+      <div className="my-4 ml-10 xl:ml-16">
         <div className={'text-' + color + ' my-4 text-sm'}>Product</div>
         <div className="w-4 my-3">
           <FontAwesomeIcon icon={page === 4 ? faCircle : farCircle} className={'fill-current text-' + color}></FontAwesomeIcon>
