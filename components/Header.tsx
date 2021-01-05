@@ -4,11 +4,11 @@ import { Fragment } from 'react'
 
 export default function Header () {
   return (
-    <header className="absolute flex h-24 items-center mx-4 mt-4 z-50" style={{ width: 'calc(100vw - 2rem)' }}>
-      <div className="m-4 w-16"><Image src="/logo.png" alt="Logo" height={128} width={128} layout="responsive"></Image></div>
-      <div className="m-6 ml-auto">
+    <header className="absolute flex h-36 items-center mt-4 z-50 w-full">
+      <div className="ml-16 w-16"><Image src="/logo.png" alt="Logo" height={128} width={128} layout="responsive"></Image></div>
+      <div className="mr-16 ml-auto">
         <Fragment>
-          <span className="m-2">
+          <span className="mr-2">
             <Link href="about">About</Link>
           </span>
           <span className="m-2">
@@ -17,7 +17,7 @@ export default function Header () {
           <span className="m-2">
             <Link href="fun">Fun</Link>
           </span>
-          <span className="m-2">
+          <span className="ml-2">
             <Link href="contact">Contact</Link>
           </span>
         </Fragment>

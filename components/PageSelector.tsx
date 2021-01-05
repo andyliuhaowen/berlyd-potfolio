@@ -9,28 +9,28 @@ type PageSelectorProps = {
 
 export default function PageSelector ({ color, page }: PageSelectorProps) {
   return (
-    <div className="flex flex-col items-center w-32">
-      <div className="my-4">
-        <div className={'text-' + color + ' my-2 text-xs'}>Packaging</div>
-        <div className="w-3 my-3">
+    <div className="flex flex-col w-48">
+      <div className="my-4 ml-16">
+        <div className={'text-' + color + ' my-4 text-sm'}>Packaging</div>
+        <div className="w-4 my-3">
           <FontAwesomeIcon icon={page === 1 ? faCircle : farCircle} className={'fill-current text-' + color}></FontAwesomeIcon>
         </div>
-        <div className="w-3 my-3">
+        <div className="w-4 my-3">
           <FontAwesomeIcon icon={page === 2 ? faCircle : farCircle} className={'fill-current text-' + color}></FontAwesomeIcon>
         </div>
-        <div className="w-3 my-3">
+        <div className="w-4 my-3">
           <FontAwesomeIcon icon={page === 3 ? faCircle : farCircle} className={'fill-current text-' + color}></FontAwesomeIcon>
         </div>
       </div>
-      <div className="my-4">
-        <div className={'text-' + color + ' my-2 text-xs'}>Product</div>
-        <div className="w-3 my-3">
+      <div className="my-4 ml-16">
+        <div className={'text-' + color + ' my-4 text-sm'}>Product</div>
+        <div className="w-4 my-3">
           <FontAwesomeIcon icon={page === 4 ? faCircle : farCircle} className={'fill-current text-' + color}></FontAwesomeIcon>
         </div>
-        <div className="w-3 my-3">
+        <div className="w-4 my-3">
           <FontAwesomeIcon icon={page === 5 ? faCircle : farCircle} className={'fill-current text-' + color}></FontAwesomeIcon>
         </div>
-        <div className="w-3 my-3">
+        <div className="w-4 my-3">
           <FontAwesomeIcon icon={page === 6 ? faCircle : farCircle} className={'fill-current text-' + color}></FontAwesomeIcon>
         </div>
       </div>

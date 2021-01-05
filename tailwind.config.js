@@ -7,6 +7,11 @@ module.exports = {
       mojo_bg: '#efe8e1',
       mojo_text: '#728397'
     },
+    flexGrow: {
+      0: 0,
+      DEFAULT: 1,
+      1: 1
+    },
     extend: {}
   },
   variants: {
