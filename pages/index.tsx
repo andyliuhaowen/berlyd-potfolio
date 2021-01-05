@@ -28,12 +28,18 @@ export default function Home () {
         {/* Intro page */}
         <div className="flex items-center bg-landing_pink h-screen relative">
           <div className="hidden md:inline-block md:mx-auto lg:mr-0 lg:ml-60 xl:mx-0 xl:relative xl:left-1/5">
-            <div className="font-yesteryear leading-normal md:text-40 xl:text-48">Berly Dai</div>
-            <div className="text-center text-4xl">I&apos;m a creator, designer, and a life lover.</div>
+            <div className="font-yesteryear leading-normal md:text-40 xl:text-48">
+              Berly Dai
+            </div>
+            <div className="text-center text-4xl">
+              I&apos;m a creator, designer, and a life lover.
+            </div>
           </div>
           <div className="block mx-auto md:hidden">
             <div className="font-yesteryear text-9xl leading-normal">Berly</div>
-            <div className="text-center text-lg">designer &#183; creator &#183; life lover</div>
+            <div className="text-center text-lg">
+              designer &#183; creator &#183; life lover
+            </div>
           </div>
           <div className="absolute left-1/2 transform -translate-x-1/2 h-8 w-8 bottom-8p">
             <ScrollIndicator />
@@ -41,10 +47,61 @@ export default function Home () {
         </div>
 
         {/* Mojo */}
-        <LandingContent name="mojo" title="Mojo" tagline="Mojito" desc="a delightful taste from Havana" image="/mojo.png" />
+        <LandingContent
+          name="mojo"
+          title="Mojo"
+          tagline="Mojito"
+          desc="a delightful taste from Havana"
+          image="/mojo_2.png"
+          titleLength={false}
+        />
+
+        <LandingContent
+          name="mojo"
+          title="Hidden Season"
+          tagline="Makeup Set"
+          desc=""
+          image="/hidden_season.png"
+          titleLength={true}
+        />
+
+        <LandingContent
+          name="mojo"
+          title="Chocolit"
+          tagline="Toy &amp; Chocolate kit"
+          desc=""
+          image="/chocolit.png"
+          titleLength={false}
+        />
+
+        <LandingContent
+          name="mojo"
+          title="Pelaton Gaming"
+          tagline="VR Headset"
+          desc=""
+          image="/pelaton_gaming.png"
+          titleLength={true}
+        />
+
+        <LandingContent
+          name="mojo"
+          title="Multicolor Pen"
+          tagline="Adaptive Pen"
+          desc=""
+          image="/multipen.jpg"
+          titleLength={true}
+        />
+
+        <LandingContent
+          name="mojo"
+          title="Haru"
+          tagline="Speaker"
+          desc=""
+          image="/haru.png"
+          titleLength={false}
+        />
       </main>
-      <footer>
-      </footer>
+      <footer></footer>
     </Fragment>
   )
 }

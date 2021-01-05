@@ -8,12 +8,12 @@ class ButtonProps {
 
 export default function CustomButton (props: ButtonProps) {
   return (
-    <div className={`border-${props.color} text-${props.color} border-2 inline-block my-2`}>
-      <Link href={props.href}>
-        <div className="m-1 font-bold">
-          {props.text}
-        </div>
-      </Link>
-    </div>
+    <Link href={props.href}>
+      <div
+        className={`border-${props.color} text-${props.color} border inline-block my-2 cursor-pointer`}
+      >
+        <div className="m-1 font-bold">{props.text}</div>
+      </div>
+    </Link>
   )
 }
