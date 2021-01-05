@@ -1,5 +1,12 @@
 module.exports = {
-  purge: ['./pages/**/*.tsx', './components/**/*.tsx'],
+  purge: {
+    content: ['./pages/**/*.tsx', './components/**/*.tsx'],
+    options: {
+      safelist: {
+        standard: [/landing_pink$/, /mojo_bg$/, /mojo_text$/]
+      }
+    }
+  },
   darkMode: false, // or 'media' or 'class'
   theme: {
     colors: {
