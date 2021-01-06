@@ -20,7 +20,7 @@ export default function Home () {
       <Header />
 
       <main>
-        <PageSelector page={1}></PageSelector>
+        <PageSelector></PageSelector>
 
         {/* Intro page */}
         <div className="flex items-center bg-landing_pink h-screen relative">

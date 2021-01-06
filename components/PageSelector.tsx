@@ -2,11 +2,7 @@ import { faCircle } from '@fortawesome/free-solid-svg-icons'
 import { faCircle as farCircle } from '@fortawesome/free-regular-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-type PageSelectorProps = {
-  page: number;
-};
-
-export default function PageSelector ({ page }: PageSelectorProps) {
+export default function PageSelector () {
   return (
     <div className="absolute w-48 flex flex-col h-entire z-20">
       <div className="h-full w-full absolute">
@@ -19,40 +15,45 @@ export default function PageSelector ({ page }: PageSelectorProps) {
           <div className="bg-mojo_text h-screen"></div>
         </div>
         <div className="fixed left-0 top-1/2 transform -translate-y-1/2">
+          <div className="flex w-5 h-5 ml-10 xl:ml-16 absolute items-center justify-center top-17">
+            <div className="w-3">
+              <FontAwesomeIcon icon={faCircle}></FontAwesomeIcon>
+            </div>
+          </div>
           <div className=" flex-col w-48 hidden lg:flex">
             <div className="my-4 ml-10 xl:ml-16">
               <div className={'my-4 text-sm'}>Packaging</div>
-              <div className="w-4 my-3">
+              <div className="w-5 my-3">
                 <FontAwesomeIcon
-                  icon={page === 1 ? faCircle : farCircle}
+                  icon={farCircle}
                 ></FontAwesomeIcon>
               </div>
-              <div className="w-4 my-3">
+              <div className="w-5 my-3">
                 <FontAwesomeIcon
-                  icon={page === 2 ? faCircle : farCircle}
+                  icon={farCircle}
                 ></FontAwesomeIcon>
               </div>
-              <div className="w-4 my-3">
+              <div className="w-5 my-3">
                 <FontAwesomeIcon
-                  icon={page === 3 ? faCircle : farCircle}
+                  icon={farCircle}
                 ></FontAwesomeIcon>
               </div>
             </div>
             <div className="my-4 ml-10 xl:ml-16">
               <div className={'my-4 text-sm'}>Product</div>
-              <div className="w-4 my-3">
+              <div className="w-5 my-3">
                 <FontAwesomeIcon
-                  icon={page === 4 ? faCircle : farCircle}
+                  icon={farCircle}
                 ></FontAwesomeIcon>
               </div>
-              <div className="w-4 my-3">
+              <div className="w-5 my-3">
                 <FontAwesomeIcon
-                  icon={page === 5 ? faCircle : farCircle}
+                  icon={farCircle}
                 ></FontAwesomeIcon>
               </div>
-              <div className="w-4 my-3">
+              <div className="w-5 my-3">
                 <FontAwesomeIcon
-                  icon={page === 6 ? faCircle : farCircle}
+                  icon={farCircle}
                 ></FontAwesomeIcon>
               </div>
             </div>
