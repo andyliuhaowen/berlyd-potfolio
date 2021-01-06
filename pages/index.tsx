@@ -20,10 +20,7 @@ export default function Home () {
       <Header />
 
       <main>
-        {/* Scroll indicator */}
-        <div className="fixed z-50 left-0 top-1/2 transform -translate-y-1/2">
-          <PageSelector color="mojo_text" page={1}></PageSelector>
-        </div>
+        <PageSelector page={1}></PageSelector>
 
         {/* Intro page */}
         <div className="flex items-center bg-landing_pink h-screen relative">
@@ -53,7 +50,7 @@ export default function Home () {
           tagline="Mojito"
           desc="a delightful taste from Havana"
           image="/mojo_2.png"
-          titleLength={false}
+          titleLong={false}
         />
 
         <LandingContent
@@ -62,16 +59,16 @@ export default function Home () {
           tagline="Makeup Set"
           desc=""
           image="/hidden_season.png"
-          titleLength={true}
+          titleLong={true}
         />
 
         <LandingContent
           name="mojo"
           title="Chocolit"
-          tagline="Toy &amp; Chocolate kit"
+          tagline="Toy &amp; Treat"
           desc=""
           image="/chocolit.png"
-          titleLength={false}
+          titleLong={true}
         />
 
         <LandingContent
@@ -80,7 +77,7 @@ export default function Home () {
           tagline="VR Headset"
           desc=""
           image="/pelaton_gaming.png"
-          titleLength={true}
+          titleLong={true}
         />
 
         <LandingContent
@@ -89,7 +86,7 @@ export default function Home () {
           tagline="Adaptive Pen"
           desc=""
           image="/multipen.jpg"
-          titleLength={true}
+          titleLong={true}
         />
 
         <LandingContent
@@ -98,7 +95,7 @@ export default function Home () {
           tagline="Speaker"
           desc=""
           image="/haru.png"
-          titleLength={false}
+          titleLong={false}
         />
       </main>
       <footer></footer>

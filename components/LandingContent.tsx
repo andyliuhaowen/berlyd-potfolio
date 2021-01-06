@@ -7,13 +7,13 @@ class LandingContentProps {
   tagline: string = '';
   desc: string = '';
   image: string = '';
-  titleLength: boolean = false;
+  titleLong: boolean = false;
 }
 
 export default function LandingContent (props: LandingContentProps) {
   let textSize = ''
-  if (props.titleLength) {
-    textSize = 'whitespace-normal text-8xl md:whitespace-norwrap md:text-9xl lg:text-40 xl:text-52'
+  if (props.titleLong) {
+    textSize = 'whitespace-normal text-8xl md:whitespace-nowrap md:text-9xl lg:text-40 xl:text-52'
   } else {
     textSize = 'text-40 lg:text-52 xl:text-60 whitespace-nowrap'
   }

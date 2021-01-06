@@ -10,6 +10,8 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     colors: {
+      black: '#000000',
+      white: '#ffffff',
       landing_pink: '#dbb9b4',
       mojo_bg: '#efe8e1',
       mojo_text: '#728397'
@@ -30,7 +32,8 @@ module.exports = {
         '7/20': '35%'
       },
       height: {
-        '65vh': '65vh'
+        '65vh': '65vh',
+        entire: '700vh'
       },
       margin: {
         '8vh': '8vh'
