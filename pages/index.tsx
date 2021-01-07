@@ -24,55 +24,58 @@ export default function Home () {
   const [delta, setDelta] = useState(0)
   const [lineHeight, setLineheight] = useState<number | undefined>(undefined)
 
-  const handleWheel = useCallback((e: React.WheelEvent) => {
-    let newDelta: number
-    switch (e.deltaMode) {
-      case 0: {
-        newDelta = delta + e.deltaY
-        break
-      }
-      case 1: {
-        if (lineHeight === undefined) {
-          const height = getScrollLineHeight()
-          setLineheight(height)
-          newDelta = delta + height! * e.deltaY
-        } else {
-          newDelta = delta + lineHeight * e.deltaY
+  const handleWheel = useCallback(
+    (e: React.WheelEvent) => {
+      let newDelta: number
+      switch (e.deltaMode) {
+        case 0: {
+          newDelta = delta + e.deltaY
+          break
         }
-        break
-      }
-      case 2: {
-        if (e.deltaY < 0) {
-          newDelta = delta - 2 * THRESHOLD
-        } else if (e.deltaY > 0) {
-          newDelta = delta + 2 * THRESHOLD
+        case 1: {
+          if (lineHeight === undefined) {
+            const height = getScrollLineHeight()
+            setLineheight(height)
+            newDelta = delta + height! * e.deltaY
+          } else {
+            newDelta = delta + lineHeight * e.deltaY
+          }
+          break
         }
-        break
+        case 2: {
+          if (e.deltaY < 0) {
+            newDelta = delta - 2 * THRESHOLD
+          } else if (e.deltaY > 0) {
+            newDelta = delta + 2 * THRESHOLD
+          }
+          break
+        }
       }
-    }
 
-    if (newDelta! > THRESHOLD) {
-      setSection((orig) => {
-        if (orig !== NUM_PAGES) {
-          return orig + 1
-        } else {
-          return NUM_PAGES
-        }
-      })
-      newDelta = 0
-    } else if (newDelta! < -THRESHOLD) {
-      setSection((orig) => {
-        if (orig !== 0) {
-          return orig - 1
-        } else {
-          return 0
-        }
-      })
-      newDelta = 0
-    }
+      if (newDelta! > THRESHOLD) {
+        setSection((orig) => {
+          if (orig !== NUM_PAGES) {
+            return orig + 1
+          } else {
+            return NUM_PAGES
+          }
+        })
+        newDelta = 0
+      } else if (newDelta! < -THRESHOLD) {
+        setSection((orig) => {
+          if (orig !== 0) {
+            return orig - 1
+          } else {
+            return 0
+          }
+        })
+        newDelta = 0
+      }
 
-    setDelta(newDelta!)
-  }, [delta, lineHeight])
+      setDelta(newDelta!)
+    },
+    [delta, lineHeight]
+  )
 
   useEffect(() => {
     console.log(section)
@@ -86,25 +89,40 @@ export default function Home () {
       </Head>
 
       <main>
-        <PageSelector page={section}></PageSelector>
+        <PageSelector page={section} setSection={setSection}></PageSelector>
 
-        <div className="h-screen w-screen overflow-hidden relative" onWheel={handleWheel}>
-          <motion.div className="absolute w-full" animate={{ top: `${-section}00vh` }} transition={{ type: 'spring', damping: 10, mass: 0.5, stiffness: 100, velocity: 100 }}>
+        <div
+          className="h-screen w-screen overflow-hidden relative"
+          onWheel={handleWheel}
+        >
+          <motion.div
+            className="absolute w-full"
+            animate={{ top: `${-section}00vh` }}
+            transition={{
+              type: 'spring',
+              damping: 10,
+              mass: 0.5,
+              stiffness: 100,
+              velocity: 100
+            }}
+          >
             <Header />
             {/* Intro page */}
             <div className="flex items-center bg-landing_pink h-screen relative">
               <div className="hidden md:inline-block md:mx-auto lg:mr-0 lg:ml-60 xl:mx-0 xl:relative xl:left-1/5">
                 <div className="font-yesteryear leading-normal md:text-40 xl:text-48">
-              Berly Dai
+                  Berly Dai
                 </div>
                 <div className="text-center text-4xl">
-              I&apos;m a creator, designer, and a life lover.
+                  I&apos;m a creator, designer, and a life lover.
                 </div>
               </div>
               <div className="block mx-auto md:hidden">
-                <div className="font-yesteryear text-9xl leading-normal">Berly</div>
+                <div className="font-yesteryear text-9xl leading-normal">
+                  Berly
+                </div>
                 <div className="text-center text-lg">
-              designer &#183; creator &#183; life lover
+                  designer &#183; creator &#183; life lover
                 </div>
               </div>
               <ScrollIndicator />

@@ -13,7 +13,8 @@ class LandingContentProps {
 export default function LandingContent (props: LandingContentProps) {
   let textSize = ''
   if (props.titleLong) {
-    textSize = 'whitespace-normal text-8xl md:whitespace-nowrap md:text-9xl lg:text-40 xl:text-52'
+    textSize =
+      'whitespace-normal text-8xl md:whitespace-nowrap md:text-9xl lg:text-40 xl:text-52'
   } else {
     textSize = 'text-40 lg:text-52 xl:text-60 whitespace-nowrap'
   }
@@ -23,7 +24,10 @@ export default function LandingContent (props: LandingContentProps) {
         <div className="flex flex-col items-center pl-0 md:w-7/20 lg:pl-28">
           <div className="h-full flex-col flex">
             <div
-              className={`text-${props.name}_text font-yesteryear z-50 relative w-0 leading-none  transform translate-x-16 md:transform-none ` + textSize}
+              className={
+                `text-${props.name}_text font-yesteryear z-50 relative w-0 leading-none  transform translate-x-16 md:transform-none ` +
+                textSize
+              }
             >
               {props.title}
             </div>
