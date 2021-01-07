@@ -13,7 +13,7 @@ const colorMap = ['#000000', '#728397', '#efe8e1', '#e89b7c', '#efe8e1', '#72839
 export default function PageSelector (props: PageSelectorProps) {
   const mt = offsetMap[props.page]
   return (
-    <motion.div className="hidden lg:fixed left-0 top-1/2 transform -translate-y-1/2 z-10" animate={{ color: colorMap[props.page] }} >
+    <motion.div className="hidden lg:block fixed left-0 top-1/2 transform -translate-y-1/2 z-10" animate={{ color: colorMap[props.page] }} >
       <motion.div
         animate={{ top: `${mt / 4}rem` }}
         className={'flex w-5 h-5 ml-10 xl:ml-16 absolute items-center justify-center'}

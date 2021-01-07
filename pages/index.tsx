@@ -75,9 +75,8 @@ export default function Home () {
   }, [delta, lineHeight])
 
   useEffect(() => {
-    console.log(delta)
     console.log(section)
-  }, [delta, section])
+  }, [section])
 
   return (
     <Fragment>
@@ -90,7 +89,7 @@ export default function Home () {
         <PageSelector page={section}></PageSelector>
 
         <div className="h-screen w-screen overflow-hidden relative" onWheel={handleWheel}>
-          <motion.div className="absolute w-full" animate={{ top: `${-section}00vh` }}>
+          <motion.div className="absolute w-full" animate={{ top: `${-section}00vh` }} transition={{ type: 'spring', damping: 10, mass: 0.5, stiffness: 100, velocity: 100 }}>
             <Header />
             {/* Intro page */}
             <div className="flex items-center bg-landing_pink h-screen relative">
