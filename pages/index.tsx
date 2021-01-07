@@ -5,6 +5,7 @@ import PageSelector from '../components/PageSelector'
 import ScrollIndicator from '../components/ScrollIndicator'
 import LandingContent from '../components/LandingContent'
 import { motion } from 'framer-motion'
+import { useSwipeable } from 'react-swipeable'
 
 const THRESHOLD = 30
 const NUM_PAGES = 6
@@ -77,6 +78,27 @@ export default function Home () {
     [delta, lineHeight]
   )
 
+  const swipeHandlers = useSwipeable({
+    onSwipedUp: () => {
+      setSection((orig) => {
+        if (orig !== NUM_PAGES) {
+          return orig + 1
+        } else {
+          return NUM_PAGES
+        }
+      })
+    },
+    onSwipedDown: () => {
+      setSection((orig) => {
+        if (orig !== 0) {
+          return orig - 1
+        } else {
+          return 0
+        }
+      })
+    }
+  })
+
   useEffect(() => {
     console.log(section)
   }, [section])
@@ -93,7 +115,7 @@ export default function Home () {
 
         <div
           className="h-screen w-screen overflow-hidden relative"
-          onWheel={handleWheel}
+          onWheel={handleWheel} {...swipeHandlers}
         >
           <motion.div
             className="absolute w-full"
