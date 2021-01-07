@@ -13,13 +13,19 @@ const bounceTransition = {
 
 export default function ScrollIndicator () {
   return (
-    <motion.div
-      transition={bounceTransition}
-      animate={{
-        y: ['40%', '-40%']
-      }}
-    >
-      <FontAwesomeIcon icon={faAngleDown}></FontAwesomeIcon>
-    </motion.div>
+    <div className="absolute left-1/2 transform -translate-x-1/2 h-8 w-8 bottom-8p">
+      <motion.div
+        transition={bounceTransition}
+        className="relative h-full w-full"
+        animate={{
+          y: ['40%', '-40%']
+        }}
+      >
+        <FontAwesomeIcon
+          icon={faAngleDown}
+          className="w-full h-full absolute left-0 top-0"
+        ></FontAwesomeIcon>
+      </motion.div>
+    </div>
   )
 }
