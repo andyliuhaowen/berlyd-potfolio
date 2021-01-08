@@ -42,7 +42,7 @@ export default function PageSelector (props: PageSelectorProps) {
         </div>
       </motion.div>
       <div className="flex flex-row lg:flex-col w-min">
-        <div className="mx-2 my-0 mb-8 lg:mb-0 lg:my-2 lg:ml-10 lg:mr-0 xl:ml-16">
+        <div className="mx-2 my-0 mb-8 lg:my-2 lg:ml-10 lg:mr-0 xl:ml-16">
           <div className="w-5 h-5 mt-0 ml-3 lg:mt-3 lg:ml-0 relative">
             <FontAwesomeIcon
               icon={farCircle}
@@ -53,7 +53,7 @@ export default function PageSelector (props: PageSelectorProps) {
             ></FontAwesomeIcon>
           </div>
         </div>
-        <div className="flex flex-row lg:flex-col mx-2 my-0 mb-8 lg:mb-0 lg:my-2 lg:ml-10 lg:mr-0 xl:ml-16">
+        <div className="flex flex-row lg:flex-col mx-2 my-0 mb-8 lg:my-2 lg:ml-10 lg:mr-0 xl:ml-16">
           <div className={'hidden lg:block my-4 text-sm'}>Packaging</div>
           <div className="w-5 h-5 mt-0 ml-3 lg:mt-3 lg:ml-0 relative">
             <FontAwesomeIcon
@@ -83,7 +83,7 @@ export default function PageSelector (props: PageSelectorProps) {
             ></FontAwesomeIcon>
           </div>
         </div>
-        <div className="flex flex-row lg:flex-col mx-2 my-0 mb-8 lg:mb-0 lg:my-2 lg:ml-10 lg:mr-0 xl:ml-16">
+        <div className="flex flex-row lg:flex-col mx-2 my-0 mb-8 lg:my-2 lg:ml-10 lg:mr-0 xl:ml-16">
           <div className={'hidden lg:block my-4 text-sm'}>Product</div>
           <div className="w-5 h-5 mt-0 ml-3 lg:mt-3 lg:ml-0 relative">
             <FontAwesomeIcon
