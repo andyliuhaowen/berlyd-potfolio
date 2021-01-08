@@ -3,12 +3,15 @@ import { faCircle as farCircle } from '@fortawesome/free-regular-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { motion } from 'framer-motion'
 
+import styles from '../styles/PageSelector.module.css'
+
 class PageSelectorProps {
   page: number = 0;
   setSection: (sec: number) => void = (a) => {};
 }
 
 const offsetMap = [5, 30, 38, 46, 71, 79, 87]
+const mobileOffsetMap = [5, 17, 25, 33, 45, 53, 61]
 const colorMap = [
   '#000000',
   '#728397',
@@ -20,16 +23,15 @@ const colorMap = [
 ]
 
 export default function PageSelector (props: PageSelectorProps) {
-  const mt = offsetMap[props.page]
   return (
     <motion.div
-      className="hidden lg:block fixed left-0 top-1/2 transform -translate-y-1/2 z-10"
+      className="fixed transform left-1/2 bottom-0 translate-y-0 -translate-x-1/2 lg:left-0 lg:bottom-1/2 lg:translate-y-1/2 lg:translate-x-0 z-10"
       animate={{ color: colorMap[props.page] }}
     >
       <motion.div
-        animate={{ top: `${mt / 4}rem` }}
+        animate={{ top: `${offsetMap[props.page] / 4}rem`, left: `${mobileOffsetMap[props.page] / 4}rem` }}
         className={
-          'flex w-5 h-5 ml-10 xl:ml-16 absolute items-center justify-center'
+          'flex w-5 h-5 ml-0 lg:ml-10 xl:ml-16 absolute items-center justify-center ' + styles.dot
         }
       >
         <div className="w-3 h-3 relative">
@@ -39,9 +41,9 @@ export default function PageSelector (props: PageSelectorProps) {
           ></FontAwesomeIcon>
         </div>
       </motion.div>
-      <div className="flex-col w-48 flex">
-        <div className="my-2 ml-10 xl:ml-16">
-          <div className="w-5 h-5 my-3 relative">
+      <div className="flex flex-row lg:flex-col w-min">
+        <div className="mx-2 my-0 mb-8 lg:mb-0 lg:my-2 lg:ml-10 lg:mr-0 xl:ml-16">
+          <div className="w-5 h-5 mt-0 ml-3 lg:mt-3 lg:ml-0 relative">
             <FontAwesomeIcon
               icon={farCircle}
               className="w-full h-full absolute left-0 top-0 cursor-pointer"
@@ -51,9 +53,9 @@ export default function PageSelector (props: PageSelectorProps) {
             ></FontAwesomeIcon>
           </div>
         </div>
-        <div className="my-2 ml-10 xl:ml-16">
-          <div className={'my-4 text-sm'}>Packaging</div>
-          <div className="w-5 h-5 my-3 relative">
+        <div className="flex flex-row lg:flex-col mx-2 my-0 mb-8 lg:mb-0 lg:my-2 lg:ml-10 lg:mr-0 xl:ml-16">
+          <div className={'hidden lg:block my-4 text-sm'}>Packaging</div>
+          <div className="w-5 h-5 mt-0 ml-3 lg:mt-3 lg:ml-0 relative">
             <FontAwesomeIcon
               icon={farCircle}
               className="w-full h-full absolute left-0 top-0 cursor-pointer"
@@ -62,7 +64,7 @@ export default function PageSelector (props: PageSelectorProps) {
               }}
             ></FontAwesomeIcon>
           </div>
-          <div className="w-5 h-5 my-3 relative">
+          <div className="w-5 h-5 mt-0 ml-3 lg:mt-3 lg:ml-0 relative">
             <FontAwesomeIcon
               icon={farCircle}
               className="w-full h-full absolute left-0 top-0 cursor-pointer"
@@ -71,7 +73,7 @@ export default function PageSelector (props: PageSelectorProps) {
               }}
             ></FontAwesomeIcon>
           </div>
-          <div className="w-5 h-5 my-3 relative">
+          <div className="w-5 h-5 mt-0 ml-3 lg:mt-3 lg:ml-0 relative">
             <FontAwesomeIcon
               icon={farCircle}
               className="w-full h-full absolute left-0 top-0 cursor-pointer"
@@ -81,9 +83,9 @@ export default function PageSelector (props: PageSelectorProps) {
             ></FontAwesomeIcon>
           </div>
         </div>
-        <div className="my-2 ml-10 xl:ml-16">
-          <div className={'my-4 text-sm'}>Product</div>
-          <div className="w-5 h-5 my-3 relative">
+        <div className="flex flex-row lg:flex-col mx-2 my-0 mb-8 lg:mb-0 lg:my-2 lg:ml-10 lg:mr-0 xl:ml-16">
+          <div className={'hidden lg:block my-4 text-sm'}>Product</div>
+          <div className="w-5 h-5 mt-0 ml-3 lg:mt-3 lg:ml-0 relative">
             <FontAwesomeIcon
               icon={farCircle}
               className="w-full h-full absolute left-0 top-0 cursor-pointer"
@@ -92,7 +94,7 @@ export default function PageSelector (props: PageSelectorProps) {
               }}
             ></FontAwesomeIcon>
           </div>
-          <div className="w-5 h-5 my-3 relative">
+          <div className="w-5 h-5 mt-0 ml-3 lg:mt-3 lg:ml-0 relative">
             <FontAwesomeIcon
               icon={farCircle}
               className="w-full h-full absolute left-0 top-0 cursor-pointer"
@@ -101,7 +103,7 @@ export default function PageSelector (props: PageSelectorProps) {
               }}
             ></FontAwesomeIcon>
           </div>
-          <div className="w-5 h-5 my-3 relative">
+          <div className="w-5 h-5 mt-0 ml-3 lg:mt-3 lg:ml-0 relative">
             <FontAwesomeIcon
               icon={farCircle}
               className="w-full h-full absolute left-0 top-0 cursor-pointer"

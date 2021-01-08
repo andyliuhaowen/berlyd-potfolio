@@ -1,0 +1,11 @@
+@media (min-width: 1024px) {
+    .dot {
+        left: 0 !important
+    }
+}
+
+@media (max-width: 1023px) {
+    .dot {
+        top: 0 !important
+    }
+}
