@@ -1,107 +1,107 @@
-import Head from 'next/head'
-import React, { Fragment, useCallback, useEffect, useState } from 'react'
-import Header from '../components/Header'
-import PageSelector from '../components/PageSelector'
-import ScrollIndicator from '../components/ScrollIndicator'
-import LandingContent from '../components/LandingContent'
-import { motion } from 'framer-motion'
-import { useSwipeable } from 'react-swipeable'
+import Head from "next/head";
+import React, { Fragment, useCallback, useEffect, useState } from "react";
+import Header from "../components/Header";
+import PageSelector from "../components/PageSelector";
+import ScrollIndicator from "../components/ScrollIndicator";
+import LandingContent from "../components/LandingContent";
+import { motion } from "framer-motion";
+import { useSwipeable } from "react-swipeable";
 
-const THRESHOLD = 30
-const NUM_PAGES = 6
+const THRESHOLD = 30;
+const NUM_PAGES = 6;
 
-function getScrollLineHeight () {
-  const el = document.createElement('div')
-  el.style.fontSize = 'initial'
-  el.style.display = 'none'
-  document.body.appendChild(el)
-  const fontSize = window.getComputedStyle(el).fontSize
-  document.body.removeChild(el)
-  return fontSize ? window.parseInt(fontSize) : undefined
+function getScrollLineHeight() {
+  const el = document.createElement("div");
+  el.style.fontSize = "initial";
+  el.style.display = "none";
+  document.body.appendChild(el);
+  const fontSize = window.getComputedStyle(el).fontSize;
+  document.body.removeChild(el);
+  return fontSize ? window.parseInt(fontSize) : undefined;
 }
 
-export default function Home () {
-  const [section, setSection] = useState(0)
-  const [delta, setDelta] = useState(0)
-  const [lineHeight, setLineheight] = useState<number | undefined>(undefined)
+export default function Home() {
+  const [section, setSection] = useState(0);
+  const [delta, setDelta] = useState(0);
+  const [lineHeight, setLineHeight] = useState<number | undefined>(undefined);
 
   const handleWheel = useCallback(
     (e: React.WheelEvent) => {
-      let newDelta: number
+      let newDelta: number;
       switch (e.deltaMode) {
         case 0: {
-          newDelta = delta + e.deltaY
-          break
+          newDelta = delta + e.deltaY;
+          break;
         }
         case 1: {
           if (lineHeight === undefined) {
-            const height = getScrollLineHeight()
-            setLineheight(height)
-            newDelta = delta + height! * e.deltaY
+            const height = getScrollLineHeight();
+            setLineHeight(height);
+            newDelta = delta + height! * e.deltaY;
           } else {
-            newDelta = delta + lineHeight * e.deltaY
+            newDelta = delta + lineHeight * e.deltaY;
           }
-          break
+          break;
         }
         case 2: {
           if (e.deltaY < 0) {
-            newDelta = delta - 2 * THRESHOLD
+            newDelta = delta - 2 * THRESHOLD;
           } else if (e.deltaY > 0) {
-            newDelta = delta + 2 * THRESHOLD
+            newDelta = delta + 2 * THRESHOLD;
           }
-          break
+          break;
         }
       }
 
       if (newDelta! > THRESHOLD) {
         setSection((orig) => {
           if (orig !== NUM_PAGES) {
-            return orig + 1
+            return orig + 1;
           } else {
-            return NUM_PAGES
+            return NUM_PAGES;
           }
-        })
-        newDelta = 0
+        });
+        newDelta = 0;
       } else if (newDelta! < -THRESHOLD) {
         setSection((orig) => {
           if (orig !== 0) {
-            return orig - 1
+            return orig - 1;
           } else {
-            return 0
+            return 0;
           }
-        })
-        newDelta = 0
+        });
+        newDelta = 0;
       }
 
-      setDelta(newDelta!)
+      setDelta(newDelta!);
     },
     [delta, lineHeight]
-  )
+  );
 
   const swipeHandlers = useSwipeable({
     onSwipedUp: () => {
       setSection((orig) => {
         if (orig !== NUM_PAGES) {
-          return orig + 1
+          return orig + 1;
         } else {
-          return NUM_PAGES
+          return NUM_PAGES;
         }
-      })
+      });
     },
     onSwipedDown: () => {
       setSection((orig) => {
         if (orig !== 0) {
-          return orig - 1
+          return orig - 1;
         } else {
-          return 0
+          return 0;
         }
-      })
-    }
-  })
+      });
+    },
+  });
 
   useEffect(() => {
-    console.log(section)
-  }, [section])
+    console.log(section);
+  }, [section]);
 
   return (
     <Fragment>
@@ -115,17 +115,18 @@ export default function Home () {
 
         <div
           className="h-screen w-screen overflow-hidden relative"
-          onWheel={handleWheel} {...swipeHandlers}
+          onWheel={handleWheel}
+          {...swipeHandlers}
         >
           <motion.div
             className="absolute w-full"
             animate={{ top: `${-section}00vh` }}
             transition={{
-              type: 'spring',
+              type: "spring",
               damping: 10,
               mass: 0.5,
               stiffness: 100,
-              velocity: 100
+              velocity: 100,
             }}
           >
             <Header />
@@ -209,5 +210,5 @@ export default function Home () {
       </main>
       <footer></footer>
     </Fragment>
-  )
+  );
 }

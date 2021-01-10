@@ -1,12 +1,12 @@
-import Link from 'next/link'
+import Link from "next/link";
 
 class ButtonProps {
-  text: string = '';
-  href: string = '';
-  color: string = '';
+  text: string = "";
+  href: string = "";
+  color: string = "";
 }
 
-export default function CustomButton (props: ButtonProps) {
+export default function CustomButton(props: ButtonProps) {
   return (
     <Link href={props.href}>
       <div
@@ -15,5 +15,5 @@ export default function CustomButton (props: ButtonProps) {
         <div className="m-1 font-bold">{props.text}</div>
       </div>
     </Link>
-  )
+  );
 }

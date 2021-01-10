@@ -1,22 +1,22 @@
-import CustomButton from './CustomButton'
-import Image from 'next/image'
+import CustomButton from "./CustomButton";
+import Image from "next/image";
 
 class LandingContentProps {
-  name: string = '';
-  title: string = '';
-  tagline: string = '';
-  desc: string = '';
-  image: string = '';
+  name: string = "";
+  title: string = "";
+  tagline: string = "";
+  desc: string = "";
+  image: string = "";
   titleLong: boolean = false;
 }
 
-export default function LandingContent (props: LandingContentProps) {
-  let textSize = ''
+export default function LandingContent(props: LandingContentProps) {
+  let textSize = "";
   if (props.titleLong) {
     textSize =
-      'whitespace-normal text-8xl md:whitespace-nowrap md:text-9xl lg:text-40 xl:text-52'
+      "whitespace-normal text-8xl md:whitespace-nowrap md:text-9xl lg:text-40 xl:text-52";
   } else {
-    textSize = 'text-40 lg:text-52 xl:text-60 whitespace-nowrap'
+    textSize = "text-40 lg:text-52 xl:text-60 whitespace-nowrap";
   }
   return (
     <div className={`bg-${props.name}_bg h-screen relative flex items-center`}>
@@ -63,5 +63,5 @@ export default function LandingContent (props: LandingContentProps) {
         </div>
       </div>
     </div>
-  )
+  );
 }

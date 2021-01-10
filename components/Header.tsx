@@ -1,8 +1,8 @@
-import Image from 'next/image'
-import Link from 'next/link'
-import { Fragment } from 'react'
+import Image from "next/image";
+import Link from "next/link";
+import { Fragment } from "react";
 
-export default function Header () {
+export default function Header() {
   return (
     <header className="absolute flex h-36 items-center mt-4 z-50 w-full">
       <div className="ml-10 xl:ml-16 w-16">
@@ -31,5 +31,5 @@ export default function Header () {
         </Fragment>
       </div>
     </header>
-  )
+  );
 }
