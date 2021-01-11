@@ -1,5 +1,6 @@
 import CustomButton from "./CustomButton";
 import Image from "next/image";
+import Link from "next/link";
 
 class LandingContentProps {
   name: string = "";
@@ -53,13 +54,16 @@ export default function LandingContent(props: LandingContentProps) {
           </div>
         </div>
         <div className="flex flex-row mr-16 relative flex-grow h-65vh mt-8vh ml-16 md:ml-0">
-          <Image
-            src={props.image}
-            alt={`${props.title} photo`}
-            layout="fill"
-            objectFit="cover"
-            objectPosition="center"
-          ></Image>
+          <Link href={props.name}>
+            <Image
+              src={props.image}
+              alt={`${props.title} photo`}
+              layout="fill"
+              objectFit="cover"
+              objectPosition="center"
+              className="cursor-pointer"
+            ></Image>
+          </Link>
         </div>
       </div>
     </div>

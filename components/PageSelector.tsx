@@ -26,9 +26,11 @@ export default function PageSelector(props: PageSelectorProps) {
   return (
     <motion.div
       className="fixed transform left-1/2 bottom-0 translate-y-0 -translate-x-1/2 lg:left-0 lg:bottom-1/2 lg:translate-y-1/2 lg:translate-x-0 z-10"
+      initial={false}
       animate={{ color: colorMap[props.page] }}
     >
       <motion.div
+        initial={false}
         animate={{
           top: `${offsetMap[props.page] / 4}rem`,
           left: `${mobileOffsetMap[props.page] / 4}rem`,
