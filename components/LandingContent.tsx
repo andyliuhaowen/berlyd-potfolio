@@ -38,7 +38,7 @@ export default function LandingContent(props: LandingContentProps) {
                 {props.tagline}
               </div>
               <div
-                className={`text-${props.name}_text text-base xl:text-lg my-2`}
+                className={`text-${props.name}_text text-base xl:text-lg my-2 w-56 lg:w-64 xl:w-80`}
               >
                 {props.desc}
               </div>

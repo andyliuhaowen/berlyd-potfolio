@@ -165,7 +165,7 @@ export default function Home() {
               name="hs"
               title="Hidden Season"
               tagline="Makeup Set"
-              desc=""
+              desc="a memorable gift from The Palace Museum"
               image="/hidden_season.png"
               titleLong={true}
             />
@@ -174,7 +174,7 @@ export default function Home() {
               name="choco"
               title="Chocolit"
               tagline="Toy &amp; Treat"
-              desc=""
+              desc="a playful and tasty kit for adult"
               image="/chocolit.png"
               titleLong={true}
             />
@@ -183,7 +183,7 @@ export default function Home() {
               name="pelaton"
               title="Pelaton Gaming"
               tagline="VR Headset"
-              desc=""
+              desc="a gaming platform aimed at blending gaming with physical activity"
               image="/pelaton_gaming.png"
               titleLong={true}
             />
@@ -192,7 +192,7 @@ export default function Home() {
               name="multi"
               title="Multicolor Pen"
               tagline="Adaptive Pen"
-              desc=""
+              desc="a tool to help artists with cerebral palsy to draw independently"
               image="/multipen.jpg"
               titleLong={true}
             />
@@ -201,7 +201,7 @@ export default function Home() {
               name="haru"
               title="Haru"
               tagline="Speaker"
-              desc=""
+              desc="a seasonal limited high-end speaker for Francfranc"
               image="/haru.png"
               titleLong={false}
             />
