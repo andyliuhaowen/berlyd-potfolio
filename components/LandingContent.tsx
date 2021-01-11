@@ -16,7 +16,7 @@ export default function LandingContent(props: LandingContentProps) {
     textSize =
       "whitespace-normal text-8xl md:whitespace-nowrap md:text-9xl lg:text-40 xl:text-52";
   } else {
-    textSize = "text-40 lg:text-52 xl:text-60 whitespace-nowrap";
+    textSize = "text-40 lg:text-48 xl:text-52 2xl:text-60 whitespace-nowrap";
   }
   return (
     <div className={`bg-${props.name}_bg h-screen relative flex items-center`}>
@@ -25,7 +25,7 @@ export default function LandingContent(props: LandingContentProps) {
           <div className="h-full flex-col flex">
             <div
               className={
-                `text-${props.name}_text font-yesteryear z-50 relative w-0 leading-none  transform translate-x-16 md:transform-none ` +
+                `text-${props.name}_text font-yesteryear z-50 relative w-0 leading-none transform translate-x-16 md:transform-none ` +
                 textSize
               }
             >
@@ -33,12 +33,12 @@ export default function LandingContent(props: LandingContentProps) {
             </div>
             <div className="flex-col flex-grow justify-center hidden md:flex">
               <div
-                className={`text-${props.name}_text text-4xl xl:text-5xl mb-2`}
+                className={`text-${props.name}_text text-3xl xl:text-4xl 2xl:text-5xl mb-2`}
               >
                 {props.tagline}
               </div>
               <div
-                className={`text-${props.name}_text text-base xl:text-lg my-2 w-56 lg:w-64 xl:w-80`}
+                className={`text-${props.name}_text text-base 2xl:text-lg my-2 w-60 xl:w-64 2xl:w-80`}
               >
                 {props.desc}
               </div>
