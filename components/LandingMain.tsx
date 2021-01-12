@@ -161,7 +161,7 @@ export default function LandingMain() {
             velocity: 100,
           }}
         >
-          <Header color="black" />
+          <Header logoOnly={false} />
           {/* Intro page */}
           <div className="flex items-center bg-landing_pink h-screen relative">
             <div className="hidden md:inline-block md:mx-auto lg:mr-0 lg:ml-60 xl:mx-0 xl:relative xl:left-1/5">
@@ -183,7 +183,6 @@ export default function LandingMain() {
             <ScrollIndicator />
           </div>
 
-          {/* Mojo */}
           <LandingContent
             name="mojo"
             title="Mojo"
@@ -216,7 +215,7 @@ export default function LandingMain() {
             title="Pelaton Gaming"
             tagline="VR Headset"
             desc="a gaming platform aimed at blending gaming with physical activity"
-            image="/pelaton_gaming.png"
+            image="/pelaton_gaming/main.png"
             titleLong={true}
           />
 
