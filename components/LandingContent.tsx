@@ -1,6 +1,7 @@
 import CustomButton from "./CustomButton";
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 class LandingContentProps {
   name: string = "";
@@ -53,7 +54,10 @@ export default function LandingContent(props: LandingContentProps) {
             </div>
           </div>
         </div>
-        <div className="flex flex-row mr-16 relative flex-grow h-65vh mt-8vh ml-16 md:ml-0">
+        <motion.div
+          className="mr-16 relative flex-grow h-65vh mt-8vh ml-16 md:ml-0"
+          layoutId={`${props.name}-image`}
+        >
           <Link href={props.name}>
             <Image
               src={props.image}
@@ -64,7 +68,7 @@ export default function LandingContent(props: LandingContentProps) {
               className="cursor-pointer"
             ></Image>
           </Link>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

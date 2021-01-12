@@ -3,10 +3,10 @@ import { motion } from "framer-motion";
 
 export default function Mojo() {
   return (
-    <motion.div className="w-full" layoutId="mojo-image">
+    <motion.div className="w-full" layoutId="pelaton_gaming-image">
       <Image
-        src="/mojo/main.png"
-        alt="Mojo"
+        src="/pelaton_gaming/main.png"
+        alt="Pelaton Gaming"
         height={1080}
         width={1920}
         layout="responsive"

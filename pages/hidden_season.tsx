@@ -3,10 +3,10 @@ import { motion } from "framer-motion";
 
 export default function Mojo() {
   return (
-    <motion.div className="w-full" layoutId="mojo-image">
+    <motion.div className="w-full" layoutId="hidden_season-image">
       <Image
-        src="/mojo/main.png"
-        alt="Mojo"
+        src="/hidden_season/main.png"
+        alt="Hidden Season"
         height={1080}
         width={1920}
         layout="responsive"
