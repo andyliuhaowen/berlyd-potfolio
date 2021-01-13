@@ -15,6 +15,7 @@ export default function PelatonGaming() {
         height={2485}
         width={3840}
         layout="responsive"
+        priority={true}
       ></Image>
     </motion.div>
   );

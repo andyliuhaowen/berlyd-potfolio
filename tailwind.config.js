@@ -18,6 +18,7 @@ module.exports = {
           /multi_color_text$/,
           /haru_bg$/,
           /haru_text$/,
+          /mojo_accent$/,
           "top-5",
           "top-30",
           "top-38",
@@ -47,6 +48,7 @@ module.exports = {
       multicolor_pen_text: "#728397",
       haru_bg: "#c3c7d6",
       haru_text: "#e89b7c",
+      mojo_accent: "#509776",
     },
     fontFamily: {
       roboto: ["MyRoboto", "ui-sans-serif"],
@@ -72,7 +74,8 @@ module.exports = {
         128: "32rem",
         184: "46rem",
         fullsection: "46rem",
-        shortsection: "28rem",
+        mediumsection: "28rem",
+        shortsection: "20rem",
       },
       margin: {
         "8vh": "8vh",

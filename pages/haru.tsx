@@ -15,6 +15,7 @@ export default function Haru() {
         height={3300}
         width={5100}
         layout="responsive"
+        priority={true}
       ></Image>
     </motion.div>
   );

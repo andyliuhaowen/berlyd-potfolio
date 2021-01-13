@@ -15,6 +15,7 @@ export default function Chocolit() {
         height={4501}
         width={8001}
         layout="responsive"
+        priority={true}
       ></Image>
     </motion.div>
   );

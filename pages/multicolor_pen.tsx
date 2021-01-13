@@ -15,6 +15,7 @@ export default function MulticolorPen() {
         height={8851}
         width={10800}
         layout="responsive"
+        priority={true}
       ></Image>
     </motion.div>
   );

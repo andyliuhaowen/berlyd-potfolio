@@ -15,6 +15,7 @@ export default function HiddenSeason() {
         height={1600}
         width={2560}
         layout="responsive"
+        priority={true}
       ></Image>
     </motion.div>
   );

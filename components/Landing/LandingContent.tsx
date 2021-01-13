@@ -71,6 +71,7 @@ export default function LandingContent(props: LandingContentProps) {
               objectFit="cover"
               objectPosition="center"
               className="cursor-pointer"
+              priority={true}
             ></Image>
           </Link>
         </motion.div>

@@ -13,6 +13,7 @@ import ThreeImageAndText from "../components/Designs/ThreeImageAndText";
 import ImageList from "../components/Designs/CaptionedImageList";
 import BannerHeader from "../components/Designs/BannerHeader";
 import TextList from "../components/Designs/TextList";
+import { Height } from "../utils/global_types";
 
 export default function Mojo() {
   return (
@@ -25,6 +26,7 @@ export default function Mojo() {
           height={4501}
           width={8001}
           layout="responsive"
+          priority={true}
         ></Image>
       </motion.div>
 
@@ -83,6 +85,7 @@ export default function Mojo() {
           "/mojo/free.jpg",
           "/mojo/fresh.jpg",
         ]}
+        height={Height.Medium}
         captions={["Classic", "Colorful", "Passionate", "Free", "Fresh"]}
       ></ImageList>
 
@@ -108,7 +111,7 @@ export default function Mojo() {
           "15.Fresi",
           "16.Froto",
           "17.Frosi",
-          "18. Geji",
+          "18.Geji",
           "19.Momo",
           "20.Sizmo",
           "21.Sizzy",
@@ -117,10 +120,14 @@ export default function Mojo() {
           "24.Calmo",
           "25.Somoji",
           "26.Jotoo",
-          "27.verano",
-          "28.fresco",
-          "29.fresca",
+          "27.Verano",
+          "28.Fresco",
+          "29.Fresca",
+          "30.Nuevo"
         ]}
+        accent={7}
+        accentColor="mojo_accent"
+        caption="strong feeling when read"
       ></TextList>
     </main>
   );
