@@ -1,3 +1,8 @@
+/**
+ * Made by Haowen Liu in 2021
+ * Component of the header of page.
+ */
+
 import Image from "next/image";
 import Link from "next/link";
 import { Fragment } from "react";

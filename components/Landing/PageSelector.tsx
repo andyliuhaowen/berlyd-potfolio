@@ -1,9 +1,14 @@
+/**
+ * Made by Haowen Liu in 2021
+ * Component of a page selector sidebar.
+ */
+
 import { faCircle } from "@fortawesome/free-solid-svg-icons";
 import { faCircle as farCircle } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion } from "framer-motion";
 
-import styles from "../styles/PageSelector.module.css";
+import styles from "../../styles/PageSelector.module.css";
 
 class PageSelectorProps {
   page: number = 0;

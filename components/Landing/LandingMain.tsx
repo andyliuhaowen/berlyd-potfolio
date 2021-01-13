@@ -1,9 +1,15 @@
+/**
+ * Made by Haowen Liu in 2021
+ * Component for the main landing page.
+ * NO SSR: this requires window.location.hash on init.
+ */
+
 import React, { Fragment, useEffect, useState, useCallback } from "react";
 import { motion } from "framer-motion";
 import PageSelector from "./PageSelector";
 import { useSwipeable } from "react-swipeable";
 import { useRouter } from "next/dist/client/router";
-import Header from "./Header";
+import Header from "../Header";
 import ScrollIndicator from "./ScrollIndicator";
 import LandingContent from "./LandingContent";
 

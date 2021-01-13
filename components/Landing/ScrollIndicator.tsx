@@ -1,5 +1,10 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
+/**
+ * Made by Haowen Liu in 2021
+ * Component for creating a bumping scroll indicator.
+ */
+
 import { motion } from "framer-motion";
 
 export default function ScrollIndicator() {

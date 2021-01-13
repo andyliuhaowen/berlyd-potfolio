@@ -1,3 +1,8 @@
+/**
+ * Made by Haowen Liu in 2021
+ * Component of a customly styled button.
+ */
+
 import Link from "next/link";
 
 class ButtonProps {

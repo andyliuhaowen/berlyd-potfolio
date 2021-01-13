@@ -1,4 +1,9 @@
-import CustomButton from "./CustomButton";
+/**
+ * Made by Haowen Liu in 2021
+ * Component for displaying a single project on landing page.
+ */
+
+import CustomButton from "../CustomButton";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";

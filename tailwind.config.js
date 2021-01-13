@@ -63,10 +63,16 @@ module.exports = {
       },
       width: {
         "7/20": "35%",
+        "1280px": "1280px",
+        "1536px": "1536px",
       },
       height: {
         "65vh": "65vh",
         entire: "700vh",
+        128: "32rem",
+        184: "46rem",
+        fullsection: "46rem",
+        shortsection: "28rem",
       },
       margin: {
         "8vh": "8vh",
