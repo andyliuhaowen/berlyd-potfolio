@@ -15,7 +15,7 @@ class ImageAndTextProps {
 export default function ImageAndText(props: ImageAndTextProps) {
   return (
     <div
-      className={`flex h-fullsection ${
+      className={`flex h-fullsection_md lg:h-fullsection ${
         props.imageOnLeft ? "flex-row" : "flex-row-reverse"
       }`}
     >
@@ -38,7 +38,7 @@ export default function ImageAndText(props: ImageAndTextProps) {
       <div className="w-1/2 flex flex-row items-center p-16">
         <div className="flex flex-col">
           {props.text.map((line, index) => (
-            <div key={index} className="text-2xl leading-loose">
+            <div key={index} className="text-xl leading-loose lg:text-2xl lg:leading-loose">
               {line}
             </div>
           ))}

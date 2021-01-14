@@ -14,6 +14,8 @@ import ImageList from "../components/Designs/CaptionedImageList";
 import BannerHeader from "../components/Designs/BannerHeader";
 import TextList from "../components/Designs/TextList";
 import { Height } from "../utils/global_types";
+import CaptionedImage from "../components/Designs/CaptionedImage";
+import FoldableImage from "../components/Designs/FoldableImage";
 
 export default function Mojo() {
   return (
@@ -123,12 +125,68 @@ export default function Mojo() {
           "27.Verano",
           "28.Fresco",
           "29.Fresca",
-          "30.Nuevo"
+          "30.Nuevo",
         ]}
         accent={7}
-        accentColor="mojo_accent"
+        accentTextColor="mojo_text"
+        accentBgColor="mojo_bg"
         caption="strong feeling when read"
       ></TextList>
+
+      <div className="flex flex-row mt-36">
+        <CaptionedImage
+          image="/mojo/ingredients.png"
+          caption="Fresh Ingredients Study"
+          height={Height.Free}
+          imageWidth={4004}
+          imageHeight={1600}
+          textClasses="font-bold text-3xl mb-8"
+        ></CaptionedImage>
+        <CaptionedImage
+          image="/mojo/font.png"
+          caption="Typeface"
+          height={Height.Free}
+          imageWidth={4004}
+          imageHeight={1600}
+          textClasses="font-bold text-3xl mb-8"
+        ></CaptionedImage>
+      </div>
+
+      <SectionHeader>Logo Ideations</SectionHeader>
+      <FoldableImage
+        image1="/mojo/logo_ideation_1.png"
+        image2="/mojo/logo_ideation_2.png"
+        alt="Logo ideation"
+        imageHeight={1250}
+        imageWidth={3717}
+      ></FoldableImage>
+
+      <SectionHeader>Logos</SectionHeader>
+      <div className="mx-16">
+        <Image
+          src="/mojo/logos.png"
+          height={4501}
+          width={8001}
+          alt="Logos"
+          layout="responsive"
+        ></Image>
+      </div>
+
+      <SectionHeader>Lockup</SectionHeader>
+
+      <SectionHeader>Colors</SectionHeader>
+      <div className="mx-16">
+        <Image
+          src="/mojo/colors.png"
+          height={2184}
+          width={6992}
+          alt="Logos"
+          layout="responsive"
+        ></Image>
+      </div>
+
+      <BannerHeader color="mojo_bg">Packaging</BannerHeader>
+
     </main>
   );
 }
