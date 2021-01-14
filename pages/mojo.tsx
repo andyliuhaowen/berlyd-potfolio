@@ -5,7 +5,6 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import Header from "../components/Header";
 import SectionHeader from "../components/Designs/SectionHeader";
 import ProjectBanner from "../components/Designs/ProjectBanner";
 import ImageAndText from "../components/Designs/ImageAndText";
@@ -16,11 +15,12 @@ import TextList from "../components/Designs/TextList";
 import { Height } from "../utils/global_types";
 import CaptionedImage from "../components/Designs/CaptionedImage";
 import FoldableImage from "../components/Designs/FoldableImage";
+import LogoHeader from "../components/Designs/LogoHeader";
 
 export default function Mojo() {
   return (
     <main>
-      <Header logoOnly={true}></Header>
+      <LogoHeader></LogoHeader>
       <motion.div className="w-full" layoutId="mojo-image">
         <Image
           src="/mojo/main.png"
@@ -186,7 +186,6 @@ export default function Mojo() {
       </div>
 
       <BannerHeader color="mojo_bg">Packaging</BannerHeader>
-
     </main>
   );
 }

@@ -167,7 +167,7 @@ export default function LandingMain() {
             velocity: 100,
           }}
         >
-          <Header logoOnly={false} />
+          <Header />
           {/* Intro page */}
           <div className="flex items-center bg-landing_pink h-screen relative">
             <div className="hidden md:inline-block md:mx-auto lg:mr-0 lg:ml-60 xl:mx-0 xl:relative xl:left-1/5">

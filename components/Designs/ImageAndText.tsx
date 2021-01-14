@@ -15,30 +15,35 @@ class ImageAndTextProps {
 export default function ImageAndText(props: ImageAndTextProps) {
   return (
     <div
-      className={`flex h-fullsection_md lg:h-fullsection ${
-        props.imageOnLeft ? "flex-row" : "flex-row-reverse"
+      className={`flex flex-col h-auto md:h-fullsection_md lg:h-fullsection ${
+        props.imageOnLeft ? "md:flex-row" : "md:flex-row-reverse"
       }`}
     >
-      <div className="w-1/2 relative">
-        <div
-          className={`absolute top-0 bottom-0 ${
-            props.imageOnLeft ? "right-0 left-16" : "right-16 left-0"
-          }`}
-        >
-          <Image
-            src={props.image}
-            layout="fill"
-            objectFit="cover"
-            objectPosition="center"
-            alt={props.alt}
-            priority={true}
-          ></Image>
-        </div>
+      <div
+        className={`md:w-1/2 relative h-fullsection_md md:h-auto mx-16 mb-16 md:mb-0 ${
+          props.imageOnLeft ? "md:mr-0" : "md:ml-0"
+        }`}
+      >
+        <Image
+          src={props.image}
+          layout="fill"
+          objectFit="cover"
+          objectPosition="center"
+          alt={props.alt}
+          priority={true}
+        ></Image>
       </div>
-      <div className="w-1/2 flex flex-row items-center p-16">
+      <div
+        className={`w-full md:w-1/2 flex flex-row items-center ${
+          props.imageOnLeft ? "mr-16 pl-16" : "ml-16 pr-16"
+        }`}
+      >
         <div className="flex flex-col">
           {props.text.map((line, index) => (
-            <div key={index} className="text-xl leading-loose lg:text-2xl lg:leading-loose">
+            <div
+              key={index}
+              className="text-lg leading-loose lg:text-2xl lg:leading-loose"
+            >
               {line}
             </div>
           ))}

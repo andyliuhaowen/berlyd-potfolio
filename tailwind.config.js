@@ -74,7 +74,7 @@ module.exports = {
         128: "32rem",
         184: "46rem",
         fullsection: "46rem",
-        fullsection_md: "36rem",
+        fullsection_md: "32rem",
         mediumsection: "28rem",
         shortsection: "20rem",
       },
