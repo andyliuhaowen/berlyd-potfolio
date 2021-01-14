@@ -92,6 +92,9 @@ module.exports = {
         79: "19.75rem",
         87: "21.75rem",
       },
+      gridTemplateRows: {
+        10: "repeat(10, minmax(0, 1fr))",
+      },
     },
   },
   variants: {

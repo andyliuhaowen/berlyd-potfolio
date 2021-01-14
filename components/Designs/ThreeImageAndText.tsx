@@ -19,14 +19,12 @@ class ImageAndTextProps {
 export default function ThreeImageAndText(props: ImageAndTextProps) {
   return (
     <div
-      className={`h-fullsection flex ${
-        props.imageOnLeft ? "flex-row" : "flex-row-reverse"
+      className={`flex flex-col h-auto md:h-fullsection_md lg:h-fullsection mx-16 ${
+        props.imageOnLeft ? "md:flex-row" : "md:flex-row-reverse"
       }`}
     >
-      <div className="w-1/2 relative">
-        <div
-          className={`relative h-full ${props.imageOnLeft ? "ml-16" : "mr-16"}`}
-        >
+      <div className="md:w-1/2 h-fullsection_md md:h-auto relative mb-16 md:mb-0">
+        <div className="relative h-full">
           <div className="absolute left-0 w-1/2 top-0 bottom-0">
             <div className="absolute top-1 left-1 right-1 bottom-1">
               <Image
@@ -65,10 +63,17 @@ export default function ThreeImageAndText(props: ImageAndTextProps) {
           </div>
         </div>
       </div>
-      <div className="w-1/2 flex flex-row items-center justify-center p-16">
+      <div
+        className={`md:w-1/2 flex flex-row items-center justify-center ${
+          props.imageOnLeft ? "md:pl-16" : "md:pr-16"
+        }`}
+      >
         <div className="flex flex-col">
           {props.text.map((line, index) => (
-            <div key={index} className="text-2xl leading-loose">
+            <div
+              key={index}
+              className="text-lg leading-loose lg:leading-loose lg:text-2xl"
+            >
               {line}
             </div>
           ))}

@@ -15,15 +15,11 @@ class ImageAndTextProps {
 export default function ImageAndText(props: ImageAndTextProps) {
   return (
     <div
-      className={`flex flex-col h-auto md:h-fullsection_md lg:h-fullsection ${
+      className={`flex flex-col h-auto md:h-fullsection_md lg:h-fullsection mx-16 ${
         props.imageOnLeft ? "md:flex-row" : "md:flex-row-reverse"
       }`}
     >
-      <div
-        className={`md:w-1/2 relative h-fullsection_md md:h-auto mx-16 mb-16 md:mb-0 ${
-          props.imageOnLeft ? "md:mr-0" : "md:ml-0"
-        }`}
-      >
+      <div className="md:w-1/2 relative h-fullsection_md md:h-auto mb-16 md:mb-0">
         <Image
           src={props.image}
           layout="fill"
@@ -34,8 +30,8 @@ export default function ImageAndText(props: ImageAndTextProps) {
         ></Image>
       </div>
       <div
-        className={`w-full md:w-1/2 flex flex-row items-center ${
-          props.imageOnLeft ? "mr-16 pl-16" : "ml-16 pr-16"
+        className={`md:w-1/2 flex flex-row items-center ${
+          props.imageOnLeft ? "md:pl-16" : "md:pr-16"
         }`}
       >
         <div className="flex flex-col">

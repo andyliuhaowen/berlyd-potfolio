@@ -10,8 +10,8 @@ class FoldableImageProps {
 
 export default function FoldableImage(props: FoldableImageProps) {
   return (
-    <div className="flex flex-row">
-      <div className="w-1/2 ml-16">
+    <div className="flex flex-col md:flex-row mx-16">
+      <div className="md:w-1/2">
         <Image
           src={props.image1}
           alt={props.alt}
@@ -21,7 +21,7 @@ export default function FoldableImage(props: FoldableImageProps) {
           layout="responsive"
         ></Image>
       </div>
-      <div className="w-1/2 mr-16">
+      <div className="md:w-1/2">
         <Image
           src={props.image2}
           alt={props.alt}

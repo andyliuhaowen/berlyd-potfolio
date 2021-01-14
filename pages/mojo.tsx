@@ -9,13 +9,12 @@ import SectionHeader from "../components/Designs/SectionHeader";
 import ProjectBanner from "../components/Designs/ProjectBanner";
 import ImageAndText from "../components/Designs/ImageAndText";
 import ThreeImageAndText from "../components/Designs/ThreeImageAndText";
-import ImageList from "../components/Designs/CaptionedImageList";
 import BannerHeader from "../components/Designs/BannerHeader";
 import TextList from "../components/Designs/TextList";
 import { Height } from "../utils/global_types";
-import CaptionedImage from "../components/Designs/CaptionedImage";
 import FoldableImage from "../components/Designs/FoldableImage";
 import LogoHeader from "../components/Designs/LogoHeader";
+import CaptionedImageList from "../components/Designs/CaptionedImageList";
 
 export default function Mojo() {
   return (
@@ -79,7 +78,7 @@ export default function Mojo() {
       ></ThreeImageAndText>
 
       <SectionHeader>Keywords</SectionHeader>
-      <ImageList
+      <CaptionedImageList
         images={[
           "/mojo/classic.jpg",
           "/mojo/colorful.jpg",
@@ -89,7 +88,7 @@ export default function Mojo() {
         ]}
         height={Height.Medium}
         captions={["Classic", "Colorful", "Passionate", "Free", "Fresh"]}
-      ></ImageList>
+      ></CaptionedImageList>
 
       <BannerHeader color="mojo_bg">Branding</BannerHeader>
 
@@ -133,23 +132,15 @@ export default function Mojo() {
         caption="strong feeling when read"
       ></TextList>
 
-      <div className="flex flex-row mt-36">
-        <CaptionedImage
-          image="/mojo/ingredients.png"
-          caption="Fresh Ingredients Study"
+      <div className="mt-36">
+        <CaptionedImageList
+          images={["/mojo/ingredients.png", "/mojo/font.png"]}
+          captions={["Fresh Ingredients Study", "Typeface"]}
           height={Height.Free}
-          imageWidth={4004}
           imageHeight={1600}
-          textClasses="font-bold text-3xl mb-8"
-        ></CaptionedImage>
-        <CaptionedImage
-          image="/mojo/font.png"
-          caption="Typeface"
-          height={Height.Free}
           imageWidth={4004}
-          imageHeight={1600}
-          textClasses="font-bold text-3xl mb-8"
-        ></CaptionedImage>
+          textClass="font-bold text-3xl mb-8"
+        ></CaptionedImageList>
       </div>
 
       <SectionHeader>Logo Ideations</SectionHeader>
@@ -158,7 +149,7 @@ export default function Mojo() {
         image2="/mojo/logo_ideation_2.png"
         alt="Logo ideation"
         imageHeight={1250}
-        imageWidth={3717}
+        imageWidth={3417}
       ></FoldableImage>
 
       <SectionHeader>Logos</SectionHeader>

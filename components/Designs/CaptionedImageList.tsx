@@ -12,6 +12,7 @@ class ImageListProps {
   height: Height = Height.Medium;
   imageHeight?: number;
   imageWidth?: number;
+  textClass?: string;
 }
 
 export default function CaptionedImageList(props: ImageListProps) {
@@ -29,6 +30,7 @@ export default function CaptionedImageList(props: ImageListProps) {
             height={props.height}
             imageHeight={props.imageHeight}
             imageWidth={props.imageWidth}
+            textClass={props.textClass}
           ></CaptionedImage>
         </div>
       ))}
