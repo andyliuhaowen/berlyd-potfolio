@@ -10,6 +10,7 @@ export default function LogoHeader() {
           height={128}
           width={128}
           layout="responsive"
+          priority={true}
         ></Image>
       </div>
     </header>

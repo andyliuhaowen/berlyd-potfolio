@@ -88,6 +88,7 @@ export default function Mojo() {
         ]}
         height={Height.Medium}
         captions={["Classic", "Colorful", "Passionate", "Free", "Fresh"]}
+        imageIsImportant={false}
       ></CaptionedImageList>
 
       <BannerHeader color="mojo_bg">Branding</BannerHeader>
@@ -129,17 +130,18 @@ export default function Mojo() {
         accent={7}
         accentTextColor="mojo_text"
         accentBgColor="mojo_bg"
-        caption="strong feeling when read"
+        caption="strong, simple"
       ></TextList>
 
-      <div className="mt-36">
+      <div className="mt-24 md:mt-36">
         <CaptionedImageList
           images={["/mojo/ingredients.png", "/mojo/font.png"]}
           captions={["Fresh Ingredients Study", "Typeface"]}
           height={Height.Free}
           imageHeight={1600}
           imageWidth={4004}
-          textClass="font-bold text-3xl mb-8"
+          textClass="font-bold text-2xl md:text-3xl mb-8"
+          imageIsImportant={true}
         ></CaptionedImageList>
       </div>
 
@@ -160,6 +162,7 @@ export default function Mojo() {
           width={8001}
           alt="Logos"
           layout="responsive"
+          priority={true}
         ></Image>
       </div>
 
@@ -173,6 +176,7 @@ export default function Mojo() {
           width={6992}
           alt="Logos"
           layout="responsive"
+          priority={true}
         ></Image>
       </div>
 

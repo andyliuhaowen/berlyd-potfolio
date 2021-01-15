@@ -17,6 +17,7 @@ export default function Header() {
           height={128}
           width={128}
           layout="responsive"
+          priority={true}
         ></Image>
       </div>
       <div className="mr-10 xl:mr-16 ml-auto">

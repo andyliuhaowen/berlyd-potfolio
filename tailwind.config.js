@@ -76,7 +76,9 @@ module.exports = {
         fullsection: "46rem",
         fullsection_md: "32rem",
         mediumsection: "28rem",
+        mediumsection_md: "20rem",
         shortsection: "20rem",
+        shortsection_md: "16rem",
       },
       margin: {
         "8vh": "8vh",
@@ -94,6 +96,19 @@ module.exports = {
       },
       gridTemplateRows: {
         10: "repeat(10, minmax(0, 1fr))",
+      },
+      gridAutoRows: {
+        fullsection: "46rem",
+        fullsection_md: "32rem",
+        mediumsection: "28rem",
+        mediumsection_md: "20rem",
+        shortsection: "20rem",
+        shortsection_md: "16rem",
+      },
+      minWidth: {
+        "1/3": "33%",
+        "1/5": "18%",
+        "1/2": "50%",
       },
     },
   },

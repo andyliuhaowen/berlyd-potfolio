@@ -13,11 +13,12 @@ class CaptionedImageProps {
   imageHeight?: number;
   imageWidth?: number;
   textClass?: string;
+  className?: string;
 }
 
 export default function CaptionedImage(props: CaptionedImageProps) {
   return (
-    <div className="h-full w-full flex flex-col">
+    <div className={`h-full w-full flex flex-col ${props.className}`}>
       <div className={`text-center text-2xl mb-4 ${props.textClass ?? ""}`}>
         {props.caption}
       </div>

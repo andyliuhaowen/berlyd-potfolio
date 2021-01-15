@@ -17,8 +17,8 @@ export default function FoldableImage(props: FoldableImageProps) {
           alt={props.alt}
           height={props.imageHeight}
           width={props.imageWidth}
-          priority={true}
           layout="responsive"
+          priority={true}
         ></Image>
       </div>
       <div className="md:w-1/2">
@@ -27,8 +27,8 @@ export default function FoldableImage(props: FoldableImageProps) {
           alt={props.alt}
           height={props.imageHeight}
           width={props.imageWidth}
-          priority={true}
           layout="responsive"
+          priority={true}
         ></Image>
       </div>
     </div>
