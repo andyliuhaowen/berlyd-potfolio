@@ -211,7 +211,7 @@ export default function Mojo() {
         alt="Packaging Ideations"
       ></FullScreenImage>
 
-      <SectionHeader>Development</SectionHeader>
+      <SectionHeader>Inspiration</SectionHeader>
       <FullScreenImage
         image="/mojo/car_bottle.png"
         width={Width.Padded}
@@ -221,7 +221,7 @@ export default function Mojo() {
         alt="Car and bottle"
       ></FullScreenImage>
 
-      <div className="my-16"></div>
+      <SectionHeader>Development</SectionHeader>
 
       <FullScreenImage
         image="/mojo/bottle_devel.png"
@@ -230,6 +230,15 @@ export default function Mojo() {
         imageHeight={4055}
         imageWidth={8000}
         alt="Bottle development"
+      ></FullScreenImage>
+      
+      <FullScreenImage
+        image="/mojo/bottle_color.png"
+        width={Width.Full}
+        height={Height.Free}
+        imageHeight={4055}
+        imageWidth={8000}
+        alt="Bottle color"
       ></FullScreenImage>
 
       <StaticParallex
