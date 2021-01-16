@@ -106,7 +106,7 @@ export default function LandingMain() {
         setTransitioning(true);
         setTimeout(() => {
           setTransitioning(false);
-        }, 500);
+        }, 300);
       } else if (newDelta! < -THRESHOLD) {
         setSection((orig) => {
           if (orig === undefined) {
@@ -122,7 +122,7 @@ export default function LandingMain() {
         setTransitioning(true);
         setTimeout(() => {
           setTransitioning(false);
-        }, 500);
+        }, 300);
       }
 
       setDelta(newDelta!);
