@@ -1,3 +1,8 @@
+/**
+ * Made by Haowen Liu in 2021
+ * Component for creating a two-piece foldable image.
+ */
+
 import Image from "next/image";
 
 class FoldableImageProps {

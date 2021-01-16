@@ -69,7 +69,7 @@ export default function LandingContent(props: LandingContentProps) {
               alt={`${props.title} photo`}
               layout="fill"
               objectFit="cover"
-              objectPosition="center"
+              objectPosition="center center"
               className="cursor-pointer"
               priority={true}
             ></Image>

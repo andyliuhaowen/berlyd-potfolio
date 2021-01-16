@@ -1,6 +1,7 @@
 /**
  * Made by Haowen Liu in 2021
  * Component for laying out a long list of texts.
+ *
  * This is current assuming props.text is exactly 30 units long.
  */
 

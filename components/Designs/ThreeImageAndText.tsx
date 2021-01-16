@@ -31,7 +31,7 @@ export default function ThreeImageAndText(props: ImageAndTextProps) {
                 src={props.image1}
                 layout="fill"
                 objectFit="cover"
-                objectPosition="center"
+                objectPosition="center center"
                 alt={props.alt1}
                 priority={true}
               ></Image>
@@ -43,7 +43,7 @@ export default function ThreeImageAndText(props: ImageAndTextProps) {
                 src={props.image2}
                 layout="fill"
                 objectFit="cover"
-                objectPosition="center"
+                objectPosition="center center"
                 alt={props.alt2}
                 priority={true}
               ></Image>
@@ -55,7 +55,7 @@ export default function ThreeImageAndText(props: ImageAndTextProps) {
                 src={props.image3}
                 layout="fill"
                 objectFit="cover"
-                objectPosition="center"
+                objectPosition="center center"
                 alt={props.alt3}
                 priority={true}
               ></Image>

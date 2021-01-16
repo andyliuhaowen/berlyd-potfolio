@@ -1,3 +1,8 @@
+/**
+ * Made by Haowen Liu in 2021
+ * Component for creating a logo-only header.
+ */
+
 import Image from "next/image";
 
 export default function LogoHeader() {

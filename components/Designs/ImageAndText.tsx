@@ -24,7 +24,7 @@ export default function ImageAndText(props: ImageAndTextProps) {
           src={props.image}
           layout="fill"
           objectFit="cover"
-          objectPosition="center"
+          objectPosition="center center"
           alt={props.alt}
           priority={true}
         ></Image>

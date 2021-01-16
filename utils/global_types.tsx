@@ -1,8 +1,18 @@
+/**
+ * Made by Haowen Liu in 2021
+ * Define global types used accross the project.
+ */
+
 export enum Height {
   Full,
   Medium,
   Short,
   Free,
+}
+
+export enum Width {
+  Full,
+  Padded
 }
 
 export function getRemHeight(height: Height) {

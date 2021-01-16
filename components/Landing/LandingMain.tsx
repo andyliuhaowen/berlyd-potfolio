@@ -1,6 +1,7 @@
 /**
  * Made by Haowen Liu in 2021
  * Component for the main landing page.
+ *
  * NO SSR: this requires window.location.hash on init.
  */
 

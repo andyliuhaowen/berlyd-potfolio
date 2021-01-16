@@ -12,7 +12,7 @@ import styles from "../../styles/PageSelector.module.css";
 
 class PageSelectorProps {
   page: number = 0;
-  setSection: (sec: number) => void = (_) => {};
+  setSection: (sec: number) => void = () => {};
 }
 
 const offsetMap = [5, 30, 38, 46, 71, 79, 87];

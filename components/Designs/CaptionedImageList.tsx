@@ -1,6 +1,7 @@
 /**
  * Made by Haowen Liu in 2021
  * Component for creating a horizontal list of top-captioned image.
+ *
  * This component is now only meant to work with 5 unimportant images,
  * and 2 important images.
  */
@@ -25,9 +26,7 @@ export default function CaptionedImageList(props: ImageListProps) {
       {props.images.map((image, index) => (
         <div
           className={`${getRemHeight(props.height)} px-4 mt-8 ${
-            props.imageIsImportant
-              ? "w-full md:w-1/2"
-              : "w-1/3 md:w-1/5"
+            props.imageIsImportant ? "w-full md:w-1/2" : "w-1/3 md:w-1/5"
           }`}
           key={index}
         >

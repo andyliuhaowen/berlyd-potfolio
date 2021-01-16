@@ -105,11 +105,6 @@ module.exports = {
         shortsection: "20rem",
         shortsection_md: "16rem",
       },
-      minWidth: {
-        "1/3": "33%",
-        "1/5": "18%",
-        "1/2": "50%",
-      },
     },
   },
   variants: {

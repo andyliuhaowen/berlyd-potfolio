@@ -29,7 +29,7 @@ export default function CaptionedImage(props: CaptionedImageProps) {
             alt={props.caption}
             layout="fill"
             objectFit="cover"
-            objectPosition="center"
+            objectPosition="center center"
             priority={true}
           ></Image>
         )}
