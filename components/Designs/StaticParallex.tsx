@@ -21,7 +21,10 @@ export default function StaticParallex(props: StaticParallexProps) {
   return (
     <Fragment>
       {props.images.map((image, index) => (
-        <div className="relative h-fullsection" key={index}>
+        <div
+          className="relative h-extralarge_md lg:h-extralarge_lg xl:h-extralarge"
+          key={index}
+        >
           <div
             className="overflow-hidden h-full w-full absolute"
             style={{ clip: "rect(0 auto auto 0)" }}

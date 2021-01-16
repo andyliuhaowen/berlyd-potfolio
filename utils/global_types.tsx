@@ -12,7 +12,8 @@ export enum Height {
 
 export enum Width {
   Full,
-  Padded
+  Padded,
+  ExtraPadded,
 }
 
 export function getRemHeight(height: Height) {
@@ -38,5 +39,16 @@ export function getGridHeight(height: Height) {
       return "auto-rows-shortsection_md lg:auto-rows-mediumsection";
     default:
       return "";
+  }
+}
+
+export function getMarginForWidth(width: Width) {
+  switch (width) {
+    case Width.Full:
+      return "w-full";
+    case Width.Padded:
+      return "mx-16";
+    case Width.ExtraPadded:
+      return "mx-16 lg:mx-48 xl:mx-64";
   }
 }

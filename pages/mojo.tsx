@@ -15,6 +15,7 @@ import LogoHeader from "../components/Designs/LogoHeader";
 import CaptionedImageList from "../components/Designs/CaptionedImageList";
 import StaticParallex from "../components/Designs/StaticParallex";
 import FullScreenImage from "../components/Designs/FullScreenImage";
+import HoverableImageList from "../components/Designs/HoverableImageList";
 
 export default function Mojo() {
   return (
@@ -22,7 +23,7 @@ export default function Mojo() {
       <LogoHeader></LogoHeader>
       <FullScreenImage
         image="/mojo/main.png"
-        alt="Mojo"
+        alt="Mojo photo"
         height={Height.Free}
         width={Width.Full}
         imageHeight={4501}
@@ -225,21 +226,64 @@ export default function Mojo() {
 
       <FullScreenImage
         image="/mojo/bottle_devel.png"
-        width={Width.Padded}
+        width={Width.Full}
         height={Height.Free}
-        imageHeight={4055}
-        imageWidth={8000}
+        imageHeight={3393}
+        imageWidth={8001}
         alt="Bottle development"
       ></FullScreenImage>
-      
+
+      <div className="m-16"></div>
+
       <FullScreenImage
         image="/mojo/bottle_color.png"
         width={Width.Full}
         height={Height.Free}
-        imageHeight={4055}
-        imageWidth={8000}
+        imageHeight={3100}
+        imageWidth={8001}
         alt="Bottle color"
       ></FullScreenImage>
+
+      <SectionHeader>Label</SectionHeader>
+      <FullScreenImage
+        image="/mojo/label.png"
+        alt="Mojo label"
+        width={Width.ExtraPadded}
+        height={Height.Free}
+        imageHeight={2442}
+        imageWidth={4642}
+      ></FullScreenImage>
+
+      <SectionHeader>Flavors</SectionHeader>
+
+      <HoverableImageList
+        images={[
+          "/mojo/flavor_pic_1.jpg",
+          "/mojo/flavor_pic_2.jpg",
+          "/mojo/flavor_pic_3.jpg",
+        ]}
+        captions={["Rose Mojito", "Mango Mojito", "Mint Mojito"]}
+        hoveredTexts={[
+          [
+            "- mint",
+            "- sparkling rose / soda water",
+            "- lime juice",
+            "- silver rum",
+            "- simple syrup",
+            "(sugar, water, dried rose petals)",
+          ],
+          [
+            "- mint",
+            "- soda water",
+            "- lime juice",
+            "- silver rum",
+            "- simple syrup",
+            "(sugar, water, mango juice)",
+          ],
+          ["- mint", "- soda water", "- lime juice", "- white rum", "- sugar"],
+        ]}
+        height={Height.Full}
+      ></HoverableImageList>
 
       <StaticParallex
         images={[
@@ -249,7 +293,31 @@ export default function Mojo() {
         ]}
         alts={["Mojo render", "Mojo render", "Mojo render"]}
       ></StaticParallex>
-      <div className="h-fullsection"></div>
+
+      <FullScreenImage
+        image="/mojo/render_1.png"
+        alt="Render 1"
+        width={Width.Full}
+        height={Height.Free}
+        imageHeight={4501}
+        imageWidth={8001}
+      ></FullScreenImage>
+      <FullScreenImage
+        image="/mojo/render_2.png"
+        alt="Render 2"
+        width={Width.Full}
+        height={Height.Free}
+        imageHeight={4501}
+        imageWidth={8001}
+      ></FullScreenImage>
+      <FullScreenImage
+        image="/mojo/render_3.png"
+        alt="Render 3"
+        width={Width.Full}
+        height={Height.Free}
+        imageHeight={4501}
+        imageWidth={8001}
+      ></FullScreenImage>
     </main>
   );
 }

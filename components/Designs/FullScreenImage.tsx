@@ -1,4 +1,14 @@
-import { getRemHeight, Height, Width } from "../../utils/global_types";
+/**
+ * Made by Haowen Liu in 2021
+ * Component for laying out a full-width-sized image.
+ */
+
+import {
+  getMarginForWidth,
+  getRemHeight,
+  Height,
+  Width,
+} from "../../utils/global_types";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
@@ -15,9 +25,9 @@ class FullScreenImageProps {
 export default function FullScreenImage(props: FullScreenImageProps) {
   return (
     <motion.div
-      className={`relative ${
-        props.width === Width.Padded ? "mx-16" : "w-full"
-      } ${getRemHeight(props.height)}`}
+      className={`relative ${getMarginForWidth(props.width)} ${getRemHeight(
+        props.height
+      )}`}
       layoutId={props.layoutId}
     >
       {props.height === Height.Free && (
