@@ -50,6 +50,7 @@ function getScrollLineHeight() {
 export default function LandingMain() {
   const [delta, setDelta] = useState(0);
   const [lineHeight, setLineHeight] = useState<number | undefined>(undefined);
+  const [transitioning, setTransitioning] = useState(false);
 
   const [section, setSection] = useState(
     nameMap.get(window.location.hash) ?? 0
@@ -63,6 +64,7 @@ export default function LandingMain() {
 
   const handleWheel = useCallback(
     (e: React.WheelEvent) => {
+      if (transitioning) return;
       let newDelta: number;
       switch (e.deltaMode) {
         case 0: {
@@ -101,6 +103,10 @@ export default function LandingMain() {
           }
         });
         newDelta = 0;
+        setTransitioning(true);
+        setTimeout(() => {
+          setTransitioning(false);
+        }, 500);
       } else if (newDelta! < -THRESHOLD) {
         setSection((orig) => {
           if (orig === undefined) {
@@ -113,11 +119,15 @@ export default function LandingMain() {
           }
         });
         newDelta = 0;
+        setTransitioning(true);
+        setTimeout(() => {
+          setTransitioning(false);
+        }, 500);
       }
 
       setDelta(newDelta!);
     },
-    [delta, lineHeight]
+    [delta, lineHeight, transitioning]
   );
 
   const swipeHandlers = useSwipeable({

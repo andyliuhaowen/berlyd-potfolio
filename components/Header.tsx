@@ -36,7 +36,6 @@ export default function Header() {
           </span>
         </Fragment>
       </div>
-      )
     </header>
   );
 }
