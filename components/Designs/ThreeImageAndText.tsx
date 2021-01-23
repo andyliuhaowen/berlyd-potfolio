@@ -19,7 +19,7 @@ class ImageAndTextProps {
 export default function ThreeImageAndText(props: ImageAndTextProps) {
   return (
     <div
-      className={`flex flex-col h-auto md:h-fullsection_md lg:h-fullsection mx-16 ${
+      className={`mx-10 xl:mx-16 flex flex-col h-auto md:h-fullsection_md lg:h-fullsection ${
         props.imageOnLeft ? "md:flex-row" : "md:flex-row-reverse"
       }`}
     >

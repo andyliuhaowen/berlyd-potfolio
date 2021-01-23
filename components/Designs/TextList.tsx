@@ -15,7 +15,7 @@ class TextListProps {
 
 export default function TextList(props: TextListProps) {
   return (
-    <div className="grid grid-rows-10 md:grid-rows-6 xl:grid-rows-5 grid-flow-col justify-around">
+    <div className="mx-10 xl:mx-16 grid grid-rows-10 md:grid-rows-6 xl:grid-rows-5 grid-flow-col justify-between">
       {props.text.map((str, index) => {
         if (index === props.accent) {
           return (

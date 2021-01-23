@@ -47,7 +47,7 @@ export function getMarginForWidth(width: Width) {
     case Width.Full:
       return "w-full";
     case Width.Padded:
-      return "mx-16";
+      return "mx-10 xl:mx-16";
     case Width.ExtraPadded:
       return "mx-16 lg:mx-48 xl:mx-64";
   }
