@@ -205,7 +205,7 @@ export default function LandingMain() {
             title="Mojo"
             tagline="Mojito"
             desc="a delightful taste from Havana"
-            image="/mojo/main.png"
+            image="/mojo/main_full"
             titleLong={false}
           />
 
@@ -214,7 +214,7 @@ export default function LandingMain() {
             title="Hidden Season"
             tagline="Makeup Set"
             desc="a memorable gift from The Palace Museum"
-            image="/hidden_season/main.png"
+            image="/hidden_season/main_full"
             titleLong={true}
           />
 
@@ -223,7 +223,7 @@ export default function LandingMain() {
             title="Chocolit"
             tagline="Toy &amp; Treat"
             desc="a playful and tasty kit for adult"
-            image="/chocolit/main.png"
+            image="/chocolit/main_full"
             titleLong={true}
           />
 
@@ -232,7 +232,7 @@ export default function LandingMain() {
             title="Pelaton Gaming"
             tagline="VR Headset"
             desc="a gaming platform aimed at blending gaming with physical activity"
-            image="/pelaton_gaming/main.png"
+            image="/pelaton_gaming/main_full"
             titleLong={true}
           />
 
@@ -241,7 +241,7 @@ export default function LandingMain() {
             title="Multicolor Pen"
             tagline="Adaptive Pen"
             desc="a tool to help artists with cerebral palsy to draw independently"
-            image="/multicolor_pen/main.jpg"
+            image="/multicolor_pen/main_full"
             titleLong={true}
           />
 
@@ -250,7 +250,7 @@ export default function LandingMain() {
             title="Haru"
             tagline="Speaker"
             desc="a seasonal limited high-end speaker for Francfranc"
-            image="/haru/main.png"
+            image="/haru/main_full"
             titleLong={false}
           />
         </motion.div>

@@ -3,20 +3,26 @@
  * Project page: Multicolor Pen.
  */
 
-import Image from "next/image";
-import { motion } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
+import FullScreenImage from "../components/Designs/FullScreenImage";
+import LogoHeader from "../components/Designs/LogoHeader";
+import { Height, Width } from "../utils/global_types";
 
 export default function MulticolorPen() {
   return (
-    <motion.div className="w-full" layoutId="multicolor_pen-image">
-      <Image
-        src="/multicolor_pen/main.jpg"
-        alt="Multicolor Pen"
-        height={8851}
-        width={10800}
-        layout="responsive"
-        priority={true}
-      ></Image>
-    </motion.div>
+    <main>
+      <LogoHeader></LogoHeader>
+      <AnimatePresence>
+        <FullScreenImage
+          image="/multicolor_pen/main_full"
+          alt="Multicolor Pen photo"
+          width={Width.Full}
+          height={Height.Free}
+          imageHeight={2098}
+          imageWidth={2560}
+          layoutId="multicolor_pen-image"
+        ></FullScreenImage>
+      </AnimatePresence>
+    </main>
   );
 }

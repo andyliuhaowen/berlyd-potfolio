@@ -3,7 +3,7 @@
  * Component for creating a two-piece foldable image.
  */
 
-import Image from "next/image";
+import Image from "../Image";
 
 class FoldableImageProps {
   image1: string = "";
@@ -20,20 +20,18 @@ export default function FoldableImage(props: FoldableImageProps) {
         <Image
           src={props.image1}
           alt={props.alt}
+          layout="responsive"
           height={props.imageHeight}
           width={props.imageWidth}
-          layout="responsive"
-          priority={true}
         ></Image>
       </div>
       <div className="md:w-1/2">
         <Image
           src={props.image2}
           alt={props.alt}
+          layout="responsive"
           height={props.imageHeight}
           width={props.imageWidth}
-          layout="responsive"
-          priority={true}
         ></Image>
       </div>
     </div>

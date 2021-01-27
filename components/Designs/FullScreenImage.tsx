@@ -10,16 +10,16 @@ import {
   Width,
 } from "../../utils/global_types";
 import { motion } from "framer-motion";
-import Image from "next/image";
+import Image from "../Image";
 
 class FullScreenImageProps {
   image: string = "";
   alt: string = "";
   height: Height = Height.Free;
   width: Width = Width.Padded;
+  layoutId?: string;
   imageHeight?: number;
   imageWidth?: number;
-  layoutId?: string;
 }
 
 export default function FullScreenImage(props: FullScreenImageProps) {
@@ -29,26 +29,19 @@ export default function FullScreenImage(props: FullScreenImageProps) {
         props.height
       )}`}
       layoutId={props.layoutId}
+      key={props.layoutId}
     >
       {props.height === Height.Free && (
         <Image
           src={props.image}
           alt={props.alt}
+          layout="responsive"
           height={props.imageHeight!}
           width={props.imageWidth!}
-          layout="responsive"
-          priority={true}
         ></Image>
       )}
       {props.height !== Height.Free && (
-        <Image
-          src={props.image}
-          alt={props.alt}
-          layout="fill"
-          objectFit="cover"
-          objectPosition="center center"
-          priority={true}
-        ></Image>
+        <Image src={props.image} alt={props.alt} layout="fill"></Image>
       )}
     </motion.div>
   );

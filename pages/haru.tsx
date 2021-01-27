@@ -3,20 +3,23 @@
  * Project page: Haru.
  */
 
-import Image from "next/image";
-import { motion } from "framer-motion";
+import LogoHeader from "../components/Designs/LogoHeader";
+import FullScreenImage from "../components/Designs/FullScreenImage";
+import { Height, Width } from "../utils/global_types";
 
 export default function Haru() {
   return (
-    <motion.div className="w-full" layoutId="haru-image">
-      <Image
-        src="/haru/main.png"
-        alt="Haru"
-        height={3300}
-        width={5100}
-        layout="responsive"
-        priority={true}
-      ></Image>
-    </motion.div>
+    <main>
+      <LogoHeader></LogoHeader>
+      <FullScreenImage
+        image="/haru/main_full"
+        alt="Haru photo"
+        height={Height.Free}
+        width={Width.Full}
+        layoutId="haru-image"
+        imageHeight={1656}
+        imageWidth={2560}
+      ></FullScreenImage>
+    </main>
   );
 }

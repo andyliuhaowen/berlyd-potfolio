@@ -4,7 +4,7 @@
  */
 
 import { motion } from "framer-motion";
-import Image from "next/image";
+import Image from "../Image";
 
 class HoverableImageProps {
   image: string = "";
@@ -17,13 +17,9 @@ export default function HoverableImage(props: HoverableImageProps) {
     <div className="h-full w-full flex flex-col">
       <div className="text-center text-2xl mb-4">{props.caption}</div>
       <div className="flex-grow relative">
-        <Image
-          src={props.image}
-          alt={props.caption}
-          layout="fill"
-          objectFit="cover"
-          objectPosition="center center"
-        ></Image>
+        <div className="absolute top-0 left-0 w-full h-full">
+          <Image src={props.image} alt={props.caption} layout="fill"></Image>
+        </div>
         <motion.div
           className="absolute top-0 left-0 w-full h-full"
           initial={{ opacity: 0 }}

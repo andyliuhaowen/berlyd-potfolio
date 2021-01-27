@@ -3,15 +3,13 @@
  * Component for creating a top-captioned image.
  */
 
-import Image from "next/image";
+import Image from "../Image";
 import { Height } from "../../utils/global_types";
 
 class CaptionedImageProps {
   image: string = "";
   caption: string = "";
   height: Height = Height.Full;
-  imageHeight?: number;
-  imageWidth?: number;
   textClass?: string;
   className?: string;
 }
@@ -19,29 +17,19 @@ class CaptionedImageProps {
 export default function CaptionedImage(props: CaptionedImageProps) {
   return (
     <div className={`h-full w-full flex flex-col ${props.className}`}>
-      <div className={`text-center text-xl lg:text-2xl mb-4 ${props.textClass ?? ""}`}>
+      <div
+        className={`text-center text-xl lg:text-2xl mb-4 ${
+          props.textClass ?? ""
+        }`}
+      >
         {props.caption}
       </div>
       <div className="w-full relative flex-grow">
         {props.height !== Height.Free && (
-          <Image
-            src={props.image}
-            alt={props.caption}
-            layout="fill"
-            objectFit="cover"
-            objectPosition="center center"
-            priority={true}
-          ></Image>
+          <Image src={props.image} alt={props.caption} layout="fill"></Image>
         )}
         {props.height === Height.Free && (
-          <Image
-            src={props.image}
-            alt={props.caption}
-            layout="responsive"
-            height={props.imageHeight!}
-            width={props.imageWidth!}
-            priority={true}
-          ></Image>
+          <Image src={props.image} alt={props.caption} layout="fill"></Image>
         )}
       </div>
     </div>

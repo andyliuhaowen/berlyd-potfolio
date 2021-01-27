@@ -22,15 +22,14 @@ export default function Mojo() {
     <main>
       <LogoHeader></LogoHeader>
       <FullScreenImage
-        image="/mojo/main.png"
+        image="/mojo/main_full"
         alt="Mojo photo"
         height={Height.Free}
         width={Width.Full}
-        imageHeight={4501}
-        imageWidth={8001}
         layoutId="mojo-image"
+        imageWidth={2560}
+        imageHeight={1440}
       ></FullScreenImage>
-
       <SectionHeader>A delightful taste from Havana.</SectionHeader>
       <ProjectBanner
         a="Summer 2020"
@@ -41,7 +40,7 @@ export default function Mojo() {
 
       <SectionHeader>About Mojito</SectionHeader>
       <ImageAndText
-        image="/mojo/about_mojito.jpg"
+        image="/mojo/about_mojito_half"
         alt="Picture of Mojito"
         text={[
           "- a kind of coocktail",
@@ -55,7 +54,7 @@ export default function Mojo() {
 
       <SectionHeader>Havana</SectionHeader>
       <ImageAndText
-        image="/mojo/havana.jpg"
+        image="/mojo/havana_half"
         alt="Picture of Havana"
         text={[
           "Havana is the capital city of Cuba. The Spanish founded this city in the 16th century. It is the largest city with the most population. Contemporary Havana can essentially be described as three cities in one: Old Havana, Vedado, and the newer subur-ban districts. All those cities have totally different architectural styles in them.",
@@ -65,11 +64,11 @@ export default function Mojo() {
 
       <SectionHeader>Target Audience</SectionHeader>
       <ThreeImageAndText
-        image1="/mojo/target_1.jpg"
+        image1="/mojo/target_1_small"
         alt1="Picture of Natasha"
-        image2="/mojo/target_2.png"
+        image2="/mojo/target_2_small"
         alt2="Picture of partying people"
-        image3="/mojo/target_3.jpg"
+        image3="/mojo/target_3_small"
         alt3="Picture of suitcase"
         imageOnLeft={false}
         text={[
@@ -80,11 +79,11 @@ export default function Mojo() {
       <SectionHeader>Keywords</SectionHeader>
       <CaptionedImageList
         images={[
-          "/mojo/classic.jpg",
-          "/mojo/colorful.jpg",
-          "/mojo/passionate.jpg",
-          "/mojo/free.jpg",
-          "/mojo/fresh.jpg",
+          "/mojo/classic_xsmall",
+          "/mojo/colorful_xsmall",
+          "/mojo/passionate_xsmall",
+          "/mojo/free_xsmall",
+          "/mojo/fresh_xsmall",
         ]}
         height={Height.Medium}
         captions={["Classic", "Colorful", "Passionate", "Free", "Fresh"]}
@@ -135,11 +134,9 @@ export default function Mojo() {
 
       <div className="mt-24 md:mt-36">
         <CaptionedImageList
-          images={["/mojo/ingredients.png", "/mojo/font.png"]}
+          images={["/mojo/ingredients_half", "/mojo/font_half"]}
           captions={["Fresh Ingredients Study", "Typeface"]}
           height={Height.Free}
-          imageHeight={2005}
-          imageWidth={3584}
           textClass="font-bold text-2xl md:text-3xl mb-8"
           imageIsImportant={true}
         ></CaptionedImageList>
@@ -147,46 +144,46 @@ export default function Mojo() {
 
       <SectionHeader>Logo Ideations</SectionHeader>
       <FoldableImage
-        image1="/mojo/logo_ideation_1.png"
-        image2="/mojo/logo_ideation_2.png"
+        image1="/mojo/logo_ideation_1_half"
+        image2="/mojo/logo_ideation_2_half"
         alt="Logo ideation"
-        imageHeight={1250}
-        imageWidth={3417}
+        imageHeight={468}
+        imageWidth={1280}
       ></FoldableImage>
 
       <SectionHeader>Logos</SectionHeader>
       <FullScreenImage
-        image="/mojo/logos.png"
+        image="/mojo/logos_full"
         width={Width.Padded}
         height={Height.Free}
-        imageHeight={4501}
-        imageWidth={8001}
         alt="Logos"
+        imageHeight={1440}
+        imageWidth={2560}
       ></FullScreenImage>
 
       <SectionHeader>Lockup</SectionHeader>
       <FullScreenImage
-        image="/mojo/lockup.png"
+        image="/mojo/lockup_full"
         width={Width.Padded}
         height={Height.Free}
-        imageHeight={3063}
-        imageWidth={8001}
         alt="Logo lockup"
+        imageHeight={980}
+        imageWidth={2560}
       ></FullScreenImage>
 
       <SectionHeader>Colors</SectionHeader>
       <FullScreenImage
-        image="/mojo/colors.png"
+        image="/mojo/colors_full"
         width={Width.Padded}
         height={Height.Free}
-        imageHeight={2184}
-        imageWidth={6992}
         alt="Colors"
+        imageWidth={2560}
+        imageHeight={800}
       ></FullScreenImage>
 
       <BannerHeader color="mojo_bg">Packaging</BannerHeader>
       <FullScreenImage
-        image="/mojo/packaging_intro.jpg"
+        image="/mojo/packaging_intro_full"
         width={Width.Full}
         height={Height.Full}
         alt="Picture of Havana"
@@ -194,73 +191,73 @@ export default function Mojo() {
 
       <SectionHeader>Architecture Study</SectionHeader>
       <FullScreenImage
-        image="/mojo/architecture.png"
+        image="/mojo/architecture_full"
         width={Width.Padded}
         height={Height.Free}
-        imageHeight={1730}
-        imageWidth={6784}
         alt="Architecture"
+        imageWidth={2560}
+        imageHeight={653}
       ></FullScreenImage>
 
       <SectionHeader>Packaging Ideations</SectionHeader>
       <FullScreenImage
-        image="/mojo/packaging_ideations.png"
+        image="/mojo/packaging_ideations_full"
         width={Width.Padded}
         height={Height.Free}
-        imageHeight={4092}
-        imageWidth={7809}
         alt="Packaging Ideations"
+        imageHeight={1341}
+        imageWidth={2560}
       ></FullScreenImage>
 
       <SectionHeader>Inspiration</SectionHeader>
       <FullScreenImage
-        image="/mojo/car_bottle.png"
+        image="/mojo/car_bottle_full"
         width={Width.Padded}
         height={Height.Free}
-        imageHeight={2959}
-        imageWidth={6672}
         alt="Car and bottle"
+        imageHeight={1135}
+        imageWidth={2560}
       ></FullScreenImage>
 
       <SectionHeader>Development</SectionHeader>
 
       <FullScreenImage
-        image="/mojo/bottle_devel.png"
+        image="/mojo/bottle_devel_full"
         width={Width.Full}
         height={Height.Free}
-        imageHeight={3393}
-        imageWidth={8001}
         alt="Bottle development"
+        imageHeight={1086}
+        imageWidth={2560}
       ></FullScreenImage>
 
       <div className="m-16"></div>
 
       <FullScreenImage
-        image="/mojo/bottle_color.png"
+        image="/mojo/bottle_color_full"
         width={Width.Full}
         height={Height.Free}
-        imageHeight={3100}
-        imageWidth={8001}
         alt="Bottle color"
+        imageHeight={922}
+        imageWidth={2560}
       ></FullScreenImage>
 
       <SectionHeader>Label</SectionHeader>
       <FullScreenImage
-        image="/mojo/label.png"
+        image="/mojo/label_full"
         alt="Mojo label"
         width={Width.ExtraPadded}
         height={Height.Free}
-        imageHeight={2442}
-        imageWidth={4642}
+        imageHeight={1347}
+        imageWidth={2560}
       ></FullScreenImage>
 
       <SectionHeader>Flavors</SectionHeader>
 
       <HoverableImageList
         images={[
-          "/mojo/flavor_pic_1.jpg",
-          "/mojo/flavor_pic_2.jpg",
-          "/mojo/flavor_pic_3.jpg",
+          "/mojo/flavor_pic_1_half",
+          "/mojo/flavor_pic_2_half",
+          "/mojo/flavor_pic_3_half",
         ]}
         captions={["Rose Mojito", "Mango Mojito", "Mint Mojito"]}
         hoveredTexts={[
@@ -287,36 +284,38 @@ export default function Mojo() {
 
       <StaticParallex
         images={[
-          "/mojo/flavor_1.png",
-          "/mojo/flavor_2.png",
-          "/mojo/flavor_3.png",
+          "/mojo/flavor_1_full",
+          "/mojo/flavor_2_full",
+          "/mojo/flavor_3_full",
         ]}
         alts={["Mojo render", "Mojo render", "Mojo render"]}
+        imageHeight={1440}
+        imageWidth={2560}
       ></StaticParallex>
 
       <FullScreenImage
-        image="/mojo/render_1.png"
+        image="/mojo/render_1_full"
         alt="Render 1"
         width={Width.Full}
         height={Height.Free}
-        imageHeight={4501}
-        imageWidth={8001}
+        imageHeight={1440}
+        imageWidth={2560}
       ></FullScreenImage>
       <FullScreenImage
-        image="/mojo/render_2.png"
+        image="/mojo/render_2_full"
         alt="Render 2"
         width={Width.Full}
         height={Height.Free}
-        imageHeight={4501}
-        imageWidth={8001}
+        imageHeight={1440}
+        imageWidth={2560}
       ></FullScreenImage>
       <FullScreenImage
-        image="/mojo/render_3.png"
+        image="/mojo/render_3_full"
         alt="Render 3"
         width={Width.Full}
         height={Height.Free}
-        imageHeight={4501}
-        imageWidth={8001}
+        imageHeight={1438}
+        imageWidth={2560}
       ></FullScreenImage>
     </main>
   );

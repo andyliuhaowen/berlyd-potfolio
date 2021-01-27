@@ -33,24 +33,6 @@ export default function TextList(props: TextListProps) {
           </div>
         );
       })}
-      {/* {props.text.map((str, index) => {
-        if (index === props.accent) {
-          return (
-            <div
-              key={index}
-              className={`pl-2 text-${props.accentTextColor} bg-${props.accentBgColor} text-2xl`}
-            >
-              {str} <small className="text-lg">{props.caption}</small>
-            </div>
-          );
-        } else {
-          return (
-            <div key={index} className="text-2xl pl-2">
-              {str}
-            </div>
-          );
-        }
-      })} */}
     </div>
   );
 }

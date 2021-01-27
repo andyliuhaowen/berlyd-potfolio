@@ -3,20 +3,23 @@
  * Project page: Hidden Season.
  */
 
-import Image from "next/image";
-import { motion } from "framer-motion";
+import FullScreenImage from "../components/Designs/FullScreenImage";
+import LogoHeader from "../components/Designs/LogoHeader";
+import { Height, Width } from "../utils/global_types";
 
 export default function HiddenSeason() {
   return (
-    <motion.div className="w-full" layoutId="hidden_season-image">
-      <Image
-        src="/hidden_season/main.png"
-        alt="Hidden Season"
-        height={1600}
-        width={2560}
-        layout="responsive"
-        priority={true}
-      ></Image>
-    </motion.div>
+    <main>
+      <LogoHeader></LogoHeader>
+      <FullScreenImage
+        image="/hidden_season/main_full"
+        alt="Hidden season photo"
+        width={Width.Full}
+        height={Height.Free}
+        imageHeight={1600}
+        imageWidth={2560}
+        layoutId="hidden_season-image"
+      ></FullScreenImage>
+    </main>
   );
 }

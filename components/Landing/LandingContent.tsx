@@ -4,7 +4,7 @@
  */
 
 import CustomButton from "../CustomButton";
-import Image from "next/image";
+import Image from "../Image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
@@ -64,15 +64,14 @@ export default function LandingContent(props: LandingContentProps) {
           layoutId={`${props.name}-image`}
         >
           <Link href={props.name}>
-            <Image
-              src={props.image}
-              alt={`${props.title} photo`}
-              layout="fill"
-              objectFit="cover"
-              objectPosition="center center"
-              className="cursor-pointer"
-              priority={true}
-            ></Image>
+            <div className="absolute w-full h-full left-0 top-0 overflow-hidden">
+              <Image
+                src={props.image}
+                alt={props.title}
+                className="cursor-pointer"
+                layout="fill"
+              ></Image>
+            </div>
           </Link>
         </motion.div>
       </div>

@@ -3,7 +3,7 @@
  * Component for laying out a three-image group with text side by side.
  */
 
-import Image from "next/image";
+import Image from "../Image";
 
 class ImageAndTextProps {
   image1: string = "";
@@ -27,38 +27,17 @@ export default function ThreeImageAndText(props: ImageAndTextProps) {
         <div className="relative h-full">
           <div className="absolute left-0 w-1/2 top-0 bottom-0">
             <div className="absolute top-1 left-1 right-1 bottom-1">
-              <Image
-                src={props.image1}
-                layout="fill"
-                objectFit="cover"
-                objectPosition="center center"
-                alt={props.alt1}
-                priority={true}
-              ></Image>
+              <Image src={props.image1} alt={props.alt1} layout="fill"></Image>
             </div>
           </div>
           <div className="absolute right-0 top-0 w-1/2 h-1/3">
             <div className="absolute top-1 left-1 right-1 bottom-1">
-              <Image
-                src={props.image2}
-                layout="fill"
-                objectFit="cover"
-                objectPosition="center center"
-                alt={props.alt2}
-                priority={true}
-              ></Image>
+              <Image src={props.image2} alt={props.alt2} layout="fill"></Image>
             </div>
           </div>
           <div className="absolute right-0 bottom-0 w-1/2 h-2/3">
             <div className="absolute top-1 left-1 right-1 bottom-1">
-              <Image
-                src={props.image3}
-                layout="fill"
-                objectFit="cover"
-                objectPosition="center center"
-                alt={props.alt3}
-                priority={true}
-              ></Image>
+              <Image src={props.image3} alt={props.alt3} layout="fill"></Image>
             </div>
           </div>
         </div>

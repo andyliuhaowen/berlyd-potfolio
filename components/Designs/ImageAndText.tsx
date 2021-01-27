@@ -3,7 +3,7 @@
  * Component for creating a horizontally laid image and text.
  */
 
-import Image from "next/image";
+import Image from "../Image";
 
 class ImageAndTextProps {
   image: string = "";
@@ -20,14 +20,7 @@ export default function ImageAndText(props: ImageAndTextProps) {
       }`}
     >
       <div className="md:w-1/2 relative h-fullsection_md md:h-auto mb-16 md:mb-0">
-        <Image
-          src={props.image}
-          layout="fill"
-          objectFit="cover"
-          objectPosition="center center"
-          alt={props.alt}
-          priority={true}
-        ></Image>
+        <Image src={props.image} alt={props.alt} layout="fill"></Image>
       </div>
       <div
         className={`md:w-1/2 flex flex-row items-center ${

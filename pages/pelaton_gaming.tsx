@@ -3,20 +3,23 @@
  * Project page: Pelaton Gaming.
  */
 
-import Image from "next/image";
-import { motion } from "framer-motion";
+import FullScreenImage from "../components/Designs/FullScreenImage";
+import LogoHeader from "../components/Designs/LogoHeader";
+import { Height, Width } from "../utils/global_types";
 
 export default function PelatonGaming() {
   return (
-    <motion.div className="w-full" layoutId="pelaton_gaming-image">
-      <Image
-        src="/pelaton_gaming/main.png"
-        alt="Pelaton Gaming"
-        height={2485}
-        width={3840}
-        layout="responsive"
-        priority={true}
-      ></Image>
-    </motion.div>
+    <main>
+      <LogoHeader></LogoHeader>
+      <FullScreenImage
+        image="/pelaton_gaming/main_full"
+        alt="Pelaton Gaming photo"
+        width={Width.Full}
+        height={Height.Free}
+        imageHeight={1657}
+        imageWidth={2560}
+        layoutId="pelaton_gaming-image"
+      ></FullScreenImage>
+    </main>
   );
 }

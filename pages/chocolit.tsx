@@ -3,20 +3,23 @@
  * Project page: Chocolit.
  */
 
-import Image from "next/image";
-import { motion } from "framer-motion";
+import FullScreenImage from "../components/Designs/FullScreenImage";
+import LogoHeader from "../components/Designs/LogoHeader";
+import { Height, Width } from "../utils/global_types";
 
 export default function Chocolit() {
   return (
-    <motion.div className="w-full" layoutId="chocolit-image">
-      <Image
-        src="/chocolit/main.png"
-        alt="Chocolit"
-        height={4501}
-        width={8001}
-        layout="responsive"
-        priority={true}
-      ></Image>
-    </motion.div>
+    <main>
+      <LogoHeader></LogoHeader>
+      <FullScreenImage
+        image="/chocolit/main_full"
+        alt="Chocolit photo"
+        layoutId="chocolit-image"
+        height={Height.Free}
+        width={Width.Full}
+        imageHeight={1440}
+        imageWidth={2560}
+      ></FullScreenImage>
+    </main>
   );
 }

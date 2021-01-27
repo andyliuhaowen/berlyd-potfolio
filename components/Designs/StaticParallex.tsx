@@ -10,11 +10,13 @@
  */
 
 import { Fragment } from "react";
-import Image from "next/image";
+import Image from "../Image";
 
 class StaticParallexProps {
   images: string[] = [];
   alts: string[] = [];
+  imageHeight: number = 0;
+  imageWidth: number = 0;
 }
 
 export default function StaticParallex(props: StaticParallexProps) {
@@ -36,9 +38,9 @@ export default function StaticParallex(props: StaticParallexProps) {
               <Image
                 src={image}
                 alt={props.alts[index]}
-                layout="fill"
-                objectFit="cover"
-                objectPosition="center center"
+                layout="responsive"
+                height={props.imageHeight}
+                width={props.imageWidth}
               ></Image>
             </div>
           </div>
