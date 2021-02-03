@@ -12,10 +12,6 @@
 /.next/
 /out/
 
-# media
-/images/
-/public_old/
-
 # production
 /build
 
