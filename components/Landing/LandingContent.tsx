@@ -23,9 +23,9 @@ export default function LandingContent(props: LandingContentProps) {
   let textSize = "";
   if (props.titleLong) {
     textSize =
-      "whitespace-normal text-24 md:whitespace-nowrap md:text-24 lg:text-28 xl:text-36 2xl:text-40";
+      "whitespace-normal text-24 md:whitespace-nowrap md:text-24 lg:text-28 xl:text-32 2xl:text-36";
   } else {
-    textSize = "text-36 lg:text-44 xl:text-52 2xl:text-52 whitespace-nowrap";
+    textSize = "text-32 lg:text-36 xl:text-40 2xl:text-44 whitespace-nowrap";
   }
   return (
     <div className={`bg-${props.bgColor} h-screen relative flex items-center`}>
@@ -34,7 +34,7 @@ export default function LandingContent(props: LandingContentProps) {
           <div className="flex flex-col h-full">
             <div
               className={
-                `text-${props.textColor} font-calson z-50 relative w-0 leading-none transform translate-x-16 md:transform-none ` +
+                `text-${props.textColor} font-calson z-50 relative w-0 leading-tight md:leading-none transform translate-x-16 md:transform-none ` +
                 textSize
               }
             >

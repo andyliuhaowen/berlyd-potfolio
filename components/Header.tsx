@@ -20,7 +20,7 @@ export default function Header() {
           priority={true}
         ></Image>
       </div>
-      <div className="mr-10 xl:mr-16 ml-auto">
+      <div className="mr-10 xl:mr-16 ml-auto text-black">
         <Fragment>
           <span className={`mr-2`}>
             <Link href="about">About</Link>

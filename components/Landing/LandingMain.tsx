@@ -182,7 +182,7 @@ export default function LandingMain() {
           {/* Intro page */}
           <div className="relative flex items-center h-screen bg-pink">
             <div className="hidden md:inline-block md:mx-auto lg:mr-0 lg:ml-60 xl:mx-0 xl:relative xl:left-1/5">
-              <div className="leading-normal text-black font-calson md:text-32 lg:text-40 xl:text-48">
+              <div className="leading-normal text-black font-calson md:text-28 lg:text-32 xl:text-40">
                 Berly Dai
               </div>
               <div className="text-4xl text-black">
