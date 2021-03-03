@@ -18,19 +18,19 @@ class PageSelectorProps {
 const offsetMap = [5, 30, 38, 46, 71, 79, 87];
 const mobileOffsetMap = [5, 17, 25, 33, 45, 53, 61];
 const colorMap = [
-  "#000000",
-  "#728397",
-  "#efe8e1",
-  "#e89b7c",
-  "#efe8e1",
-  "#728397",
-  "#e89b7c",
+  "#111921",
+  "#035157",
+  "#fffbf3",
+  "#111921",
+  "#fffbf3",
+  "#f4d4d6",
+  "#5f8db5",
 ];
 
 export default function PageSelector(props: PageSelectorProps) {
   return (
     <motion.div
-      className="fixed transform left-1/2 bottom-0 translate-y-0 -translate-x-1/2 lg:left-0 lg:bottom-1/2 lg:translate-y-1/2 lg:translate-x-0 z-10"
+      className="fixed bottom-0 z-10 transform left-1/2 translate-y-0 -translate-x-1/2 lg:left-0 lg:bottom-1/2 lg:translate-y-1/2 lg:translate-x-0"
       initial={false}
       animate={{ color: colorMap[props.page] }}
     >
@@ -45,79 +45,79 @@ export default function PageSelector(props: PageSelectorProps) {
           styles.dot
         }
       >
-        <div className="w-3 h-3 relative">
+        <div className="relative w-3 h-3">
           <FontAwesomeIcon
             icon={faCircle}
-            className="w-full h-full absolute left-0 top-0"
+            className="absolute top-0 left-0 w-full h-full"
           ></FontAwesomeIcon>
         </div>
       </motion.div>
       <div className="flex flex-row lg:flex-col w-min">
         <div className="mx-2 my-0 mb-8 lg:my-2 lg:ml-10 lg:mr-0 xl:ml-16">
-          <div className="w-5 h-5 mt-0 ml-3 lg:mt-3 lg:ml-0 relative">
+          <div className="relative w-5 h-5 mt-0 ml-3 lg:mt-3 lg:ml-0">
             <FontAwesomeIcon
               icon={farCircle}
-              className="w-full h-full absolute left-0 top-0 cursor-pointer"
+              className="absolute top-0 left-0 w-full h-full cursor-pointer"
               onClick={() => {
                 props.setSection(0);
               }}
             ></FontAwesomeIcon>
           </div>
         </div>
-        <div className="flex flex-row lg:flex-col mx-2 my-0 mb-8 lg:my-2 lg:ml-10 lg:mr-0 xl:ml-16">
+        <div className="flex flex-row mx-2 my-0 mb-8 lg:flex-col lg:my-2 lg:ml-10 lg:mr-0 xl:ml-16">
           <div className={"hidden lg:block my-4 text-sm"}>Packaging</div>
-          <div className="w-5 h-5 mt-0 ml-3 lg:mt-3 lg:ml-0 relative">
+          <div className="relative w-5 h-5 mt-0 ml-3 lg:mt-3 lg:ml-0">
             <FontAwesomeIcon
               icon={farCircle}
-              className="w-full h-full absolute left-0 top-0 cursor-pointer"
+              className="absolute top-0 left-0 w-full h-full cursor-pointer"
               onClick={() => {
                 props.setSection(1);
               }}
             ></FontAwesomeIcon>
           </div>
-          <div className="w-5 h-5 mt-0 ml-3 lg:mt-3 lg:ml-0 relative">
+          <div className="relative w-5 h-5 mt-0 ml-3 lg:mt-3 lg:ml-0">
             <FontAwesomeIcon
               icon={farCircle}
-              className="w-full h-full absolute left-0 top-0 cursor-pointer"
+              className="absolute top-0 left-0 w-full h-full cursor-pointer"
               onClick={() => {
                 props.setSection(2);
               }}
             ></FontAwesomeIcon>
           </div>
-          <div className="w-5 h-5 mt-0 ml-3 lg:mt-3 lg:ml-0 relative">
+          <div className="relative w-5 h-5 mt-0 ml-3 lg:mt-3 lg:ml-0">
             <FontAwesomeIcon
               icon={farCircle}
-              className="w-full h-full absolute left-0 top-0 cursor-pointer"
+              className="absolute top-0 left-0 w-full h-full cursor-pointer"
               onClick={() => {
                 props.setSection(3);
               }}
             ></FontAwesomeIcon>
           </div>
         </div>
-        <div className="flex flex-row lg:flex-col mx-2 my-0 mb-8 lg:my-2 lg:ml-10 lg:mr-0 xl:ml-16">
+        <div className="flex flex-row mx-2 my-0 mb-8 lg:flex-col lg:my-2 lg:ml-10 lg:mr-0 xl:ml-16">
           <div className={"hidden lg:block my-4 text-sm"}>Product</div>
-          <div className="w-5 h-5 mt-0 ml-3 lg:mt-3 lg:ml-0 relative">
+          <div className="relative w-5 h-5 mt-0 ml-3 lg:mt-3 lg:ml-0">
             <FontAwesomeIcon
               icon={farCircle}
-              className="w-full h-full absolute left-0 top-0 cursor-pointer"
+              className="absolute top-0 left-0 w-full h-full cursor-pointer"
               onClick={() => {
                 props.setSection(4);
               }}
             ></FontAwesomeIcon>
           </div>
-          <div className="w-5 h-5 mt-0 ml-3 lg:mt-3 lg:ml-0 relative">
+          <div className="relative w-5 h-5 mt-0 ml-3 lg:mt-3 lg:ml-0">
             <FontAwesomeIcon
               icon={farCircle}
-              className="w-full h-full absolute left-0 top-0 cursor-pointer"
+              className="absolute top-0 left-0 w-full h-full cursor-pointer"
               onClick={() => {
                 props.setSection(5);
               }}
             ></FontAwesomeIcon>
           </div>
-          <div className="w-5 h-5 mt-0 ml-3 lg:mt-3 lg:ml-0 relative">
+          <div className="relative w-5 h-5 mt-0 ml-3 lg:mt-3 lg:ml-0">
             <FontAwesomeIcon
               icon={farCircle}
-              className="w-full h-full absolute left-0 top-0 cursor-pointer"
+              className="absolute top-0 left-0 w-full h-full cursor-pointer"
               onClick={() => {
                 props.setSection(6);
               }}

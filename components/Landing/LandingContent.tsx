@@ -15,37 +15,39 @@ class LandingContentProps {
   desc: string = "";
   image: string = "";
   titleLong: boolean = false;
+  bgColor: string = "";
+  textColor: string = "";
 }
 
 export default function LandingContent(props: LandingContentProps) {
   let textSize = "";
   if (props.titleLong) {
     textSize =
-      "whitespace-normal text-8xl md:whitespace-nowrap md:text-9xl lg:text-40 xl:text-52";
+      "whitespace-normal text-24 md:whitespace-nowrap md:text-24 lg:text-28 xl:text-36 2xl:text-40";
   } else {
-    textSize = "text-40 lg:text-48 xl:text-52 2xl:text-60 whitespace-nowrap";
+    textSize = "text-36 lg:text-44 xl:text-52 2xl:text-52 whitespace-nowrap";
   }
   return (
-    <div className={`bg-${props.name}_bg h-screen relative flex items-center`}>
+    <div className={`bg-${props.bgColor} h-screen relative flex items-center`}>
       <div className="flex w-full">
         <div className="flex flex-col items-center pl-0 md:w-7/20 lg:pl-28">
-          <div className="h-full flex-col flex">
+          <div className="flex flex-col h-full">
             <div
               className={
-                `text-${props.name}_text font-yesteryear z-50 relative w-0 leading-none transform translate-x-16 md:transform-none ` +
+                `text-${props.textColor} font-calson z-50 relative w-0 leading-none transform translate-x-16 md:transform-none ` +
                 textSize
               }
             >
               {props.title}
             </div>
-            <div className="flex-col flex-grow justify-center hidden md:flex">
+            <div className="flex-col justify-center flex-grow hidden md:flex">
               <div
-                className={`text-${props.name}_text text-3xl xl:text-4xl 2xl:text-5xl mb-2`}
+                className={`text-${props.textColor} text-3xl xl:text-4xl 2xl:text-5xl mb-2`}
               >
                 {props.tagline}
               </div>
               <div
-                className={`text-${props.name}_text text-base 2xl:text-lg my-2 w-60 xl:w-64 2xl:w-80`}
+                className={`text-${props.textColor} text-base 2xl:text-lg my-2 w-60 xl:w-64 2xl:w-80`}
               >
                 {props.desc}
               </div>
@@ -53,18 +55,18 @@ export default function LandingContent(props: LandingContentProps) {
                 <CustomButton
                   href={props.name}
                   text="View Project"
-                  color={`${props.name}_text`}
+                  color={`${props.textColor}`}
                 />
               </div>
             </div>
           </div>
         </div>
         <motion.div
-          className="mr-16 relative flex-grow h-65vh mt-8vh ml-16 md:ml-0"
+          className="relative flex-grow ml-16 mr-16 h-65vh mt-8vh md:ml-0"
           layoutId={`${props.name}-image`}
         >
           <Link href={props.name}>
-            <div className="absolute w-full h-full left-0 top-0 overflow-hidden">
+            <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
               <Image
                 src={props.image}
                 alt={props.title}

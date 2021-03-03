@@ -162,7 +162,7 @@ export default function LandingMain() {
       <PageSelector page={section} setSection={setSection}></PageSelector>
 
       <div
-        className="h-screen w-screen overflow-hidden relative"
+        className="relative w-screen h-screen overflow-hidden"
         onWheel={handleWheel}
         {...swipeHandlers}
       >
@@ -180,20 +180,20 @@ export default function LandingMain() {
         >
           <Header />
           {/* Intro page */}
-          <div className="flex items-center bg-landing_pink h-screen relative">
+          <div className="relative flex items-center h-screen bg-pink">
             <div className="hidden md:inline-block md:mx-auto lg:mr-0 lg:ml-60 xl:mx-0 xl:relative xl:left-1/5">
-              <div className="font-yesteryear leading-normal md:text-40 xl:text-48">
+              <div className="leading-normal text-black font-calson md:text-32 lg:text-40 xl:text-48">
                 Berly Dai
               </div>
-              <div className="text-center text-4xl">
+              <div className="text-4xl text-black">
                 I&apos;m a creator, designer, and a life lover.
               </div>
             </div>
             <div className="block mx-auto md:hidden">
-              <div className="font-yesteryear text-9xl leading-normal">
+              <div className="leading-normal text-black font-calson text-9xl">
                 Berly
               </div>
-              <div className="text-center text-lg">
+              <div className="text-lg text-center text-black">
                 designer &#183; creator &#183; life lover
               </div>
             </div>
@@ -207,6 +207,8 @@ export default function LandingMain() {
             desc="a delightful taste from Havana"
             image="/mojo/main_full"
             titleLong={false}
+            textColor="green"
+            bgColor="white"
           />
 
           <LandingContent
@@ -216,6 +218,8 @@ export default function LandingMain() {
             desc="a memorable gift from The Palace Museum"
             image="/hidden_season/main_full"
             titleLong={true}
+            textColor="white"
+            bgColor="green"
           />
 
           <LandingContent
@@ -225,6 +229,8 @@ export default function LandingMain() {
             desc="a playful and tasty kit for adult"
             image="/chocolit/main_full"
             titleLong={true}
+            bgColor="pink"
+            textColor="black"
           />
 
           <LandingContent
@@ -234,6 +240,8 @@ export default function LandingMain() {
             desc="a gaming platform aimed at blending gaming with physical activity"
             image="/pelaton_gaming/main_full"
             titleLong={true}
+            textColor="white"
+            bgColor="blue"
           />
 
           <LandingContent
@@ -243,6 +251,8 @@ export default function LandingMain() {
             desc="a tool to help artists with cerebral palsy to draw independently"
             image="/multicolor_pen/main_full"
             titleLong={true}
+            bgColor="black"
+            textColor="pink"
           />
 
           <LandingContent
@@ -252,6 +262,8 @@ export default function LandingMain() {
             desc="a seasonal limited high-end speaker for Francfranc"
             image="/haru/main_full"
             titleLong={false}
+            textColor="blue"
+            bgColor="white"
           />
         </motion.div>
       </div>
