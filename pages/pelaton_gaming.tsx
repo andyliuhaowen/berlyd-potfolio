@@ -10,7 +10,7 @@ import { Height, Width } from "../utils/global_types";
 export default function PelatonGaming() {
   return (
     <main>
-      <LogoHeader></LogoHeader>
+      <LogoHeader name="pelaton_gaming"></LogoHeader>
       <FullScreenImage
         image="/pelaton_gaming/main_full"
         alt="Pelaton Gaming photo"

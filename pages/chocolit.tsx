@@ -10,7 +10,7 @@ import { Height, Width } from "../utils/global_types";
 export default function Chocolit() {
   return (
     <main>
-      <LogoHeader></LogoHeader>
+      <LogoHeader name="chocolit"></LogoHeader>
       <FullScreenImage
         image="/chocolit/main_full"
         alt="Chocolit photo"

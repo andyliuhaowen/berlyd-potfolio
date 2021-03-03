@@ -10,7 +10,7 @@ import { Height, Width } from "../utils/global_types";
 export default function Haru() {
   return (
     <main>
-      <LogoHeader></LogoHeader>
+      <LogoHeader name="haru"></LogoHeader>
       <FullScreenImage
         image="/haru/main_full"
         alt="Haru photo"

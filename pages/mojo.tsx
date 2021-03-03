@@ -20,7 +20,7 @@ import HoverableImageList from "../components/Designs/HoverableImageList";
 export default function Mojo() {
   return (
     <main>
-      <LogoHeader></LogoHeader>
+      <LogoHeader name="mojo"></LogoHeader>
       <FullScreenImage
         image="/mojo/main_full"
         alt="Mojo photo"

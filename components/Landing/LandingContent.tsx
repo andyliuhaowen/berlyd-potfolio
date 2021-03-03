@@ -6,7 +6,7 @@
 import CustomButton from "../CustomButton";
 import Image from "../Image";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 class LandingContentProps {
   name: string = "";
@@ -61,21 +61,23 @@ export default function LandingContent(props: LandingContentProps) {
             </div>
           </div>
         </div>
-        <motion.div
-          className="relative flex-grow ml-16 mr-16 h-65vh mt-8vh md:ml-0"
-          layoutId={`${props.name}-image`}
-        >
-          <Link href={props.name}>
-            <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
-              <Image
-                src={props.image}
-                alt={props.title}
-                className="cursor-pointer"
-                layout="fill"
-              ></Image>
-            </div>
-          </Link>
-        </motion.div>
+        <AnimatePresence>
+          <motion.div
+            className="relative flex-grow ml-16 mr-16 h-65vh mt-8vh md:ml-0"
+            layoutId={`${props.name}-image`}
+          >
+            <Link href={props.name}>
+              <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
+                <Image
+                  src={props.image}
+                  alt={props.title}
+                  className="cursor-pointer"
+                  layout="fill"
+                ></Image>
+              </div>
+            </Link>
+          </motion.div>
+        </AnimatePresence>
       </div>
     </div>
   );

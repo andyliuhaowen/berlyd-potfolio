@@ -10,7 +10,7 @@ import { Height, Width } from "../utils/global_types";
 export default function HiddenSeason() {
   return (
     <main>
-      <LogoHeader></LogoHeader>
+      <LogoHeader name="hidden_season"></LogoHeader>
       <FullScreenImage
         image="/hidden_season/main_full"
         alt="Hidden season photo"

@@ -3,24 +3,21 @@
  * Component of the header of page.
  */
 
-import Image from "next/image";
 import Link from "next/link";
 import { Fragment } from "react";
 
 export default function Header() {
   return (
-    <header className="absolute flex h-36 items-center mt-4 z-50 w-full">
-      <div className="ml-10 xl:ml-16 w-16">
-        <Image
+    <header className="absolute z-50 flex items-center w-full mt-4 h-36">
+      <div className="w-16 ml-10 xl:ml-16">
+        <img
           src="/logo.png"
           alt="Logo"
           height={128}
           width={128}
-          layout="responsive"
-          priority={true}
-        ></Image>
+        ></img>
       </div>
-      <div className="mr-10 xl:mr-16 ml-auto text-black">
+      <div className="ml-auto mr-10 text-black xl:mr-16">
         <Fragment>
           <span className={`mr-2`}>
             <Link href="about">About</Link>
