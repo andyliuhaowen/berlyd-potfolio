@@ -4,7 +4,6 @@
  */
 
 import Head from "next/head";
-import BannerHeader from "../components/Designs/BannerHeader";
 import CaptionedImageList from "../components/Designs/CaptionedImageList";
 import Collapse from "../components/Designs/Collapse";
 import FoldableImage from "../components/Designs/FoldableImage";
@@ -13,7 +12,7 @@ import HoverableImageList from "../components/Designs/HoverableImageList";
 import ImageAndText from "../components/Designs/ImageAndText";
 import LogoHeader from "../components/Designs/LogoHeader";
 import ProjectBanner from "../components/Designs/ProjectBanner";
-import SectionHeader from "../components/Designs/SectionHeader";
+import Title from "../components/Designs/Title";
 import StaticParallex from "../components/Designs/StaticParallex";
 import TextList from "../components/Designs/TextList";
 import ThreeImageAndText from "../components/Designs/ThreeImageAndText";
@@ -37,15 +36,17 @@ export default function Mojo() {
           imageWidth={2560}
           imageHeight={1440}
         ></FullScreenImage>
-        <SectionHeader>A delightful taste from Havana.</SectionHeader>
-        <ProjectBanner
-          a="Summer 2020"
-          b="5 weeks"
-          c="Packaging Design for Drinks"
-          color="mojo_bg"
-        ></ProjectBanner>
+        <Title type="normal" color="green">
+          A delightful taste from Havana.
+        </Title>
 
-        <SectionHeader>About Mojito</SectionHeader>
+        <Title type="banner" color="green">
+          Research
+        </Title>
+
+        <Title type="normal" color="green">
+          About Mojito
+        </Title>
         <ImageAndText
           image="/mojo/about_mojito_half"
           alt="Picture of Mojito"
@@ -59,7 +60,9 @@ export default function Mojo() {
           imageOnLeft={false}
         ></ImageAndText>
 
-        <SectionHeader>Havana</SectionHeader>
+        <Title type="normal" color="green">
+          Havana
+        </Title>
         <ImageAndText
           image="/mojo/havana_half"
           alt="Picture of Havana"
@@ -69,7 +72,9 @@ export default function Mojo() {
           imageOnLeft={true}
         ></ImageAndText>
 
-        <SectionHeader>Target Audience</SectionHeader>
+        <Title type="normal" color="green">
+          Target Audience
+        </Title>
         <ThreeImageAndText
           image1="/mojo/target_1_small"
           alt1="Picture of Natasha"
@@ -83,7 +88,9 @@ export default function Mojo() {
           ]}
         ></ThreeImageAndText>
 
-        <SectionHeader>Keywords</SectionHeader>
+        <Title type="normal" color="green">
+          Keywords
+        </Title>
         <CaptionedImageList
           images={[
             "/mojo/classic_xsmall",
@@ -97,9 +104,13 @@ export default function Mojo() {
           imageIsImportant={false}
         ></CaptionedImageList>
 
-        <BannerHeader color="mojo_bg">Branding</BannerHeader>
+        <Title type="banner" color="green">
+          Branding
+        </Title>
 
-        <SectionHeader>Brand Name</SectionHeader>
+        <Title type="normal" color="green">
+          Brand Name
+        </Title>
         <TextList
           text={[
             "1.Monoto",
@@ -139,7 +150,9 @@ export default function Mojo() {
           caption="strong, simple"
         ></TextList>
 
-        <SectionHeader>Lockup</SectionHeader>
+        <Title type="normal" color="green">
+          Lockup
+        </Title>
         <FullScreenImage
           image="/mojo/lockup_full"
           width={Width.Padded}
@@ -160,7 +173,9 @@ export default function Mojo() {
             ></CaptionedImageList>
           </div>
 
-          <SectionHeader>Logo Ideations</SectionHeader>
+          <Title type="normal" color="green">
+            Logo Ideations
+          </Title>
           <FoldableImage
             image1="/mojo/logo_ideation_1_half"
             image2="/mojo/logo_ideation_2_half"
@@ -169,7 +184,9 @@ export default function Mojo() {
             imageWidth={1280}
           ></FoldableImage>
 
-          <SectionHeader>Logos</SectionHeader>
+          <Title type="normal" color="green">
+            Logos
+          </Title>
           <FullScreenImage
             image="/mojo/logos_full"
             width={Width.Padded}
@@ -180,7 +197,9 @@ export default function Mojo() {
           ></FullScreenImage>
         </Collapse>
 
-        <SectionHeader>Colors</SectionHeader>
+        <Title type="normal" color="green">
+          Colors
+        </Title>
         <FullScreenImage
           image="/mojo/colors_full"
           width={Width.Padded}
@@ -190,7 +209,9 @@ export default function Mojo() {
           imageHeight={800}
         ></FullScreenImage>
 
-        <BannerHeader color="mojo_bg">Packaging</BannerHeader>
+        <Title type="banner" color="green">
+          Packaging
+        </Title>
         <FullScreenImage
           image="/mojo/packaging_intro_full"
           width={Width.Full}
@@ -198,7 +219,9 @@ export default function Mojo() {
           alt="Picture of Havana"
         ></FullScreenImage>
 
-        <SectionHeader>Architecture Study</SectionHeader>
+        <Title type="normal" color="green">
+          Architecture Study
+        </Title>
         <FullScreenImage
           image="/mojo/architecture_full"
           width={Width.Padded}
@@ -208,7 +231,9 @@ export default function Mojo() {
           imageHeight={653}
         ></FullScreenImage>
 
-        <SectionHeader>Packaging Ideations</SectionHeader>
+        <Title type="normal" color="green">
+          Packaging Ideations
+        </Title>
         <FullScreenImage
           image="/mojo/packaging_ideations_full"
           width={Width.Padded}
@@ -218,7 +243,9 @@ export default function Mojo() {
           imageWidth={2560}
         ></FullScreenImage>
 
-        <SectionHeader>Inspiration</SectionHeader>
+        <Title type="normal" color="green">
+          Inspiration
+        </Title>
         <FullScreenImage
           image="/mojo/car_bottle_full"
           width={Width.Padded}
@@ -228,7 +255,9 @@ export default function Mojo() {
           imageWidth={2560}
         ></FullScreenImage>
 
-        <SectionHeader>Development</SectionHeader>
+        <Title type="normal" color="green">
+          Development
+        </Title>
 
         <FullScreenImage
           image="/mojo/bottle_devel_full"
@@ -250,7 +279,9 @@ export default function Mojo() {
           imageWidth={2560}
         ></FullScreenImage>
 
-        <SectionHeader>Label</SectionHeader>
+        <Title type="normal" color="green">
+          Label
+        </Title>
         <FullScreenImage
           image="/mojo/label_full"
           alt="Mojo label"
@@ -260,7 +291,9 @@ export default function Mojo() {
           imageWidth={2560}
         ></FullScreenImage>
 
-        <SectionHeader>Flavors</SectionHeader>
+        <Title type="normal" color="green">
+          Flavors
+        </Title>
 
         <HoverableImageList
           images={[
