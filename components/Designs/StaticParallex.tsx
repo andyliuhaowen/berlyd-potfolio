@@ -24,7 +24,7 @@ export default function StaticParallex(props: StaticParallexProps) {
     <Fragment>
       {props.images.map((image, index) => (
         <div
-          className="relative h-extralarge_md lg:h-extralarge_lg xl:h-extralarge"
+          className="relative z-50 h-extralarge_md lg:h-extralarge_lg xl:h-extralarge"
           key={index}
         >
           <div

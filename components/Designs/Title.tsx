@@ -1,6 +1,6 @@
 /**
  * Made by Haowen Liu in 2021
- * Component for creating a centered section header.
+ * Component for creating a title for content (normal or banner).
  */
 
 import React from "react";
@@ -17,7 +17,7 @@ export default function Title(
     <>
       {props.type === "normal" && (
         <div
-          className={`mt-16 mb-12 text-4xl font-bold text-black md:text-5xl mx-10 xl:mx-16 md:mt-20 md:mb-16 text-${props.color}`}
+          className={`mt-16 mb-12 text-3xl font-bold text-black md:text-4xl mx-10 xl:mx-16 md:mt-20 md:mb-16 text-${props.color}`}
         >
           {props.children}
         </div>
