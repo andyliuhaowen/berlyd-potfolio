@@ -31,7 +31,7 @@ export default function ImageAndText(props: ImageAndTextProps) {
           {props.text.map((line, index) => (
             <div
               key={index}
-              className="text-lg leading-loose lg:text-2xl lg:leading-loose"
+              className="text-lg text-black leading-loose lg:text-2xl lg:leading-loose"
             >
               {line}
             </div>

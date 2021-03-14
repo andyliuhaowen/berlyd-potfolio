@@ -8,8 +8,8 @@ import { Fragment } from "react";
 
 export default function Header() {
   return (
-    <header className="absolute z-50 flex items-center w-full mt-4 h-36">
-      <div className="w-16 ml-10 xl:ml-16">
+    <header className="absolute z-40 flex items-center w-full mt-4 h-36">
+      <div className="w-24 ml-8 xl:ml-14">
         <img
           src="/logo.png"
           alt="Logo"

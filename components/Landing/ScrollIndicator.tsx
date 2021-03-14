@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 
 export default function ScrollIndicator() {
   return (
-    <div className="absolute left-1/2 transform -translate-x-1/2 h-8 w-8 bottom-16p lg:bottom-8p text-black">
+    <div className="absolute w-8 h-8 text-black left-1/2 transform -translate-x-1/2 bottom-16p lg:bottom-8p">
       <motion.div
         transition={{
           duration: 0.8,
@@ -17,14 +17,14 @@ export default function ScrollIndicator() {
           repeatType: "reverse",
           ease: "easeOut",
         }}
-        className="relative h-full w-full"
+        className="relative w-full h-full"
         animate={{
           y: ["40%", "-40%"],
         }}
       >
         <FontAwesomeIcon
           icon={faAngleDown}
-          className="w-full h-full absolute left-0 top-0"
+          className="absolute top-0 left-0 w-full h-full"
         ></FontAwesomeIcon>
       </motion.div>
     </div>

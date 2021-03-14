@@ -18,7 +18,7 @@ export default function CaptionedImage(props: CaptionedImageProps) {
   return (
     <div className={`h-full w-full flex flex-col ${props.className}`}>
       <div
-        className={`text-center text-xl lg:text-2xl mb-4 ${
+        className={`text-center text-black text-xl lg:text-2xl mb-4 ${
           props.textClass ?? ""
         }`}
       >

@@ -51,7 +51,7 @@ export default function ThreeImageAndText(props: ImageAndTextProps) {
           {props.text.map((line, index) => (
             <div
               key={index}
-              className="text-lg leading-loose lg:leading-loose lg:text-2xl"
+              className="text-lg text-black leading-loose lg:leading-loose lg:text-2xl"
             >
               {line}
             </div>

@@ -10,7 +10,7 @@ import { motion } from "framer-motion";
 import PageSelector from "./PageSelector";
 import { useSwipeable } from "react-swipeable";
 import { useRouter } from "next/dist/client/router";
-import Header from "../Header";
+import Header from "./Header";
 import ScrollIndicator from "./ScrollIndicator";
 import LandingContent from "./LandingContent";
 

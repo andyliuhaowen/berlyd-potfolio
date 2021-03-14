@@ -11,8 +11,8 @@ class LogoHeaderProps {
 
 export default function LogoHeader(props: LogoHeaderProps) {
   return (
-    <header className="absolute z-50 items-center hidden w-full mt-4 md:flex h-36">
-      <div className="w-16 ml-10 xl:ml-16">
+    <header className="absolute z-40 items-center hidden w-full mt-4 md:flex h-36">
+      <div className="w-24 ml-8 xl:ml-14">
         <Link href={`/#${props.name}`}>
           <img
             src="/logo.png"

@@ -14,9 +14,11 @@ class HoverableImageProps {
 
 export default function HoverableImage(props: HoverableImageProps) {
   return (
-    <div className="h-full w-full flex flex-col">
-      <div className="text-center text-2xl mb-4">{props.caption}</div>
-      <div className="flex-grow relative">
+    <div className="flex flex-col w-full h-full">
+      <div className="mb-4 text-2xl text-center text-black">
+        {props.caption}
+      </div>
+      <div className="relative flex-grow">
         <div className="absolute top-0 left-0 w-full h-full">
           <Image src={props.image} alt={props.caption} layout="fill"></Image>
         </div>
@@ -25,10 +27,12 @@ export default function HoverableImage(props: HoverableImageProps) {
           initial={{ opacity: 0 }}
           whileHover={{ opacity: 1 }}
         >
-          <div className="bg-white opacity-50 absolute left-0 top-0 w-full h-full"></div>
-          <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-end p-8 text-lg">
+          <div className="absolute top-0 left-0 w-full h-full bg-white opacity-50"></div>
+          <div className="absolute top-0 left-0 flex flex-col justify-end w-full h-full p-8 text-lg">
             {props.hoveredText.map((str, index) => (
-              <div key={index}>{str}</div>
+              <div key={index} className="text-black text-base">
+                {str}
+              </div>
             ))}
           </div>
         </motion.div>
