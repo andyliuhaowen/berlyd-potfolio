@@ -14,11 +14,11 @@ export default function ProjectBanner(props: ProjectBannerProps) {
   return (
     <div className="">
       <div
-        className={`flex flex-col md:flex-row bg-${props.color} items-center justify-center`}
+        className={`flex flex-col md:flex-row bg-${props.color} text-white text-xl items-center justify-center`}
       >
-        <div className="m-4">{props.a}</div>
-        <div className="m-4">{props.b}</div>
-        <div className="m-4">{props.c}</div>
+        <div className="mt-8 mb-4 md:m-8 xl:mx-16 2xl:mx-28">{props.a}</div>
+        <div className="my-4 md:m-8 xl:mx-16 2xl:mx-28">{props.b}</div>
+        <div className="mt-4 mb-8 md:m-8 xl:mx-16 2xl:mx-28">{props.c}</div>
       </div>
     </div>
   );

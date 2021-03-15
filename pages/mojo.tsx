@@ -15,6 +15,7 @@ import ProjectBanner from "../components/Designs/ProjectBanner";
 import Title from "../components/Designs/Title";
 import StaticParallex from "../components/Designs/StaticParallex";
 import TextList from "../components/Designs/TextList";
+import TitleAndTagline from "../components/Designs/TitleAndTagline";
 import ThreeImageAndText from "../components/Designs/ThreeImageAndText";
 import { Height, Width } from "../utils/global_types";
 
@@ -36,9 +37,28 @@ export default function Mojo() {
           imageWidth={2560}
           imageHeight={1440}
         ></FullScreenImage>
-        <Title type="normal" color="green">
-          A delightful taste from Havana.
-        </Title>
+
+        <TitleAndTagline
+          title="Mojo Mojito"
+          tagline="A delightful taste from Havana."
+          color="green"
+        ></TitleAndTagline>
+
+        <ProjectBanner
+          a="Summer 2020"
+          b="5 Weeks"
+          c="Packaging Design for Drinks"
+          color="green"
+        ></ProjectBanner>
+
+        <FullScreenImage
+          image="/mojo/render_1_full"
+          alt="Render 1"
+          width={Width.Full}
+          height={Height.Free}
+          imageHeight={1440}
+          imageWidth={2560}
+        ></FullScreenImage>
 
         <Title type="banner" color="green">
           Research
@@ -341,14 +361,6 @@ export default function Mojo() {
           imageWidth={2560}
         ></StaticParallex>
 
-        <FullScreenImage
-          image="/mojo/render_1_full"
-          alt="Render 1"
-          width={Width.Full}
-          height={Height.Free}
-          imageHeight={1440}
-          imageWidth={2560}
-        ></FullScreenImage>
         <FullScreenImage
           image="/mojo/render_2_full"
           alt="Render 2"
