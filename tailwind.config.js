@@ -62,6 +62,7 @@ module.exports = {
         "1536px": "1536px",
       },
       height: {
+        7.5: "1.875rem",
         "65vh": "65vh",
         entire: "700vh",
         128: "32rem",
@@ -75,6 +76,9 @@ module.exports = {
         mediumsection_md: "20rem",
         shortsection: "20rem",
         shortsection_md: "16rem",
+      },
+      width: {
+        7.5: "1.875rem",
       },
       margin: {
         "8vh": "8vh",

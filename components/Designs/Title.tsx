@@ -17,14 +17,14 @@ export default function Title(
     <>
       {props.type === "normal" && (
         <div
-          className={`mt-16 mb-12 text-3xl font-bold text-black md:text-4xl mx-10 xl:mx-16 md:mt-20 md:mb-16 text-${props.color}`}
+          className={`mt-16 mb-12 text-3xl font-bold md:text-4xl mx-10 xl:mx-16 md:mt-20 md:mb-16 text-${props.color}`}
         >
           {props.children}
         </div>
       )}
       {props.type === "banner" && (
         <div
-          className={`mt-24 md:mt-36 text-4xl font-bold text-black px-10 xl:px-16 md:text-5xl py-12 text-white bg-${props.color}`}
+          className={`mt-24 md:mt-36 text-4xl font-bold px-10 xl:px-16 md:text-5xl py-12 text-white bg-${props.color}`}
         >
           {props.children}
         </div>

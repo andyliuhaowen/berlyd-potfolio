@@ -182,16 +182,14 @@ export default function Mojo() {
           imageWidth={2560}
         ></FullScreenImage>
 
-        <Collapse title="More ideation details">
-          <div className="mt-24 md:mt-36">
-            <CaptionedImageList
-              images={["/mojo/ingredients_half", "/mojo/font_half"]}
-              captions={["Fresh Ingredients Study", "Typeface"]}
-              height={Height.Free}
-              textClass="font-bold text-2xl md:text-3xl mb-8"
-              imageIsImportant={true}
-            ></CaptionedImageList>
-          </div>
+        <Collapse title="More ideation details" color="green">
+          <CaptionedImageList
+            images={["/mojo/ingredients_half", "/mojo/font_half"]}
+            captions={["Fresh Ingredients Study", "Typeface"]}
+            height={Height.Free}
+            textClass="font-bold text-2xl md:text-3xl mb-8"
+            imageIsImportant={true}
+          ></CaptionedImageList>
 
           <Title type="normal" color="green">
             Logo Ideations

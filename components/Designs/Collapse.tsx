@@ -1,70 +1,64 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
-import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
+import { useState, useRef } from "react";
 
 class CollapseProps {
   title: string = "";
+  color: string = "";
 }
 
 const Collapse: React.FunctionComponent<CollapseProps> = (props) => {
   let [show, setShow] = useState(false);
+  let titleElement = useRef<HTMLDivElement>(null);
 
   return (
-    <>
+    <motion.div
+      initial={{ height: "8rem" }}
+      animate={{ height: show ? "auto" : "8rem" }}
+      transition={{ type: "spring", duration: 1, bounce: 0.15 }}
+      className={`${show ? "" : "overflow-hidden"} relative`}
+    >
       <motion.div
-        className="flex flex-row items-center justify-center mt-12 mb-12 cursor-pointer md:mt-18 md:mb-16"
-        onClick={() => {
-          document.body.style.overflow = "hidden";
-          setShow((origShow) => !origShow);
+        className={`sticky origin-center self-center inline-block ml-10 h-7.5 w-7.5 md:w-9 md:h-9 top-12 xl:ml-16 cursor-pointer ${
+          show ? "mt-12" : ""
+        }`}
+        initial={{ transform: "rotate(0deg)" }}
+        animate={{
+          transform: show ? "rotate(45deg)" : "rotate(0deg)",
         }}
-        layoutId="collapse_container"
+        transition={{ type: "spring", duration: 1, bounce: 0.5 }}
+        onClick={() => {
+          setShow((origShow) => {
+            if (titleElement.current!.getBoundingClientRect().top < 0) {
+              titleElement.current!.scrollIntoView({
+                behavior: "smooth",
+              });
+            }
+            return !origShow;
+          });
+        }}
       >
         <FontAwesomeIcon
           icon={faPlus}
-          className="inline h-6 mr-4"
+          className={`h-7.5 md:h-9 text-${props.color} align-top`}
         ></FontAwesomeIcon>
-        <motion.div
-          className="text-xl font-bold text-center md:text-2xl"
-          layoutId="title_text"
-        >
-          {props.title}
-        </motion.div>
       </motion.div>
-      <AnimatePresence>
-        {show && (
-          <>
-            <div className="fixed top-0 z-50 w-9/12 overflow-auto md:w-6/12 bg-green left-1/2 transform -translate-x-1/2">
-              <motion.div
-                className="w-full max-w-3xl overflow-auto max-w-96 bg-green"
-                layoutId="collapse_container"
-              >
-                <motion.div
-                  className="flex flex-row items-center justify-center mt-12 cursor-pointer md:mt-18"
-                  onClick={() => {
-                    document.body.style.overflow = "scroll";
-                    setShow((origShow) => !origShow);
-                  }}
-                  layoutId="collapse_title"
-                >
-                  <FontAwesomeIcon
-                    icon={faPlus}
-                    className="inline h-6 mr-4"
-                  ></FontAwesomeIcon>
-                  <motion.div
-                    className="text-xl font-bold text-center md:text-2xl"
-                    layoutId="title_text"
-                  >
-                    {props.title}
-                  </motion.div>
-                </motion.div>
-                {props.children}
-              </motion.div>
-            </div>
-          </>
-        )}
-      </AnimatePresence>
-    </>
+      <div
+        className={`align-top inline-block relative top-12 text-3xl pl-6 font-bold md:text-4xl self-center text-${props.color} cursor-pointer leading-none md:leading-none`}
+        onClick={() => {
+          setShow((origShow) => !origShow);
+        }}
+        ref={titleElement}
+      >
+        {props.title}
+      </div>
+      <div
+        className={`mx-20 overflow-auto xl:mx-28 ${show ? "mt-12" : "mt-24"}`}
+      >
+        {props.children}
+      </div>
+    </motion.div>
   );
 };
 
