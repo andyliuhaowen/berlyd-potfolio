@@ -67,7 +67,7 @@ for dirpath, dirnames, filenames in os.walk(args.input_dir):
         for index, width in enumerate(widths):
             src = os.path.join(dirpath, name)
             dest = os.path.join(output_path, basename +
-                                "_" + POSTFIX[index] + ".jpg")
+                                "_" + POSTFIX[index] + ".png")
 
             if os.path.exists(dest):
                 if os.path.getmtime(src) < os.path.getmtime(dest):

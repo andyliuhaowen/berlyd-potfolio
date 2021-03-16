@@ -6,7 +6,7 @@
 import CustomButton from "../CustomButton";
 import Image from "../Image";
 import Link from "next/link";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 class LandingContentProps {
   name: string = "";
@@ -23,14 +23,14 @@ export default function LandingContent(props: LandingContentProps) {
   let textSize = "";
   if (props.titleLong) {
     textSize =
-      "whitespace-normal text-20 md:whitespace-nowrap md:text-20 lg:text-24 xl:text-28 2xl:text-32";
+      "whitespace-normal text-20 md:whitespace-nowrap md:text-24 lg:text-24 xl:text-28 2xl:text-32";
   } else {
     textSize = "text-28 lg:text-32 xl:text-36 2xl:text-40 whitespace-nowrap";
   }
   return (
     <div className={`bg-${props.bgColor} h-screen relative flex items-center`}>
       <div className="flex w-full">
-        <div className="flex flex-col items-center pl-0 md:w-7/20 lg:pl-28">
+        <div className="flex flex-col items-center pl-10 md:w-7/20 lg:pl-32 xl:pl-40">
           <div className="flex flex-col h-full">
             <div
               className={
@@ -61,23 +61,21 @@ export default function LandingContent(props: LandingContentProps) {
             </div>
           </div>
         </div>
-        <AnimatePresence>
-          <motion.div
-            className="relative flex-grow ml-16 mr-16 h-65vh mt-8vh md:ml-0"
-            layoutId={`${props.name}-image`}
-          >
-            <Link href={props.name}>
-              <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
-                <Image
-                  src={props.image}
-                  alt={props.title}
-                  className="cursor-pointer"
-                  layout="fill"
-                ></Image>
-              </div>
-            </Link>
-          </motion.div>
-        </AnimatePresence>
+        <motion.div
+          className="relative flex-grow mx-10 xl:mx-16 h-65vh mt-8vh md:ml-0"
+          layoutId={`${props.name}-image`}
+        >
+          <Link href={props.name}>
+            <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
+              <Image
+                src={props.image}
+                alt={props.title}
+                className="cursor-pointer"
+                layout="fill"
+              ></Image>
+            </div>
+          </Link>
+        </motion.div>
       </div>
     </div>
   );

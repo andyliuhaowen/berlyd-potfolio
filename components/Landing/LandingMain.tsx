@@ -13,6 +13,7 @@ import { useRouter } from "next/dist/client/router";
 import Header from "./Header";
 import ScrollIndicator from "./ScrollIndicator";
 import LandingContent from "./LandingContent";
+import Image from "../Image";
 
 const nameMap = new Map([
   ["#landing", 0],
@@ -182,16 +183,28 @@ export default function LandingMain() {
           {/* Intro page */}
           <div className="relative flex items-center h-screen bg-pink">
             <div className="hidden md:inline-block md:mx-auto lg:mr-0 lg:ml-60 xl:mx-0 xl:relative xl:left-1/5">
-              <div className="leading-normal text-black font-calson md:text-28 lg:text-32 xl:text-40">
-                Berly Dai
+              <div className="w-3/4 h-24 lg:h-32 xl:h-36">
+                <Image
+                  src="/berlyd_full"
+                  alt="Berly Dai"
+                  layout="responsive"
+                  height={540}
+                  width={2004}
+                />
               </div>
-              <div className="text-4xl text-black">
+              <div className="text-2xl text-black lg:text-3xl xl:text-4xl">
                 I&apos;m a creator, designer, and a life lover.
               </div>
             </div>
             <div className="block mx-auto md:hidden">
-              <div className="leading-normal text-black font-calson text-9xl">
-                Berly
+              <div className="w-full h-32 lg:h-36">
+                <Image
+                  src="/berlyd_half"
+                  alt="Berly Dai"
+                  layout="responsive"
+                  height={540}
+                  width={1099}
+                />
               </div>
               <div className="text-lg text-center text-black">
                 designer &#183; creator &#183; life lover
