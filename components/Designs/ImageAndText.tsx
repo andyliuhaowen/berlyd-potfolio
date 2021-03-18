@@ -19,11 +19,11 @@ export default function ImageAndText(props: ImageAndTextProps) {
         props.imageOnLeft ? "md:flex-row" : "md:flex-row-reverse"
       }`}
     >
-      <div className="md:w-1/2 relative h-fullsection_md md:h-auto mb-16 md:mb-0">
+      <div className="relative mb-16 md:w-2/3 h-fullsection_md md:h-auto md:mb-0">
         <Image src={props.image} alt={props.alt} layout="fill"></Image>
       </div>
       <div
-        className={`md:w-1/2 flex flex-row items-center ${
+        className={`md:w-1/3 flex flex-row items-center ${
           props.imageOnLeft ? "md:pl-16" : "md:pr-16"
         }`}
       >
@@ -31,7 +31,7 @@ export default function ImageAndText(props: ImageAndTextProps) {
           {props.text.map((line, index) => (
             <div
               key={index}
-              className="text-lg text-black leading-loose lg:text-2xl lg:leading-loose"
+              className="text-lg leading-loose text-black lg:text-2xl lg:leading-loose"
             >
               {line}
             </div>

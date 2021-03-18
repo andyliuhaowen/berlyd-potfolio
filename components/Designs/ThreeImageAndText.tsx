@@ -23,19 +23,19 @@ export default function ThreeImageAndText(props: ImageAndTextProps) {
         props.imageOnLeft ? "md:flex-row" : "md:flex-row-reverse"
       }`}
     >
-      <div className="md:w-1/2 h-fullsection_md md:h-auto relative mb-16 md:mb-0">
+      <div className="relative mb-16 md:w-2/3 h-fullsection_md md:h-auto md:mb-0">
         <div className="relative h-full">
-          <div className="absolute left-0 w-1/2 top-0 bottom-0">
+          <div className="absolute top-0 bottom-0 left-0 w-1/2">
             <div className="absolute top-1 left-1 right-1 bottom-1">
               <Image src={props.image1} alt={props.alt1} layout="fill"></Image>
             </div>
           </div>
-          <div className="absolute right-0 top-0 w-1/2 h-1/3">
+          <div className="absolute top-0 right-0 w-1/2 h-1/3">
             <div className="absolute top-1 left-1 right-1 bottom-1">
               <Image src={props.image2} alt={props.alt2} layout="fill"></Image>
             </div>
           </div>
-          <div className="absolute right-0 bottom-0 w-1/2 h-2/3">
+          <div className="absolute bottom-0 right-0 w-1/2 h-2/3">
             <div className="absolute top-1 left-1 right-1 bottom-1">
               <Image src={props.image3} alt={props.alt3} layout="fill"></Image>
             </div>
@@ -43,7 +43,7 @@ export default function ThreeImageAndText(props: ImageAndTextProps) {
         </div>
       </div>
       <div
-        className={`md:w-1/2 flex flex-row items-center justify-center ${
+        className={`md:w-1/3 flex flex-row items-center justify-center ${
           props.imageOnLeft ? "md:pl-16" : "md:pr-16"
         }`}
       >
@@ -51,7 +51,7 @@ export default function ThreeImageAndText(props: ImageAndTextProps) {
           {props.text.map((line, index) => (
             <div
               key={index}
-              className="text-lg text-black leading-loose lg:leading-loose lg:text-2xl"
+              className="text-lg leading-loose text-black lg:leading-loose lg:text-2xl"
             >
               {line}
             </div>
