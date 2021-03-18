@@ -24,13 +24,8 @@ export default function CaptionedImage(props: CaptionedImageProps) {
       >
         {props.caption}
       </div>
-      <div className="w-full relative flex-grow">
-        {props.height !== Height.Free && (
-          <Image src={props.image} alt={props.caption} layout="fill"></Image>
-        )}
-        {props.height === Height.Free && (
-          <Image src={props.image} alt={props.caption} layout="fill"></Image>
-        )}
+      <div className="relative flex-grow flex-shrink w-full min-h-0">
+        <Image src={props.image} alt={props.caption} layout="fill"></Image>
       </div>
     </div>
   );

@@ -28,7 +28,7 @@ export default function StaticParallex(props: StaticParallexProps) {
           key={index}
         >
           <div
-            className="overflow-hidden h-full w-full absolute"
+            className="absolute w-full h-full overflow-hidden"
             style={{ clip: "rect(0 auto auto 0)" }}
           >
             <div
@@ -38,7 +38,7 @@ export default function StaticParallex(props: StaticParallexProps) {
               <Image
                 src={image}
                 alt={props.alts[index]}
-                layout="responsive"
+                layout="fill"
                 height={props.imageHeight}
                 width={props.imageWidth}
               ></Image>

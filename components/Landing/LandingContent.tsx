@@ -30,7 +30,7 @@ export default function LandingContent(props: LandingContentProps) {
   return (
     <div className={`bg-${props.bgColor} h-screen relative flex items-center`}>
       <div className="flex w-full">
-        <div className="flex flex-col items-center pl-10 md:w-7/20 lg:pl-32 xl:pl-40">
+        <div className="flex flex-col items-center pl-10 md:w-7/20 lg:pl-40 xl:pl-48 2xl:pl-52">
           <div className="flex flex-col h-full">
             <div
               className={
