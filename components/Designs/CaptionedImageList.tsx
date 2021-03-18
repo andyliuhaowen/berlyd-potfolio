@@ -20,7 +20,7 @@ class ImageListProps {
 export default function CaptionedImageList(props: ImageListProps) {
   return (
     // Margins are subtracted by 4 due to the below paddings.
-    <div className="flex flex-wrap justify-center h-auto mx-6 -mt-8 xl:mx-12">
+    <div className="flex flex-wrap justify-center mx-6 -mt-8 xl:mx-12">
       {props.images.map((image, index) => (
         <div
           className={`${getRemHeight(props.height)} px-4 mt-8 ${
