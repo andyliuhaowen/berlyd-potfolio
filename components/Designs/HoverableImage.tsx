@@ -6,16 +6,16 @@
 import { motion } from "framer-motion";
 import Image from "../Image";
 
-class HoverableImageProps {
-  image: string = "";
-  hoveredText: string[] = [];
-  caption: string = "";
+interface IHoverableImageProps {
+  image: string;
+  imageHidden: string;
+  caption: string;
 }
 
-export default function HoverableImage(props: HoverableImageProps) {
+export default function HoverableImage(props: IHoverableImageProps) {
   return (
     <div className="flex flex-col w-full h-full">
-      <div className="mb-4 text-2xl text-center text-black">
+      <div className="mx-10 mb-4 text-xl xl:text-2xl text-black xl:mx-16">
         {props.caption}
       </div>
       <div className="relative flex-grow">
@@ -23,18 +23,16 @@ export default function HoverableImage(props: HoverableImageProps) {
           <Image src={props.image} alt={props.caption} layout="fill"></Image>
         </div>
         <motion.div
-          className="absolute top-0 left-0 w-full h-full"
+          className="absolute top-0 left-0 w-full h-full bg-white"
           initial={{ opacity: 0 }}
           whileHover={{ opacity: 1 }}
+          transition={{ duration: 0.6 }}
         >
-          <div className="absolute top-0 left-0 w-full h-full bg-white opacity-50"></div>
-          <div className="absolute top-0 left-0 flex flex-col justify-end w-full h-full p-8 text-lg">
-            {props.hoveredText.map((str, index) => (
-              <div key={index} className="text-black text-base">
-                {str}
-              </div>
-            ))}
-          </div>
+          <Image
+            src={props.imageHidden}
+            alt={props.caption}
+            layout="fill"
+          ></Image>
         </motion.div>
       </div>
     </div>

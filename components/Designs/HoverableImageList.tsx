@@ -1,14 +1,14 @@
 import { getRemHeight, Height } from "../../utils/global_types";
 import HoverableImage from "./HoverableImage";
 
-class HoverableImageListProps {
-  images: string[] = [];
-  captions: string[] = [];
-  hoveredTexts: string[][] = [];
-  height: Height = Height.Full;
+interface IHoverableImageListProps {
+  images: string[];
+  imagesHidden: string[];
+  captions: string[];
+  height: Height;
 }
 
-export default function HoverableImageList(props: HoverableImageListProps) {
+export default function HoverableImageList(props: IHoverableImageListProps) {
   return (
     <div
       className={`h-auto md:${getRemHeight(
@@ -24,8 +24,8 @@ export default function HoverableImageList(props: HoverableImageListProps) {
         >
           <HoverableImage
             image={image}
+            imageHidden={props.imagesHidden[index]}
             caption={props.captions[index]}
-            hoveredText={props.hoveredTexts[index]}
           ></HoverableImage>
         </div>
       ))}

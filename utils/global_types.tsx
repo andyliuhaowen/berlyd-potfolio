@@ -19,11 +19,11 @@ export enum Width {
 export function getRemHeight(height: Height) {
   switch (height) {
     case Height.Full:
-      return "h-fullsection_md lg:h-fullsection";
+      return "h-fullsection_md lg:h-fullsection_lg xl:h-fullsection";
     case Height.Medium:
-      return "h-mediumsection_md lg:h-mediumsection";
+      return "h-mediumsection_md lg:h-mediumsection_lg xl:h-mediumsection";
     case Height.Short:
-      return "h-shortsection_md lg:h-mediumsection";
+      return "h-shortsection_md lg:h-shortsection_lg xl:h-shortsection";
     default:
       return "";
   }

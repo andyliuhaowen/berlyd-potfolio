@@ -77,6 +77,7 @@ export default function Mojo() {
             "- popular summer drink",
             "- virgin mojito / norjito (non-alcohol version)",
           ]}
+          height={Height.Full}
           imageOnLeft={false}
         ></ImageAndText>
 
@@ -89,6 +90,7 @@ export default function Mojo() {
           text={[
             "Havana is the capital city of Cuba. The Spanish founded this city in the 16th century. It is the largest city with the most population. Contemporary Havana can essentially be described as three cities in one: Old Havana, Vedado, and the newer suburban districts. All those cities have totally different architectural styles in them.",
           ]}
+          height={Height.Full}
           imageOnLeft={true}
         ></ImageAndText>
 
@@ -121,7 +123,8 @@ export default function Mojo() {
           ]}
           height={Height.Medium}
           captions={["Classic", "Colorful", "Passionate", "Free", "Fresh"]}
-          imageIsImportant={false}
+          widthWide={5}
+          widthNarrow={3}
         ></CaptionedImageList>
 
         <Title type="banner" color="green">
@@ -166,8 +169,8 @@ export default function Mojo() {
           ]}
           accent={7}
           accentTextColor="black"
-          accentBgColor="mojo_bg"
-          caption="strong, simple"
+          accentBgColor="mojo_accent"
+          caption=""
         ></TextList>
 
         <Title type="normal" color="green">
@@ -178,17 +181,18 @@ export default function Mojo() {
           width={Width.Padded}
           height={Height.Free}
           alt="Logo lockup"
-          imageHeight={980}
-          imageWidth={2560}
+          imageHeight={649}
+          imageWidth={1810}
         ></FullScreenImage>
 
         <Collapse title="More ideation details" color="green">
           <CaptionedImageList
             images={["/mojo/ingredients_half", "/mojo/font_half"]}
-            captions={["Fresh Ingredients Study", "Typeface"]}
+            captions={["Fresh Ingredients", "Typeface"]}
             height={Height.Free}
-            textClass="font-bold text-2xl md:text-3xl mb-8"
-            imageIsImportant={true}
+            textClass="font-bold text-3xl md:text-2xl lg:text-3xl mb-8 text-green"
+            widthNarrow={1}
+            widthWide={2}
           ></CaptionedImageList>
 
           <Title type="normal" color="green">
@@ -240,14 +244,17 @@ export default function Mojo() {
         <Title type="normal" color="green">
           Architecture Study
         </Title>
-        <FullScreenImage
+        <ImageAndText
           image="/mojo/architecture_full"
-          width={Width.Padded}
+          text={[
+            "To give the drink a feeling of Havana. I look into the iconic buildings of Havana as inspiration. I want consumers to feel like they are in Havana when they drink the mojito.",
+          ]}
           height={Height.Free}
           alt="Architecture"
           imageWidth={2560}
           imageHeight={653}
-        ></FullScreenImage>
+          imageOnLeft={false}
+        ></ImageAndText>
 
         <Title type="normal" color="green">
           Packaging Ideations
@@ -257,21 +264,27 @@ export default function Mojo() {
           width={Width.Padded}
           height={Height.Free}
           alt="Packaging Ideations"
-          imageHeight={1341}
-          imageWidth={2560}
+          imageHeight={956}
+          imageWidth={1813}
         ></FullScreenImage>
 
         <Title type="normal" color="green">
           Inspiration
         </Title>
-        <FullScreenImage
+        <ImageAndText
           image="/mojo/car_bottle_full"
-          width={Width.Padded}
           height={Height.Free}
           alt="Car and bottle"
-          imageHeight={1135}
-          imageWidth={2560}
-        ></FullScreenImage>
+          imageHeight={688}
+          imageWidth={1171}
+          imageOnLeft={false}
+          text={[
+            "-bulky",
+            "-classic",
+            "-strong",
+            "The shape of the classic car inspired the bottle. Vintage vehicles are popular in Havana, and people see them as the icon for the city. Incorporating this iconic feeling into the bottle would help people have a better feel for the town.",
+          ]}
+        ></ImageAndText>
 
         <Title type="normal" color="green">
           Development
@@ -279,35 +292,38 @@ export default function Mojo() {
 
         <FullScreenImage
           image="/mojo/bottle_devel_full"
-          width={Width.Full}
+          width={Width.Padded}
           height={Height.Free}
           alt="Bottle development"
-          imageHeight={1086}
-          imageWidth={2560}
+          imageHeight={892}
+          imageWidth={1808}
         ></FullScreenImage>
 
         <div className="m-16"></div>
 
         <FullScreenImage
           image="/mojo/bottle_color_full"
-          width={Width.Full}
+          width={Width.Padded}
           height={Height.Free}
           alt="Bottle color"
-          imageHeight={922}
-          imageWidth={2560}
+          imageHeight={882}
+          imageWidth={1814}
         ></FullScreenImage>
 
         <Title type="normal" color="green">
           Label
         </Title>
-        <FullScreenImage
+        <ImageAndText
           image="/mojo/label_full"
           alt="Mojo label"
-          width={Width.ExtraPadded}
           height={Height.Free}
-          imageHeight={1347}
-          imageWidth={2560}
-        ></FullScreenImage>
+          imageHeight={727}
+          imageWidth={1238}
+          imageOnLeft={false}
+          text={[
+            "The label is comply with depend on the US alcohol selling regulations and PDP studies of real-life products.",
+          ]}
+        ></ImageAndText>
 
         <Title type="normal" color="green">
           Flavors
@@ -319,32 +335,12 @@ export default function Mojo() {
             "/mojo/flavor_pic_2_half",
             "/mojo/flavor_pic_3_half",
           ]}
-          captions={["Rose Mojito", "Mango Mojito", "Mint Mojito"]}
-          hoveredTexts={[
-            [
-              "- mint",
-              "- sparkling rose / soda water",
-              "- lime juice",
-              "- silver rum",
-              "- simple syrup",
-              "(sugar, water, dried rose petals)",
-            ],
-            [
-              "- mint",
-              "- soda water",
-              "- lime juice",
-              "- silver rum",
-              "- simple syrup",
-              "(sugar, water, mango juice)",
-            ],
-            [
-              "- mint",
-              "- soda water",
-              "- lime juice",
-              "- white rum",
-              "- sugar",
-            ],
+          imagesHidden={[
+            "/mojo/flavor_pic_1_render_half",
+            "/mojo/flavor_pic_2_render_half",
+            "/mojo/flavor_pic_3_render_half",
           ]}
+          captions={["Rose Mojito", "Mango Mojito", "Mint Mojito"]}
           height={Height.Full}
         ></HoverableImageList>
 
