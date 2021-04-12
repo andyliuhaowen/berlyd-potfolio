@@ -48,12 +48,14 @@ export default function ImageAndText(props: IImageAndTextProps) {
         )}
       </div>
       <div
-        className={`lg:w-1/3 ${props.imageOnLeft ? "lg:pl-16" : "lg:pr-16"}`}
+        className={`lg:w-1/3 flex flex-col ${
+          props.imageOnLeft ? "lg:pl-16" : "lg:pr-16"
+        }`}
       >
-        <div className="flex flex-col">
-          <div className={`mb-12 font-bold text-${props.color} m_font`}>
-            {props.title}
-          </div>
+        <div className={`mb-12 font-bold text-${props.color} m_font`}>
+          {props.title}
+        </div>
+        <div className="flex flex-col flex-grow">
           <div className="my-auto">
             {props.text.map((line, index) => (
               <div key={index} className="text-black s_font">
