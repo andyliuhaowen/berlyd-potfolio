@@ -23,7 +23,7 @@ module.exports = {
           /h-fullsection$/,
           /h-mediumsection$/,
           /h-shortsection$/,
-          /grid-rows-$/,
+          /grid-rows/,
         ],
       },
     },
