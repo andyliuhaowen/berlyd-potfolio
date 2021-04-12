@@ -8,6 +8,8 @@ import Image from "../Image";
 
 interface IImageAndTextProps {
   image: string;
+  title: string;
+  color: string;
   alt: string;
   text: string[];
   imageOnLeft: boolean;
@@ -19,7 +21,7 @@ interface IImageAndTextProps {
 export default function ImageAndText(props: IImageAndTextProps) {
   return (
     <div
-      className={`mx-10 xl:mx-16 flex flex-col h-auto ${
+      className={`mx-10 xl:mx-16 flex flex-col h-auto mt-16 md:mt-20 ${
         props.height === Height.Free
           ? ""
           : "lg:h-fullsection_lg xl:h-fullsection"
@@ -46,16 +48,19 @@ export default function ImageAndText(props: IImageAndTextProps) {
         )}
       </div>
       <div
-        className={`lg:w-1/3 flex flex-row items-center ${
-          props.imageOnLeft ? "lg:pl-16" : "lg:pr-16"
-        }`}
+        className={`lg:w-1/3 ${props.imageOnLeft ? "lg:pl-16" : "lg:pr-16"}`}
       >
         <div className="flex flex-col">
-          {props.text.map((line, index) => (
-            <div key={index} className="text-black s_font">
-              {line}
-            </div>
-          ))}
+          <div className={`mb-12 font-bold text-${props.color} m_font`}>
+            {props.title}
+          </div>
+          <div className="my-auto">
+            {props.text.map((line, index) => (
+              <div key={index} className="text-black s_font">
+                {line}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>

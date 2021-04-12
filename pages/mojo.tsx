@@ -64,11 +64,10 @@ export default function Mojo() {
           Research
         </Title>
 
-        <Title type="normal" color="green">
-          About Mojito
-        </Title>
         <ImageAndText
           image="/mojo/about_mojito_half"
+          title="About Mojito"
+          color="green"
           alt="Picture of Mojito"
           text={[
             "- a kind of cocktail",
@@ -81,10 +80,9 @@ export default function Mojo() {
           imageOnLeft={false}
         ></ImageAndText>
 
-        <Title type="normal" color="green">
-          Havana
-        </Title>
         <ImageAndText
+          title="Havana"
+          color="green"
           image="/mojo/havana_half"
           alt="Picture of Havana"
           text={[
@@ -94,10 +92,9 @@ export default function Mojo() {
           imageOnLeft={true}
         ></ImageAndText>
 
-        <Title type="normal" color="green">
-          Target Audience
-        </Title>
         <ThreeImageAndText
+          title="Target Audience"
+          color="green"
           image1="/mojo/target_1_small"
           alt1="Picture of Natasha"
           image2="/mojo/target_2_small"
@@ -241,11 +238,10 @@ export default function Mojo() {
           alt="Picture of Havana"
         ></FullScreenImage>
 
-        <Title type="normal" color="green">
-          Architecture Study
-        </Title>
         <ImageAndText
           image="/mojo/architecture_full"
+          title="Architecture Study"
+          color="green"
           text={[
             "To give the drink a feeling of Havana. I look into the iconic buildings of Havana as inspiration. I want consumers to feel like they are in Havana when they drink the mojito.",
           ]}
@@ -268,10 +264,9 @@ export default function Mojo() {
           imageWidth={1813}
         ></FullScreenImage>
 
-        <Title type="normal" color="green">
-          Inspiration
-        </Title>
         <ImageAndText
+          title="Inspiration"
+          color="green"
           image="/mojo/car_bottle_full"
           height={Height.Free}
           alt="Car and bottle"
@@ -310,10 +305,9 @@ export default function Mojo() {
           imageWidth={1814}
         ></FullScreenImage>
 
-        <Title type="normal" color="green">
-          Label
-        </Title>
         <ImageAndText
+          title="Label"
+          color="green"
           image="/mojo/label_full"
           alt="Mojo label"
           height={Height.Free}

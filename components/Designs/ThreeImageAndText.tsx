@@ -5,21 +5,23 @@
 
 import Image from "../Image";
 
-class ImageAndTextProps {
-  image1: string = "";
-  alt1: string = "";
-  image2: string = "";
-  alt2: string = "";
-  image3: string = "";
-  alt3: string = "";
-  text: string[] = [];
-  imageOnLeft: boolean = true;
+interface IImageAndTextProps {
+  title: string;
+  color: string;
+  image1: string;
+  alt1: string;
+  image2: string;
+  alt2: string;
+  image3: string;
+  alt3: string;
+  text: string[];
+  imageOnLeft: boolean;
 }
 
-export default function ThreeImageAndText(props: ImageAndTextProps) {
+export default function ThreeImageAndText(props: IImageAndTextProps) {
   return (
     <div
-      className={`mx-10 xl:mx-16 flex flex-col h-auto lg:h-fullsection_lg xl:h-fullsection ${
+      className={`mx-10 xl:mx-16 flex flex-col h-auto mt-16 md:mt-20 lg:h-fullsection_lg xl:h-fullsection ${
         props.imageOnLeft ? "lg:flex-row" : "lg:flex-row-reverse"
       }`}
     >
@@ -43,16 +45,19 @@ export default function ThreeImageAndText(props: ImageAndTextProps) {
         </div>
       </div>
       <div
-        className={`lg:w-1/3 flex flex-row items-center justify-center ${
-          props.imageOnLeft ? "lg:pl-16" : "lg:pr-16"
-        }`}
+        className={`lg:w-1/3 ${props.imageOnLeft ? "lg:pl-16" : "lg:pr-16"}`}
       >
         <div className="flex flex-col">
-          {props.text.map((line, index) => (
-            <div key={index} className="text-black s_font">
-              {line}
-            </div>
-          ))}
+          <div className={`mb-12 font-bold text-${props.color} m_font`}>
+            {props.title}
+          </div>
+          <div className="my-auto">
+            {props.text.map((line, index) => (
+              <div key={index} className="text-black s_font">
+                {line}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>
