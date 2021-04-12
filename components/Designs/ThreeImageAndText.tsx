@@ -49,10 +49,7 @@ export default function ThreeImageAndText(props: ImageAndTextProps) {
       >
         <div className="flex flex-col">
           {props.text.map((line, index) => (
-            <div
-              key={index}
-              className="text-xl leading-loose text-black xl:leading-loose xl:text-2xl"
-            >
+            <div key={index} className="text-black s_font">
               {line}
             </div>
           ))}

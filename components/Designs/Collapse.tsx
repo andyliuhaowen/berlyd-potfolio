@@ -45,7 +45,7 @@ const Collapse: React.FunctionComponent<CollapseProps> = (props) => {
         ></FontAwesomeIcon>
       </motion.div>
       <div
-        className={`align-top inline-block relative top-12 text-3xl pl-6 font-bold lg:text-4xl self-center text-${props.color} cursor-pointer leading-none md:leading-none`}
+        className={`align-top inline-block relative top-12 pl-6 font-bold self-center text-${props.color} cursor-pointer leading-none md:leading-none m_font`}
         onClick={() => {
           setShow((origShow) => !origShow);
         }}

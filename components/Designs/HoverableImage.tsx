@@ -15,7 +15,7 @@ interface IHoverableImageProps {
 export default function HoverableImage(props: IHoverableImageProps) {
   return (
     <div className="flex flex-col w-full h-full">
-      <div className="mx-10 mb-4 text-xl xl:text-2xl text-black xl:mx-16">
+      <div className="mx-0 mb-4 text-black md:mx-10 xl:mx-16 s_font">
         {props.caption}
       </div>
       <div className="relative flex-grow">

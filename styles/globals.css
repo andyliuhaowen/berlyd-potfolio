@@ -26,4 +26,20 @@
   * {
     @apply box-border;
   }
+
+  .xl_font {
+    @apply text-6xl sm:text-8xl md:text-28 lg:text-32;
+  }
+
+  .l_font {
+    @apply text-3xl md:text-4xl lg:text-5xl;
+  }
+
+  .m_font {
+    @apply text-2xl md:text-3xl lg:text-4xl;
+  }
+
+  .s_font {
+    @apply text-lg leading-loose md:text-xl md:leading-loose xl:leading-loose xl:text-2xl;
+  }
 }

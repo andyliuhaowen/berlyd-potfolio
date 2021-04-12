@@ -5,6 +5,9 @@
 
 import FullScreenImage from "../components/Designs/FullScreenImage";
 import LogoHeader from "../components/Designs/LogoHeader";
+import ProjectBanner from "../components/Designs/ProjectBanner";
+import Title from "../components/Designs/Title";
+import TitleAndTagline from "../components/Designs/TitleAndTagline";
 import { Height, Width } from "../utils/global_types";
 
 export default function HiddenSeason() {
@@ -20,6 +23,31 @@ export default function HiddenSeason() {
         imageWidth={2560}
         layoutId="hidden_season-image"
       ></FullScreenImage>
+      <TitleAndTagline
+        title="Hidden Season"
+        tagline="A memorable gift from The Palace Museum."
+        color="green"
+      ></TitleAndTagline>
+
+      <ProjectBanner
+        a="Summer 2020"
+        b="9 Weeks"
+        c="Packaging Design for the Cosmetics"
+        color="green"
+      ></ProjectBanner>
+
+      <FullScreenImage
+        image="/hidden_season/render_1_full"
+        alt="Render"
+        height={Height.Free}
+        width={Width.Full}
+        imageHeight={2400}
+        imageWidth={3840}
+      ></FullScreenImage>
+
+      <Title type="banner" color="green">
+        Research
+      </Title>
     </main>
   );
 }

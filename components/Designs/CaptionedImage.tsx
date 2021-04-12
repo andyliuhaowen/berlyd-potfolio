@@ -19,7 +19,7 @@ export default function CaptionedImage(props: ICaptionedImageProps) {
     <div className={`h-full w-full flex flex-col ${props.className}`}>
       {props.caption !== "" && (
         <div
-          className={`text-black text-xl xl:text-2xl mb-4 ${
+          className={`text-black s_font mb-4 ${
             props.textClass ?? ""
           }`}
         >

@@ -20,7 +20,9 @@ export default function ImageAndText(props: IImageAndTextProps) {
   return (
     <div
       className={`mx-10 xl:mx-16 flex flex-col h-auto ${
-        props.height === Height.Free ? "" : "lg:h-fullsection_lg xl:h-fullsection"
+        props.height === Height.Free
+          ? ""
+          : "lg:h-fullsection_lg xl:h-fullsection"
       } ${props.imageOnLeft ? "lg:flex-row" : "lg:flex-row-reverse"}`}
     >
       <div
@@ -50,10 +52,7 @@ export default function ImageAndText(props: IImageAndTextProps) {
       >
         <div className="flex flex-col">
           {props.text.map((line, index) => (
-            <div
-              key={index}
-              className="text-xl leading-loose text-black 2xl:text-2xl 2xl:leading-loose"
-            >
+            <div key={index} className="text-black s_font">
               {line}
             </div>
           ))}

@@ -190,7 +190,7 @@ export default function Mojo() {
             images={["/mojo/ingredients_half", "/mojo/font_half"]}
             captions={["Fresh Ingredients", "Typeface"]}
             height={Height.Free}
-            textClass="font-bold text-3xl md:text-2xl lg:text-3xl mb-8 text-green"
+            textClass="font-bold mb-8 text-green m_font"
             widthNarrow={1}
             widthWide={2}
           ></CaptionedImageList>
