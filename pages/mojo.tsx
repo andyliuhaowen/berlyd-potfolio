@@ -18,6 +18,8 @@ import TextList from "../components/Designs/TextList";
 import TitleAndTagline from "../components/Designs/TitleAndTagline";
 import ThreeImageAndText from "../components/Designs/ThreeImageAndText";
 import { Height, Width } from "../utils/global_types";
+import VerticalSpacing from "../components/Designs/VerticalSpacing";
+import Image from "../components/Image";
 
 export default function Mojo() {
   return (
@@ -95,17 +97,39 @@ export default function Mojo() {
         <ThreeImageAndText
           title="Target Audience"
           color="green"
-          image1="/mojo/target_1_small"
-          alt1="Picture of Natasha"
-          image2="/mojo/target_2_small"
-          alt2="Picture of partying people"
-          image3="/mojo/target_3_small"
-          alt3="Picture of suitcase"
           imageOnLeft={false}
           text={[
             "Natasha is a party girl. She enjoys the summer most and loves to hang out with friends. She has friends all over the world and loves to visit them when she is free.",
           ]}
-        ></ThreeImageAndText>
+        >
+          <div className="absolute top-0 bottom-0 left-0 w-1/2">
+            <div className="absolute top-1 left-1 right-1 bottom-1">
+              <Image
+                src="/mojo/target_1_small"
+                alt="Picture of Natasha"
+                layout="fill"
+              ></Image>
+            </div>
+          </div>
+          <div className="absolute top-0 right-0 w-1/2 h-1/3">
+            <div className="absolute top-1 left-1 right-1 bottom-1">
+              <Image
+                src="/mojo/target_2_small"
+                alt="Picture of partying people"
+                layout="fill"
+              ></Image>
+            </div>
+          </div>
+          <div className="absolute bottom-0 right-0 w-1/2 h-2/3">
+            <div className="absolute top-1 left-1 right-1 bottom-1">
+              <Image
+                src="/mojo/target_3_small"
+                alt="Picture of suitcase"
+                layout="fill"
+              ></Image>
+            </div>
+          </div>
+        </ThreeImageAndText>
 
         <Title type="normal" color="green">
           Keywords
@@ -124,6 +148,7 @@ export default function Mojo() {
           widthNarrow={3}
         ></CaptionedImageList>
 
+        <VerticalSpacing size="section" />
         <Title type="banner" color="green">
           Branding
         </Title>
@@ -168,6 +193,9 @@ export default function Mojo() {
           accentTextColor="black"
           accentBgColor="mojo_accent"
           caption=""
+          sm={10}
+          md={6}
+          xl={5}
         ></TextList>
 
         <Title type="normal" color="green">
@@ -228,14 +256,17 @@ export default function Mojo() {
           imageHeight={800}
         ></FullScreenImage>
 
+        <VerticalSpacing size="section" />
         <Title type="banner" color="green">
           Packaging
         </Title>
         <FullScreenImage
           image="/mojo/packaging_intro_full"
           width={Width.Full}
-          height={Height.Full}
-          alt="Picture of Havana"
+          height={Height.Free}
+          alt="Packaging"
+          imageHeight={1692}
+          imageWidth={3008}
         ></FullScreenImage>
 
         <ImageAndText

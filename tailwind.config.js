@@ -11,6 +11,7 @@ module.exports = {
           /blue$/,
           /green$/,
           /mojo_accent$/,
+          /hidden_season_accent$/,
           "top-5",
           "top-30",
           "top-38",
@@ -22,6 +23,7 @@ module.exports = {
           /h-fullsection$/,
           /h-mediumsection$/,
           /h-shortsection$/,
+          /grid-rows-$/,
         ],
       },
     },
@@ -35,6 +37,7 @@ module.exports = {
       blue: "#5f8db5",
       green: "#035157",
       mojo_accent: "#f4d047",
+      hidden_season_accent: "#d8ba77",
     },
     fontFamily: {
       roboto: ["MyRoboto", "ui-sans-serif"],
@@ -97,6 +100,9 @@ module.exports = {
       },
       gridTemplateRows: {
         10: "repeat(10, minmax(0, 1fr))",
+        11: "repeat(11, minmax(0, 1fr))",
+        15: "repeat(15, minmax(0, 1fr))",
+        22: "repeat(22, minmax(0, 1fr))",
       },
       gridAutoRows: {
         fullsection: "46rem",

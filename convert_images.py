@@ -71,8 +71,6 @@ for dirpath, dirnames, filenames in os.walk(args.input_dir):
 
             if os.path.exists(dest):
                 if os.path.getmtime(src) < os.path.getmtime(dest):
-                    print(colorama.Fore.GREEN +
-                          "===>" + colorama.Fore.RESET + " Image up to date, skipping " + dest)
                     continue
 
             subprocess.call([
@@ -97,8 +95,6 @@ for dirpath, dirnames, filenames in os.walk(args.input_dir):
 
             if os.path.exists(dest):
                 if os.path.getmtime(src) < os.path.getmtime(dest):
-                    print(colorama.Fore.GREEN +
-                          "===>" + colorama.Fore.RESET + " Image up to date, skipping " + dest)
                     continue
 
             subprocess.call([

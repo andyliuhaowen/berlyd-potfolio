@@ -5,17 +5,22 @@
  * This is current assuming props.text is exactly 30 units long.
  */
 
-class TextListProps {
-  text: string[] = [];
-  accent: number = 0;
-  caption: string = "";
-  accentBgColor: string = "";
-  accentTextColor: string = "";
+interface ITextListProps {
+  text: string[];
+  accent: number;
+  caption: string;
+  accentBgColor: string;
+  accentTextColor: string;
+  sm: number;
+  md: number;
+  xl: number;
 }
 
-export default function TextList(props: TextListProps) {
+export default function TextList(props: ITextListProps) {
   return (
-    <div className="justify-between mx-10 xl:mx-16 grid grid-rows-10 md:grid-rows-6 xl:grid-rows-5 grid-flow-col">
+    <div
+      className={`justify-between mx-10 xl:mx-16 grid grid-rows-${props.sm} md:grid-rows-${props.md} xl:grid-rows-${props.xl} grid-flow-col`}
+    >
       {props.text.map((str, index) => {
         if (index === props.accent) {
           return (

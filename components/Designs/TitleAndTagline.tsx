@@ -12,7 +12,7 @@ export default function TitleAndTagline(props: TitleAndTaglineProps) {
       >
         {props.title}
       </div>
-      <div className="relative inline-block pt-20 pb-12 ml-10 text-left sm:pt-24 lg:ml-0 lg:left-1/2 lg:pt-28 l_font">
+      <div className="relative inline-block pt-20 pb-12 ml-10 text-left sm:pt-24 lg:ml-0 lg:left-1/2 lg:pt-28 m_font">
         {props.tagline}
       </div>
     </div>

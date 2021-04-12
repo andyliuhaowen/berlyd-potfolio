@@ -21,7 +21,7 @@ interface IImageAndTextProps {
 export default function ImageAndText(props: IImageAndTextProps) {
   return (
     <div
-      className={`mx-10 xl:mx-16 flex flex-col h-auto mt-16 md:mt-20 ${
+      className={`mx-10 xl:mx-16 flex flex-col h-auto mt-28 md:mt-32 ${
         props.height === Height.Free
           ? ""
           : "lg:h-fullsection_lg xl:h-fullsection"
