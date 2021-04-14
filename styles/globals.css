@@ -40,6 +40,6 @@
   }
 
   .s_font {
-    @apply text-lg leading-loose md:text-xl md:leading-loose 2xl:leading-loose 2xl:text-2xl;
+    @apply text-base leading-loose md:text-lg md:leading-loose 2xl:leading-loose 2xl:text-xl;
   }
 }

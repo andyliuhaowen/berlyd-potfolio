@@ -10,9 +10,22 @@ interface IFrameAnimationProps {
 
 export default function FrameAnimation(props: IFrameAnimationProps) {
   const [frameNum, setFrameNum] = useState(0);
+  const [increasing, setIncreasing] = useState(true);
   useEffect(() => {
     let int = setInterval(() => {
-      setFrameNum((origFrame) => (origFrame + 1) % 7);
+      if (increasing) {
+        if (frameNum == props.frames.length - 1) {
+          setIncreasing(false);
+        } else {
+          setFrameNum(frameNum + 1);
+        }
+      } else {
+        if (frameNum == 0) {
+          setIncreasing(true);
+        } else {
+          setFrameNum(frameNum - 1);
+        }
+      }
     }, props.frame_duration * 1000);
 
     return () => {
@@ -20,7 +33,7 @@ export default function FrameAnimation(props: IFrameAnimationProps) {
         clearInterval(int);
       }
     };
-  }, []);
+  }, [frameNum, increasing]);
   return (
     <div
       className="relative h-auto"
