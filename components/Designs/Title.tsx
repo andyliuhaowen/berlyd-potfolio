@@ -5,13 +5,14 @@
 
 import React from "react";
 
-class SectionHeaderProps {
-  type: "normal" | "banner" = "normal";
-  color: "green" = "green";
+interface ISectionHeaderProps {
+  type: "normal" | "banner";
+  color: "green" | "pink" | "black";
+  bannerTextColor?: "black" | "white";
 }
 
 export default function Title(
-  props: React.PropsWithChildren<SectionHeaderProps>
+  props: React.PropsWithChildren<ISectionHeaderProps>
 ) {
   return (
     <>
@@ -24,7 +25,7 @@ export default function Title(
       )}
       {props.type === "banner" && (
         <div
-          className={`font-bold px-10 xl:px-16 py-12 text-white bg-${props.color} l_font`}
+          className={`font-bold px-10 xl:px-16 py-12 text-${props.bannerTextColor} bg-${props.color} l_font`}
         >
           {props.children}
         </div>

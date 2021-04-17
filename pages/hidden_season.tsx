@@ -41,7 +41,8 @@ export default function HiddenSeason() {
         a="Summer 2020"
         b="9 Weeks"
         c="Packaging Design for the Cosmetics"
-        color="green"
+        bgColor="green"
+        textColor="white"
       ></ProjectBanner>
 
       <FullScreenImage
@@ -53,7 +54,7 @@ export default function HiddenSeason() {
         imageWidth={3840}
       ></FullScreenImage>
 
-      <Title type="banner" color="green">
+      <Title type="banner" color="green" bannerTextColor="white">
         Research
       </Title>
 
@@ -147,7 +148,7 @@ export default function HiddenSeason() {
       ></CaptionedImageList>
 
       <VerticalSpacing size="section" />
-      <Title type="banner" color="green">
+      <Title type="banner" color="green" bannerTextColor="white">
         Branding
       </Title>
       <ThreeImageAndText
@@ -281,7 +282,7 @@ export default function HiddenSeason() {
       <Collapse title="More design process" color="green"></Collapse>
 
       <VerticalSpacing size="section" />
-      <Title type="banner" color="green">
+      <Title type="banner" color="green" bannerTextColor="white">
         Packaging
       </Title>
       <FullScreenImage

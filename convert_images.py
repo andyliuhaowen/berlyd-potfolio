@@ -41,7 +41,7 @@ for dirpath, dirnames, filenames in os.walk(args.input_dir):
         basename, ext = os.path.splitext(name)
 
         # Check extension
-        if ext not in [".png", ".jpg", ".webp", ".avif"]:
+        if ext.lower() not in [".png", ".jpg", ".webp", ".avif"]:
             print(colorama.Fore.RED + "Image of type " +
                   ext + " is not supported")
             err_count += 1

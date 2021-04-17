@@ -50,7 +50,8 @@ export default function Mojo() {
           a="Summer 2020"
           b="5 Weeks"
           c="Packaging Design for Drinks"
-          color="green"
+          bgColor="green"
+          textColor="white"
         ></ProjectBanner>
 
         <FullScreenImage
@@ -62,7 +63,7 @@ export default function Mojo() {
           imageWidth={2560}
         ></FullScreenImage>
 
-        <Title type="banner" color="green">
+        <Title type="banner" color="green" bannerTextColor="white">
           Research
         </Title>
 
@@ -149,7 +150,7 @@ export default function Mojo() {
         ></CaptionedImageList>
 
         <VerticalSpacing size="section" />
-        <Title type="banner" color="green">
+        <Title type="banner" color="green" bannerTextColor="white">
           Branding
         </Title>
 
@@ -257,7 +258,7 @@ export default function Mojo() {
         ></FullScreenImage>
 
         <VerticalSpacing size="section" />
-        <Title type="banner" color="green">
+        <Title type="banner" color="green" bannerTextColor="white">
           Packaging
         </Title>
         <FullScreenImage

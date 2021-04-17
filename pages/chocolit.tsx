@@ -4,12 +4,21 @@
  */
 
 import FullScreenImage from "../components/Designs/FullScreenImage";
+import ImageAndText from "../components/Designs/ImageAndText";
 import LogoHeader from "../components/Designs/LogoHeader";
+import ProjectBanner from "../components/Designs/ProjectBanner";
+import ThreeImageAndText from "../components/Designs/ThreeImageAndText";
+import Title from "../components/Designs/Title";
+import TitleAndTagline from "../components/Designs/TitleAndTagline";
 import { Height, Width } from "../utils/global_types";
+import Image from "../components/Image";
+import VerticalSpacing from "../components/Designs/VerticalSpacing";
+import Collapse from "../components/Designs/Collapse";
+import ProcessGallery from "../components/Designs/ProcessGallery";
 
 export default function Chocolit() {
   return (
-    <main>
+    <main className="bg-white">
       <LogoHeader name="chocolit"></LogoHeader>
       <FullScreenImage
         image="/chocolit/main_full"
@@ -20,6 +29,282 @@ export default function Chocolit() {
         imageHeight={1440}
         imageWidth={2560}
       ></FullScreenImage>
+
+      <TitleAndTagline
+        title="Chocolit"
+        tagline="A playful and tasty kit for adults."
+        color="black"
+      ></TitleAndTagline>
+
+      <ProjectBanner
+        a="Fall 2020"
+        b="14 weeks"
+        c="Sustainability design for consumer packaged goods"
+        bgColor="pink"
+        textColor="black"
+      ></ProjectBanner>
+
+      <FullScreenImage
+        image="/chocolit/render_1_full"
+        alt="Chocolit render"
+        width={Width.Full}
+        height={Height.Free}
+        imageWidth={1920}
+        imageHeight={1080}
+      ></FullScreenImage>
+
+      <Title type="banner" color="pink" bannerTextColor="black">
+        Research
+      </Title>
+
+      <Title type="normal" color="black">
+        Focus
+      </Title>
+
+      <ThreeImageAndText
+        title="Target User"
+        color="black"
+        text={[
+          "Millennials",
+          "Ages: 24-39",
+          "- 72.1 million Americans are Millennials, the largest group in 2019",
+          "- 35% of the workforce are Millennials in the U.S., the largest generation in the labor force",
+        ]}
+        imageOnLeft={false}
+      >
+        <div className="absolute top-0 bottom-0 left-0 w-1/3">
+          <div className="absolute top-1 left-1 right-1 bottom-1">
+            <Image
+              src="/chocolit/target_user_1_half"
+              alt="Target user"
+              layout="fill"
+            ></Image>
+          </div>
+        </div>
+        <div className="absolute top-0 bottom-0 right-0 w-2/3">
+          <div className="absolute top-1 left-1 right-1 bottom-1">
+            <Image
+              src="/chocolit/target_user_2_half"
+              alt="Target user"
+              layout="fill"
+            ></Image>
+          </div>
+        </div>
+      </ThreeImageAndText>
+
+      <ImageAndText
+        title="Stress"
+        color="black"
+        text={[
+          "44% of millennials feel stressed, all or most of the time due to financial concerns, family welfare, and career expectations.",
+        ]}
+        image="/chocolit/stress_half"
+        alt="Pie chart of stress"
+        height={Height.Free}
+        imageHeight={409}
+        imageWidth={538}
+        imageOnLeft={false}
+      ></ImageAndText>
+
+      <ImageAndText
+        title="Surprise Reduces Stress"
+        color="black"
+        text={[
+          "The brain finds unexpected pleasures more rewarding than expected ones.",
+        ]}
+        image="/chocolit/surprise_half"
+        alt="Surprise"
+        height={Height.Free}
+        imageHeight={409}
+        imageWidth={538}
+        imageOnLeft={false}
+      ></ImageAndText>
+
+      <Title type="normal" color="black">
+        Competitive Market
+      </Title>
+
+      <FullScreenImage
+        image="/chocolit/competitive_full"
+        alt="Competitive market"
+        width={Width.Padded}
+        height={Height.Free}
+        imageWidth={1637}
+        imageHeight={599}
+      ></FullScreenImage>
+
+      <VerticalSpacing size="section"></VerticalSpacing>
+      <Title type="banner" color="pink" bannerTextColor="black">
+        Benchmark Product Study
+      </Title>
+      <Title type="normal" color="black">Kinder Tear Down</Title>
+      <ProcessGallery
+        images={[
+          "/chocolit/process_1_small",
+          "/chocolit/process_2_small",
+          "/chocolit/process_3_small",
+          "/chocolit/process_4_small",
+          "/chocolit/process_5_small",
+          "/chocolit/process_6_small",
+          "/chocolit/process_7_small",
+          "/chocolit/process_8_small",
+        ]}
+        captions={[
+          "open up the box",
+          "take out the egg",
+          "open the egg",
+          "two half eggs",
+          "open one half",
+          "play with toy",
+          "open the other half",
+          "enjoy the chocolate",
+        ]}
+        imageHeight={1083}
+        imageWidth={2000}
+      ></ProcessGallery>
+
+      <ImageAndText
+        title="What We Learned"
+        color="black"
+        text={[
+          "Pros",
+          "- easy to open",
+          "- fun to play with toy",
+          "- a surprise inside",
+          "- intuitive app",
+
+          "Cons",
+          "- one-time play toy",
+        ]}
+        image="/chocolit/learned_full"
+        alt="Display of kinder packaging"
+        height={Height.Free}
+        imageHeight={3024}
+        imageWidth={4032}
+        imageOnLeft={false}
+      ></ImageAndText>
+
+      <Collapse title="Sustainability research" color="black">
+        <FullScreenImage
+          image="/chocolit/sustainability_full"
+          alt="Sustainability"
+          width={Width.Padded}
+          height={Height.Free}
+          imageWidth={6601}
+          imageHeight={10200}
+        ></FullScreenImage>
+      </Collapse>
+
+      <ThreeImageAndText
+        title="Design Goals"
+        color="black"
+        text={[
+          "Sustainability",
+          "1. reduce virgin material",
+          "2. reduce transportation impact",
+          "3. prolong toy’s life span",
+          "4. optimize end of life",
+          "Social",
+          "1. health",
+          "2. aesthetic",
+        ]}
+        imageOnLeft={false}
+      >
+        <div className="absolute top-0 left-0 right-0 h-1/3">
+          <div className="absolute top-1 left-1 right-1 bottom-1">
+            <Image
+              src="/chocolit/design_goals_1_half"
+              alt="Design goals"
+              layout="fill"
+            ></Image>
+          </div>
+        </div>
+        <div className="absolute left-0 right-0 top-1/3 h-1/3">
+          <div className="absolute top-1 left-1 right-1 bottom-1">
+            <Image
+              src="/chocolit/design_goals_2_half"
+              alt="Design goals"
+              layout="fill"
+            ></Image>
+          </div>
+        </div>
+        <div className="absolute bottom-0 left-0 right-0 h-1/3">
+          <div className="absolute top-1 left-1 right-1 bottom-1">
+            <Image
+              src="/chocolit/design_goals_3_half"
+              alt="Design goals"
+              layout="fill"
+            ></Image>
+          </div>
+        </div>
+      </ThreeImageAndText>
+
+      <ThreeImageAndText
+        title="Health"
+        color="black"
+        text={[
+          "Mental Health",
+          "- surprise reduce stress",
+          "",
+          "Body Health",
+          "- dark chocolate (70% of cocoa or more) is better for human health",
+        ]}
+        imageOnLeft={false}
+      >
+        <div className="absolute top-0 bottom-0 left-0 w-1/2">
+          <div className="absolute top-1 left-1 right-1 bottom-1">
+            <Image
+              src="/chocolit/health_1_half"
+              alt="Health"
+              layout="fill"
+            ></Image>
+          </div>
+        </div>
+        <div className="absolute top-0 bottom-0 right-0 w-1/2">
+          <div className="absolute top-1 left-1 right-1 bottom-1">
+            <Image
+              src="/chocolit/health_2_half"
+              alt="Health"
+              layout="fill"
+            ></Image>
+          </div>
+        </div>
+      </ThreeImageAndText>
+
+      <ThreeImageAndText
+        title="Aesthetic"
+        color="black"
+        text={["Sophisticated", "Neutral"]}
+        imageOnLeft={false}
+      >
+        <div className="absolute top-0 bottom-0 left-0 w-2/5">
+          <div className="absolute top-1 left-1 right-1 bottom-1">
+            <Image
+              src="/chocolit/aesthetic_1_half"
+              alt="Aesthetic"
+              layout="fill"
+            ></Image>
+          </div>
+        </div>
+        <div className="absolute top-0 bottom-0 w-2/5 left-2/5">
+          <div className="absolute top-1 left-1 right-1 bottom-1">
+            <Image
+              src="/chocolit/aesthetic_2_half"
+              alt="Aesthetic"
+              layout="fill"
+            ></Image>
+          </div>
+        </div>
+        <div className="absolute top-0 bottom-0 right-0 w-1/5">
+          <div className="absolute top-1 left-1 right-1 bottom-1">
+            <Image
+              src="/chocolit/aesthetic_3_small"
+              alt="Aesthetic"
+              layout="fill"
+            ></Image>
+          </div>
+        </div>
+      </ThreeImageAndText>
     </main>
   );
 }
