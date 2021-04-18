@@ -15,6 +15,7 @@ import Image from "../components/Image";
 import VerticalSpacing from "../components/Designs/VerticalSpacing";
 import Collapse from "../components/Designs/Collapse";
 import ProcessGallery from "../components/Designs/ProcessGallery";
+import { Cell, Legend, Pie, PieChart, ResponsiveContainer } from "recharts";
 
 export default function Chocolit() {
   return (
@@ -61,6 +62,10 @@ export default function Chocolit() {
         Focus
       </Title>
 
+      <div className="mx-10 s_font xl:mx-16">
+        Combine the taste and play together to create a delightful daily life.
+      </div>
+
       <ThreeImageAndText
         title="Target User"
         color="black"
@@ -92,19 +97,32 @@ export default function Chocolit() {
         </div>
       </ThreeImageAndText>
 
-      <ImageAndText
+      <ThreeImageAndText
         title="Stress"
         color="black"
         text={[
           "44% of millennials feel stressed, all or most of the time due to financial concerns, family welfare, and career expectations.",
         ]}
-        image="/chocolit/stress_half"
-        alt="Pie chart of stress"
-        height={Height.Free}
-        imageHeight={409}
-        imageWidth={538}
-        imageOnLeft={false}
-      ></ImageAndText>
+        imageOnLeft={true}
+      >
+        <div className="relative flex items-center w-full h-full">
+          <ResponsiveContainer height="100%" width="100%">
+            <PieChart>
+              <Pie
+                dataKey="value"
+                data={[
+                  { name: "Stressed", value: 44 },
+                  { name: "Others", value: 56 },
+                ]}
+              >
+                <Cell key={0} fill="#E59AA4" />
+                <Cell key={1} fill="#F4D4D6" />
+              </Pie>
+              <Legend />
+            </PieChart>
+          </ResponsiveContainer>
+        </div>
+      </ThreeImageAndText>
 
       <ImageAndText
         title="Surprise Reduces Stress"
@@ -137,7 +155,9 @@ export default function Chocolit() {
       <Title type="banner" color="pink" bannerTextColor="black">
         Benchmark Product Study
       </Title>
-      <Title type="normal" color="black">Kinder Tear Down</Title>
+      <Title type="normal" color="black">
+        Kinder Tear Down
+      </Title>
       <ProcessGallery
         images={[
           "/chocolit/process_1_small",
@@ -204,6 +224,7 @@ export default function Chocolit() {
           "2. reduce transportation impact",
           "3. prolong toy’s life span",
           "4. optimize end of life",
+          "",
           "Social",
           "1. health",
           "2. aesthetic",
@@ -249,7 +270,7 @@ export default function Chocolit() {
           "Body Health",
           "- dark chocolate (70% of cocoa or more) is better for human health",
         ]}
-        imageOnLeft={false}
+        imageOnLeft={true}
       >
         <div className="absolute top-0 bottom-0 left-0 w-1/2">
           <div className="absolute top-1 left-1 right-1 bottom-1">
@@ -305,6 +326,40 @@ export default function Chocolit() {
           </div>
         </div>
       </ThreeImageAndText>
+
+      <FullScreenImage
+        image="/chocolit/breakdown_full"
+        alt="Product breakdown"
+        height={Height.Free}
+        width={Width.Full}
+        imageHeight={8665}
+        imageWidth={6601}
+      ></FullScreenImage>
+
+      <FullScreenImage
+        image="/chocolit/pic_1_full"
+        alt="Product picture"
+        height={Height.Free}
+        width={Width.Full}
+        imageHeight={1536}
+        imageWidth={2048}
+      ></FullScreenImage>
+      <FullScreenImage
+        image="/chocolit/pic_2_full"
+        alt="Product picture"
+        height={Height.Free}
+        width={Width.Full}
+        imageHeight={3024}
+        imageWidth={4032}
+      ></FullScreenImage>
+      <FullScreenImage
+        image="/chocolit/pic_3_full"
+        alt="Product breakdown"
+        height={Height.Free}
+        width={Width.Full}
+        imageHeight={3024}
+        imageWidth={4032}
+      ></FullScreenImage>
     </main>
   );
 }
