@@ -327,6 +327,8 @@ export default function Chocolit() {
         </div>
       </ThreeImageAndText>
 
+      <VerticalSpacing size="small" />
+
       <FullScreenImage
         image="/chocolit/breakdown_full"
         alt="Product breakdown"
