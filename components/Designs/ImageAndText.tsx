@@ -57,11 +57,21 @@ export default function ImageAndText(props: IImageAndTextProps) {
         </div>
         <div className="flex flex-col flex-grow">
           <div className="my-auto">
-            {props.text.map((line, index) => (
-              <div key={index} className="text-black s_font">
-                {line}
-              </div>
-            ))}
+            {props.text.map((line, index) => {
+              if (line === "") {
+                return (
+                  <div key={index} className="text-black s_font">
+                    &nbsp;
+                  </div>
+                );
+              } else {
+                return (
+                  <div key={index} className="text-black s_font">
+                    {line}
+                  </div>
+                );
+              }
+            })}
           </div>
         </div>
       </div>

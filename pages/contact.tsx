@@ -4,5 +4,5 @@
  */
 
 export default function Contact() {
-  return <div className="">Site contrusting</div>;
+  return <div className="">Site constructing</div>;
 }

@@ -25,7 +25,7 @@ export default function Mojo() {
   return (
     <>
       <Head>
-        <title>Berly Dai Portfolio</title>
+        <title>Mojo - Berly Dai</title>
         <link rel="icon" href="/favicon.png" />
       </Head>
       <main className="bg-white">
