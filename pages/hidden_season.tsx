@@ -18,6 +18,7 @@ import TextList from "../components/Designs/TextList";
 import Collapse from "../components/Designs/Collapse";
 import FrameAnimation from "../components/Designs/FrameAnimation";
 import Head from "next/head";
+import BottomNav from "../components/Designs/BottomNav";
 
 export default function HiddenSeason() {
   return (
@@ -219,50 +220,50 @@ export default function HiddenSeason() {
         </Title>
         <TextList
           text={[
-            "1.Plain&#9;&#9;&#9;素",
-            "2.Color&#9;&#9;&#9;颜",
-            "3.Natural&#9;&#9;素颜",
-            "4.Nature&#9;&#9;自然",
-            "5.Ran&#9;&#9;&#9;&#9;然",
-            "6.Comfort&#9;&#9;自在",
-            "7.Free&#9;&#9;&#9;自由",
-            "8.Newborn&#9;初生",
-            "9.Fendai&#9;&#9;粉黛",
-            "10.Yinghua&#9;迎花",
-            "11.Yun&#9;&#9;&#9;韵",
-            "12.Lead White&#9;铅白",
-            "13.Dai&#9;&#9;&#9;&#9;黛",
-            "14.Pintang&#9;&#9;品棠",
-            "15.Sakura&#9;&#9;&#9;海樱",
-            "16.New Stone&#9;石初",
-            "17.Feiyan&#9;&#9;&#9;绯烟",
-            "18.Wan qing si&#9;绾青丝",
-            "19.Wan yin&#9;&#9;绾殷",
-            "20.Tuoyan&#9;&#9;&#9;酡颜",
-            "21.Xiangcha&#9;&#9;湘茶",
-            "22.Xiangfen&#9;&#9;湘粉",
-            "23.Season&#9;&#9;&#9;&#9;季",
-            "24.Hidden&#9;&#9;&#9;&#9;&#9;藏",
-            "25.Hidden Season&#9;藏季",
-            "26.Feigan&#9;&#9;&#9;&#9;&#9;绯绀",
-            "27.Dan&#9;&#9;&#9;&#9;&#9;&#9;丹",
-            "28.Su Fang&#9;&#9;&#9;&#9;苏枋",
-            "29.First Color&#9;&#9;&#9;初釉",
-            "30.Chujin&#9;&#9;&#9;&#9;&#9;初瑾",
-            "31.Xuandai&#9;&#9;&#9;&#9;萱黛",
-            "32.Pinky&#9;&#9;&#9;&#9;&#9;蜜色",
-            "33.Glaze&#9;&#9;&#9;&#9;&#9;琉璃",
-            "34.Secret&#9;&#9;&#9;&#9;秘密",
-            "35.Secret Color&#9;秘色",
-            "36.Lotus&#9;&#9;&#9;&#9;藕荷",
-            "37.Jing&#9;&#9;&#9;&#9;&#9;京",
-            "38.Forbidden&#9;&#9;故宫",
-            "39.Light&#9;&#9;&#9;&#9;&#9;轻",
-            "40.Qingyun&#9;&#9;&#9;轻韵",
-            "41.Sweet White&#9;甜白",
-            "42.Xiaoman&#9;&#9;&#9;小满",
-            "43.Jingzhe&#9;&#9;&#9;惊蛰",
-            "44.Bailu&#9;&#9;&#9;&#9;&#9;白露",
+            "1.Plain 素",
+            "2.Color 颜",
+            "3.Natural 素颜",
+            "4.Nature 自然",
+            "5.Ran 然",
+            "6.Comfort 自在",
+            "7.Free 自由",
+            "8.Newborn 初生",
+            "9.Fendai 粉黛",
+            "10.Yinghua 迎花",
+            "11.Yun 韵",
+            "12.Lead White 铅白",
+            "13.Dai 黛",
+            "14.Pintang 品棠",
+            "15.Sakura 海樱",
+            "16.New Stone 石初",
+            "17.Feiyan 绯烟",
+            "18.Wan qing si 绾青丝",
+            "19.Wan yin 绾殷",
+            "20.Tuoyan 酡颜",
+            "21.Xiangcha 湘茶",
+            "22.Xiangfen 湘粉",
+            "23.Season 季",
+            "24.Hidden 藏",
+            "25.Hidden Season 藏季",
+            "26.Feigan 绯绀",
+            "27.Dan 丹",
+            "28.Su Fang 苏枋",
+            "29.First Color 初釉",
+            "30.Chujin 初瑾",
+            "31.Xuandai 萱黛",
+            "32.Pinky 蜜色",
+            "33.Glaze 琉璃",
+            "34.Secret 秘密",
+            "35.Secret Color 秘色",
+            "36.Lotus 藕荷",
+            "37.Jing 京",
+            "38.Forbidden 故宫",
+            "39.Light 轻",
+            "40.Qingyun 轻韵",
+            "41.Sweet White 甜白",
+            "42.Xiaoman 小满",
+            "43.Jingzhe 惊蛰",
+            "44.Bailu 白露",
           ]}
           accent={24}
           accentBgColor="hidden_season_accent"
@@ -709,6 +710,13 @@ export default function HiddenSeason() {
           imageHeight={2400}
           imageWidth={3840}
         ></FullScreenImage>
+
+        <BottomNav
+          leftName="Mojo"
+          leftLink="/mojo"
+          rightName="Chocolit"
+          rightLink="/chocolit"
+        ></BottomNav>
       </main>
     </>
   );

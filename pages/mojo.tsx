@@ -20,6 +20,7 @@ import ThreeImageAndText from "../components/Designs/ThreeImageAndText";
 import { Height, Width } from "../utils/global_types";
 import VerticalSpacing from "../components/Designs/VerticalSpacing";
 import Image from "../components/Image";
+import BottomNav from "../components/Designs/BottomNav";
 
 export default function Mojo() {
   return (
@@ -398,6 +399,12 @@ export default function Mojo() {
           imageWidth={2560}
         ></FullScreenImage>
       </main>
+      <BottomNav
+        leftName=""
+        leftLink=""
+        rightName="Hidden Season"
+        rightLink="/hidden_season"
+      />
     </>
   );
 }
