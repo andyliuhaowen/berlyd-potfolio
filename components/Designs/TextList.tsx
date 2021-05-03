@@ -24,18 +24,21 @@ export default function TextList(props: ITextListProps) {
       {props.text.map((str, index) => {
         if (index === props.accent) {
           return (
-            <div
+            <pre
               key={index}
-              className={`px-2 text-${props.accentTextColor} bg-${props.accentBgColor} s_font`}
+              className={`px-2 text-${props.accentTextColor} bg-${props.accentBgColor} s_font font-roboto`}
+              dangerouslySetInnerHTML={{ __html: str }}
             >
-              {str} <small className="text-lg">{props.caption}</small>
-            </div>
+              {/*<small className="text-lg">{props.caption}</small>*/}
+            </pre>
           );
         }
         return (
-          <div key={index} className="px-2 s_font">
-            {str}
-          </div>
+          <pre
+            key={index}
+            className="px-2 s_font font-roboto"
+            dangerouslySetInnerHTML={{ __html: str }}
+          ></pre>
         );
       })}
     </div>
