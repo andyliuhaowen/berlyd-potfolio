@@ -24,6 +24,7 @@ module.exports = {
           /h-mediumsection$/,
           /h-shortsection$/,
           /grid-rows/,
+          /roboto/,
         ],
       },
     },
