@@ -41,8 +41,8 @@ module.exports = {
       hidden_season_accent: "#d8ba77",
     },
     fontFamily: {
-      roboto: ["MyRoboto", "ui-sans-serif"],
-      calson: ["MyCalson", "ui-serif"],
+      roboto: ["Roboto", "sans-serif"],
+      calson: ["Libre Caslon Text", "serif"],
     },
     extend: {
       fontSize: {
