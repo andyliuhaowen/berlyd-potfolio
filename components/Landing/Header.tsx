@@ -10,12 +10,7 @@ export default function Header() {
   return (
     <header className="absolute z-40 flex items-center w-full mt-4 h-36">
       <div className="w-24 ml-8 xl:ml-14">
-        <img
-          src="/logo.png"
-          alt="Logo"
-          height={128}
-          width={128}
-        ></img>
+        <img src="/logo.png" alt="Logo" height={128} width={128}></img>
       </div>
       <div className="ml-auto mr-10 text-black xl:mr-16">
         <Fragment>
@@ -23,13 +18,9 @@ export default function Header() {
             <Link href="about">About</Link>
           </span>
           <span className={`m-2`}>
-            <Link href="resume">Resume</Link>
-          </span>
-          <span className={`m-2`}>
-            <Link href="fun">Fun</Link>
-          </span>
-          <span className={`ml-2`}>
-            <Link href="contact">Contact</Link>
+            <a href="/resume.png" target="_blank" rel="noreferrer noopener">
+              Resume
+            </a>
           </span>
         </Fragment>
       </div>

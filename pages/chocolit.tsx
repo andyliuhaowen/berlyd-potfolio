@@ -16,6 +16,7 @@ import VerticalSpacing from "../components/Designs/VerticalSpacing";
 import Collapse from "../components/Designs/Collapse";
 import ProcessGallery from "../components/Designs/ProcessGallery";
 import { Cell, Legend, Pie, PieChart, ResponsiveContainer } from "recharts";
+import StaticParallex from "../components/Designs/StaticParallex";
 
 export default function Chocolit() {
   return (
@@ -206,12 +207,36 @@ export default function Chocolit() {
 
       <Collapse title="Sustainability research" color="black">
         <FullScreenImage
-          image="/chocolit/sustainability_full"
+          image="/chocolit/sus_1_full"
           alt="Sustainability"
-          width={Width.Padded}
           height={Height.Free}
-          imageWidth={6601}
-          imageHeight={10200}
+          width={Width.Padded}
+          imageHeight={1041}
+          imageWidth={1811}
+        ></FullScreenImage>
+        <FullScreenImage
+          image="/chocolit/sus_2_full"
+          alt="Sustainability"
+          height={Height.Free}
+          width={Width.Padded}
+          imageHeight={1041}
+          imageWidth={1811}
+        ></FullScreenImage>
+        <FullScreenImage
+          image="/chocolit/sus_3_full"
+          alt="Sustainability"
+          height={Height.Free}
+          width={Width.Padded}
+          imageHeight={1041}
+          imageWidth={1811}
+        ></FullScreenImage>
+        <FullScreenImage
+          image="/chocolit/sus_4_full"
+          alt="Sustainability"
+          height={Height.Free}
+          width={Width.Padded}
+          imageHeight={1041}
+          imageWidth={1811}
         ></FullScreenImage>
       </Collapse>
 
@@ -336,6 +361,15 @@ export default function Chocolit() {
         width={Width.Full}
         imageHeight={8665}
         imageWidth={6601}
+      ></FullScreenImage>
+
+      <FullScreenImage
+        image="/chocolit/sustainability_full"
+        alt="Sustainability"
+        width={Width.Full}
+        height={Height.Free}
+        imageWidth={6601}
+        imageHeight={10200}
       ></FullScreenImage>
 
       <FullScreenImage
