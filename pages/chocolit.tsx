@@ -16,7 +16,7 @@ import VerticalSpacing from "../components/Designs/VerticalSpacing";
 import Collapse from "../components/Designs/Collapse";
 import ProcessGallery from "../components/Designs/ProcessGallery";
 import { Cell, Legend, Pie, PieChart, ResponsiveContainer } from "recharts";
-import StaticParallex from "../components/Designs/StaticParallex";
+import BottomNav from "../components/Designs/BottomNav";
 
 export default function Chocolit() {
   return (
@@ -396,6 +396,13 @@ export default function Chocolit() {
         imageHeight={3024}
         imageWidth={4032}
       ></FullScreenImage>
+
+      <BottomNav
+        leftName="Hidden Season"
+        leftLink="hidden_season"
+        rightName="Peloton Gaming"
+        rightLink="https://www.berlyd.com/projects/pelotongaming"
+      ></BottomNav>
     </main>
   );
 }

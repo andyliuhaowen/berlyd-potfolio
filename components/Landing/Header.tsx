@@ -10,7 +10,7 @@ export default function Header() {
   return (
     <header className="absolute z-40 flex items-center w-full mt-4 h-36">
       <div className="w-24 ml-8 xl:ml-14">
-      <Link href={`/#landing`}>
+        <Link href={`/#landing`}>
           <img
             src="/logo.png"
             alt="Logo"
@@ -23,7 +23,7 @@ export default function Header() {
       <div className="ml-auto mr-10 text-black xl:mr-16">
         <Fragment>
           <span className={`mr-2`}>
-            <Link href="about">About</Link>
+            <Link href="/about.html">About</Link>
           </span>
           <span className={`m-2`}>
             <a href="/resume.png" target="_blank" rel="noreferrer noopener">
