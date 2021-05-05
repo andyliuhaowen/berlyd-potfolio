@@ -10,7 +10,15 @@ export default function Header() {
   return (
     <header className="absolute z-40 flex items-center w-full mt-4 h-36">
       <div className="w-24 ml-8 xl:ml-14">
-        <img src="/logo.png" alt="Logo" height={128} width={128}></img>
+      <Link href={`/#landing`}>
+          <img
+            src="/logo.png"
+            alt="Logo"
+            height={128}
+            width={128}
+            className="cursor-pointer"
+          ></img>
+        </Link>
       </div>
       <div className="ml-auto mr-10 text-black xl:mr-16">
         <Fragment>

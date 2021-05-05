@@ -14,13 +14,14 @@ import Header from "./Header";
 import ScrollIndicator from "./ScrollIndicator";
 import LandingContent from "./LandingContent";
 import Image from "../Image";
+import LandingContentTemp from "./LandingContentTemp";
 
 const nameMap = new Map([
   ["#landing", 0],
   ["#mojo", 1],
   ["#hidden_season", 2],
   ["#chocolit", 3],
-  ["#pelaton_gaming", 4],
+  ["#peloton_gaming", 4],
   ["#multicolor_pen", 5],
   ["#haru", 6],
 ]);
@@ -30,7 +31,7 @@ const names = [
   "mojo",
   "hidden_season",
   "chocolit",
-  "pelaton_gaming",
+  "peloton_gaming",
   "multicolor_pen",
   "haru",
 ];
@@ -246,18 +247,19 @@ export default function LandingMain() {
             textColor="black"
           />
 
-          <LandingContent
-            name="pelaton_gaming"
-            title="Pelaton Gaming"
+          <LandingContentTemp
+            name="peloton_gaming"
+            title="Peloton Gaming"
             tagline="VR Headset"
             desc="a gaming platform aimed at blending gaming with physical activity"
-            image="/pelaton_gaming/main_full"
+            image="/peloton_gaming/main_full"
             titleLong={true}
             textColor="white"
             bgColor="blue"
+            tempLink="https://www.berlyd.com/projects/pelotongaming"
           />
 
-          <LandingContent
+          <LandingContentTemp
             name="multicolor_pen"
             title="Multicolor Pen"
             tagline="Adaptive Pen"
@@ -266,9 +268,10 @@ export default function LandingMain() {
             titleLong={true}
             bgColor="black"
             textColor="pink"
+            tempLink="https://www.berlyd.com/projects/multicolorpen"
           />
 
-          <LandingContent
+          <LandingContentTemp
             name="haru"
             title="Haru"
             tagline="Speaker"
@@ -277,6 +280,7 @@ export default function LandingMain() {
             titleLong={false}
             textColor="blue"
             bgColor="white"
+            tempLink="https://www.berlyd.com/projects/haru"
           />
         </motion.div>
       </div>
