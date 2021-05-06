@@ -53,7 +53,7 @@ export default function LandingContent(props: LandingContentProps) {
               </div>
               <div>
                 <CustomButton
-                  href={"/" + props.name + ".html"}
+                  href={props.name}
                   text="View Project"
                   color={`${props.textColor}`}
                 />
@@ -65,7 +65,7 @@ export default function LandingContent(props: LandingContentProps) {
           className="relative flex-grow mx-10 xl:mx-16 h-65vh mt-8vh md:ml-0"
           layoutId={`${props.name}-image`}
         >
-          <Link href={"/" + props.name + ".html"}>
+          <Link href={props.name}>
             <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
               <Image
                 src={props.image}

@@ -17,11 +17,7 @@ export default function BottomNav(props: IBottomNav) {
         <div
           className="flex items-center cursor-pointer"
           onClick={() => {
-            if (props.leftLink.indexOf("http") === 0) {
-              router.push(props.leftLink);
-            } else {
-              router.push(props.leftLink + ".html");
-            }
+            router.push(props.leftLink);
           }}
         >
           <div className="relative w-12 h-12 text-black">
@@ -39,11 +35,7 @@ export default function BottomNav(props: IBottomNav) {
         <div
           className="flex items-center ml-auto cursor-pointer"
           onClick={() => {
-            if (props.rightLink.indexOf("http") === 0) {
-              router.push(props.rightLink);
-            } else {
-              router.push(props.rightLink + ".html");
-            }
+            router.push(props.rightLink);
           }}
         >
           <div className="mr-4 font-bold text-black s_font">
