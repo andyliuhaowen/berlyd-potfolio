@@ -17,6 +17,7 @@ import Collapse from "../components/Designs/Collapse";
 import ProcessGallery from "../components/Designs/ProcessGallery";
 import { Cell, Legend, Pie, PieChart, ResponsiveContainer } from "recharts";
 import BottomNav from "../components/Designs/BottomNav";
+import styles from "../styles/ChocolitAnimation.module.css";
 
 export default function Chocolit() {
   return (
@@ -206,38 +207,65 @@ export default function Chocolit() {
       ></ImageAndText>
 
       <Collapse title="Sustainability research" color="black">
-        <FullScreenImage
-          image="/chocolit/sus_1_full"
-          alt="Sustainability"
-          height={Height.Free}
-          width={Width.Padded}
-          imageHeight={1041}
-          imageWidth={1811}
-        ></FullScreenImage>
-        <FullScreenImage
-          image="/chocolit/sus_2_full"
-          alt="Sustainability"
-          height={Height.Free}
-          width={Width.Padded}
-          imageHeight={1041}
-          imageWidth={1811}
-        ></FullScreenImage>
-        <FullScreenImage
-          image="/chocolit/sus_3_full"
-          alt="Sustainability"
-          height={Height.Free}
-          width={Width.Padded}
-          imageHeight={1041}
-          imageWidth={1811}
-        ></FullScreenImage>
-        <FullScreenImage
-          image="/chocolit/sus_4_full"
-          alt="Sustainability"
-          height={Height.Free}
-          width={Width.Padded}
-          imageHeight={1041}
-          imageWidth={1811}
-        ></FullScreenImage>
+        <div className="relative">
+          <FullScreenImage
+            image="/chocolit/sus_full"
+            alt="Sustainability"
+            height={Height.Free}
+            width={Width.Padded}
+            imageHeight={1019}
+            imageWidth={1811}
+          ></FullScreenImage>
+          <div
+            className={`absolute bottom-0 left-0 right-0 bg-white opacity-80 ${styles.top_animation}`}
+          ></div>
+          <div
+            className={`absolute top-0 left-0 right-0 bg-white opacity-80 ${styles.bot_animation}`}
+          ></div>
+          <div
+            className={`absolute transform -translate-x-1/2 left-1/2 top-1/5 m_font ${styles.caption1}`}
+          >
+            <img
+              src="/arrow_up.svg"
+              width="30"
+              className="relative my-4 transform -translate-x-1/2 left-1/2"
+            ></img>
+            <div>many virgin materials involved in the process</div>
+          </div>
+          <div
+            className={`absolute transform -translate-x-1/2 m_font ${styles.caption2}`}
+            style={{ top: "70%", left: "57.3%" }}
+          >
+            <img
+              src="/arrow_up.svg"
+              width="30"
+              className="relative my-4 transform -translate-x-1/2 left-1/2"
+            ></img>
+            <div>long-distance transportation</div>
+          </div>
+          <div
+            className={`absolute transform -translate-x-1/2 m_font ${styles.caption3}`}
+            style={{ top: "51%", left: "57.3%" }}
+          >
+            <div>short lifespan</div>
+            <img
+              src="/arrow_down.svg"
+              width="30"
+              className="relative my-4 transform -translate-x-1/2 left-1/2"
+            ></img>
+          </div>
+          <div
+            className={`absolute transform -translate-x-1/2 m_font ${styles.caption4}`}
+            style={{ top: "72%", left: "57.3%" }}
+          >
+            <div>parts are too small to recycle</div>
+            <img
+              src="/arrow_down.svg"
+              width="30"
+              className="relative my-4 transform -translate-x-1/2 left-1/2"
+            ></img>
+          </div>
+        </div>
       </Collapse>
 
       <ThreeImageAndText

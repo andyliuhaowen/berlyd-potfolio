@@ -1,0 +1,226 @@
+@keyframes top_keyframes {
+  0% {
+    top: 100%;
+  }
+
+  4.55% {
+    top: 100%;
+  }
+
+  9.09% {
+    top: 19.6%;
+  }
+
+  27.27% {
+    top: 19.6%;
+  }
+
+  31.82% {
+    top: 71.3%;
+  }
+
+  50% {
+    top: 71.3%;
+  }
+
+  54.55% {
+    top: 91.8%;
+  }
+
+  72.73% {
+    top: 91.8%;
+  }
+
+  77.27% {
+    top: 100%;
+  }
+
+  95.45% {
+    top: 100%;
+  }
+
+  100% {
+    top: 100%;
+  }
+}
+
+@keyframes bot_keyframes {
+  0% {
+    bottom: 100%;
+  }
+
+  4.55% {
+    bottom: 100%;
+  }
+
+  9.09% {
+    bottom: 92.8%;
+  }
+
+  27.27% {
+    bottom: 92.8%;
+  }
+
+  31.82% {
+    bottom: 40.2%;
+  }
+
+  50% {
+    bottom: 40.2%;
+  }
+
+  54.55% {
+    bottom: 28.9%;
+  }
+
+  72.73% {
+    bottom: 28.9%;
+  }
+
+  77.27% {
+    bottom: 8.4%;
+  }
+
+  95.45% {
+    bottom: 8.4%;
+  }
+
+  100% {
+    bottom: 100%;
+  }
+}
+
+.top_animation {
+  animation-duration: 11s;
+  animation-name: top_keyframes;
+  animation-iteration-count: infinite;
+}
+
+.bot_animation {
+  animation-duration: 11s;
+  animation-name: bot_keyframes;
+  animation-iteration-count: infinite;
+}
+
+@keyframes caption1_keyframes {
+  0% {
+    opacity: 0%;
+  }
+
+  4.55% {
+    opacity: 0%;
+  }
+
+  9.09% {
+    opacity: 100%;
+  }
+
+  27.27% {
+    opacity: 100%;
+  }
+
+  31.82% {
+    opacity: 0%;
+  }
+
+  100% {
+    opacity: 0%;
+  }
+}
+
+.caption1 {
+  animation-duration: 11s;
+  animation-name: caption1_keyframes;
+  animation-iteration-count: infinite;
+}
+
+@keyframes caption2_keyframes {
+  0% {
+    opacity: 0%;
+  }
+
+  27.27% {
+    opacity: 0%;
+  }
+
+  31.82% {
+    opacity: 100%;
+  }
+
+  50% {
+    opacity: 100%;
+  }
+
+  54.55% {
+    opacity: 0%;
+  }
+
+  100% {
+    opacity: 0%;
+  }
+}
+
+.caption2 {
+  animation-duration: 11s;
+  animation-name: caption2_keyframes;
+  animation-iteration-count: infinite;
+}
+
+@keyframes caption3_keyframes {
+  0% {
+    opacity: 0%;
+  }
+
+  50% {
+    opacity: 0%;
+  }
+
+  54.55% {
+    opacity: 100%;
+  }
+
+  72.73% {
+    opacity: 100%;
+  }
+
+  77.27% {
+    opacity: 0%;
+  }
+
+  100% {
+    opacity: 0%;
+  }
+}
+
+.caption3 {
+  animation-duration: 11s;
+  animation-name: caption3_keyframes;
+  animation-iteration-count: infinite;
+}
+@keyframes caption4_keyframes {
+  0% {
+    opacity: 0%;
+  }
+
+  72.73% {
+    opacity: 0%;
+  }
+
+  77.27% {
+    opacity: 100%;
+  }
+
+  95.45% {
+    opacity: 100%;
+  }
+
+  100% {
+    opacity: 0%;
+  }
+}
+
+.caption4 {
+  animation-duration: 11s;
+  animation-name: caption4_keyframes;
+  animation-iteration-count: infinite;
+}
