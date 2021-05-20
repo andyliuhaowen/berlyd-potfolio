@@ -245,7 +245,7 @@ export default function Chocolit() {
           </div>
           <div
             className={`absolute transform -translate-x-1/2 m_font ${styles.caption3}`}
-            style={{ top: "51%", left: "57.3%" }}
+            style={{ bottom: "31%", left: "57.3%" }}
           >
             <div>short lifespan</div>
             <img
@@ -256,7 +256,7 @@ export default function Chocolit() {
           </div>
           <div
             className={`absolute transform -translate-x-1/2 m_font ${styles.caption4}`}
-            style={{ top: "72%", left: "57.3%" }}
+            style={{ bottom: "8%", left: "57.3%" }}
           >
             <div>parts are too small to recycle</div>
             <img
