@@ -207,7 +207,7 @@ export default function Chocolit() {
       ></ImageAndText>
 
       <Collapse title="Sustainability research" color="black">
-        <div className="relative">
+        <div className="relative overflow-y-hidden">
           <FullScreenImage
             image="/chocolit/sus_full"
             alt="Sustainability"
@@ -227,42 +227,38 @@ export default function Chocolit() {
           >
             <img
               src="/arrow_up.svg"
-              width="30"
-              className="relative my-4 transform -translate-x-1/2 left-1/2"
+              className="relative w-6 my-4 transform -translate-x-1/2 left-1/2"
             ></img>
             <div>many virgin materials involved in the process</div>
           </div>
           <div
             className={`absolute transform -translate-x-1/2 m_font ${styles.caption2}`}
-            style={{ top: "70%", left: "57.3%" }}
+            style={{ top: "70%", left: "57.2%" }}
           >
             <img
               src="/arrow_up.svg"
-              width="30"
-              className="relative my-4 transform -translate-x-1/2 left-1/2"
+              className="relative w-6 my-4 transform -translate-x-1/2 left-1/2"
             ></img>
             <div>long-distance transportation</div>
           </div>
           <div
             className={`absolute transform -translate-x-1/2 m_font ${styles.caption3}`}
-            style={{ bottom: "31%", left: "57.3%" }}
+            style={{ bottom: "30%", left: "57.2%" }}
           >
             <div>short lifespan</div>
             <img
               src="/arrow_down.svg"
-              width="30"
-              className="relative my-4 transform -translate-x-1/2 left-1/2"
+              className="relative w-6 my-4 transform -translate-x-1/2 left-1/2"
             ></img>
           </div>
           <div
             className={`absolute transform -translate-x-1/2 m_font ${styles.caption4}`}
-            style={{ bottom: "8%", left: "57.3%" }}
+            style={{ bottom: "8%", left: "57.2%" }}
           >
             <div>parts are too small to recycle</div>
             <img
               src="/arrow_down.svg"
-              width="30"
-              className="relative my-4 transform -translate-x-1/2 left-1/2"
+              className="relative w-6 my-4 transform -translate-x-1/2 left-1/2"
             ></img>
           </div>
         </div>
