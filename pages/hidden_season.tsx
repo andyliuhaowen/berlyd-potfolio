@@ -131,7 +131,7 @@ export default function HiddenSeason() {
         </ThreeImageAndText>
 
         <Title type="normal" color="green">
-          What's inside the kit
+          What&apos;s inside the kit
         </Title>
 
         <CaptionedImageList

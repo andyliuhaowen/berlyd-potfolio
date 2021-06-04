@@ -51,11 +51,12 @@ export default function LandingContent(props: LandingContentProps) {
               >
                 {props.desc}
               </div>
-              <div>
+              <div className="mt-4">
                 <CustomButton
                   href={props.name}
                   text="View Project"
-                  color={`${props.textColor}`}
+                  color={props.textColor}
+                  secondaryColor={props.bgColor}
                 />
               </div>
             </div>

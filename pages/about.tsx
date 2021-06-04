@@ -5,7 +5,6 @@
 
 import Head from "next/head";
 import ImageAndText from "../components/Designs/ImageAndText";
-import VerticalSpacing from "../components/Designs/VerticalSpacing";
 import Header from "../components/Landing/Header";
 import { Height } from "../utils/global_types";
 

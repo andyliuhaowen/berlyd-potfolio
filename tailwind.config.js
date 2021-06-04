@@ -62,6 +62,7 @@ module.exports = {
         "7/20": "35%",
         "1280px": "1280px",
         "1536px": "1536px",
+        7.5: "1.875rem",
       },
       height: {
         7.5: "1.875rem",
@@ -81,9 +82,6 @@ module.exports = {
         shortsection: "20rem",
         shortsection_lg: "18rem",
         shortsection_md: "16rem",
-      },
-      width: {
-        7.5: "1.875rem",
       },
       margin: {
         "8vh": "8vh",

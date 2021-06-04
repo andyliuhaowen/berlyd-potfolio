@@ -3,23 +3,21 @@
  * Component of a customly styled button.
  */
 
- import Link from "next/link";
+interface IButtonTempProps {
+  text: string;
+  href: string;
+  color: string;
+  secondaryColor: string;
+}
 
- class ButtonTempProps {
-   text: string = "";
-   href: string = "";
-   color: string = "";
- }
- 
- export default function CustomButton(props: ButtonTempProps) {
-   return (
-     <a href={props.href} target="_blank" rel="noreferrer noopener">
-       <div
-         className={`border-${props.color} text-${props.color} border inline-block my-2 cursor-pointer`}
-       >
-         <div className="m-1 font-bold">{props.text}</div>
-       </div>
-     </a>
-   );
- }
- 
+export default function CustomButton(props: IButtonTempProps) {
+  return (
+    <a href={props.href} target="_blank" rel="noreferrer noopener">
+      <div
+        className={`border-${props.color} text-${props.color} hover:bg-${props.color} hover:text-${props.secondaryColor} border-2 inline-block my-2 cursor-pointer transition-colors`}
+      >
+        <div className="m-2 font-bold">{props.text}</div>
+      </div>
+    </a>
+  );
+}

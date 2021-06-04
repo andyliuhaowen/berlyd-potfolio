@@ -5,19 +5,20 @@
 
 import Link from "next/link";
 
-class ButtonProps {
-  text: string = "";
-  href: string = "";
-  color: string = "";
+interface IButtonProps {
+  text: string;
+  href: string;
+  color: string;
+  secondaryColor: string;
 }
 
-export default function CustomButton(props: ButtonProps) {
+export default function CustomButton(props: IButtonProps) {
   return (
     <Link href={props.href}>
       <div
-        className={`border-${props.color} text-${props.color} border inline-block my-2 cursor-pointer`}
+        className={`border-${props.color} text-${props.color} hover:text-${props.secondaryColor} hover:bg-${props.color} transition-colors border-2 inline-block my-2 cursor-pointer`}
       >
-        <div className="m-1 font-bold">{props.text}</div>
+        <div className="m-2 font-bold">{props.text}</div>
       </div>
     </Link>
   );
