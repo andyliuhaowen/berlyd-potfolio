@@ -26,7 +26,7 @@ export default function Header() {
             <Link href="about">About</Link>
           </span>
           <span className={`m-2`}>
-            <a href="/resume.png" target="_blank" rel="noreferrer noopener">
+            <a href="/resume" target="_blank" rel="noreferrer noopener">
               Resume
             </a>
           </span>
