@@ -23,12 +23,13 @@ export default function Header() {
       <div className="ml-auto mr-10 text-black xl:mr-16">
         <Fragment>
           <span className={`mr-2`}>
-            <Link href="about">About</Link>
+            <Link href="/about">About</Link>
           </span>
           <span className={`m-2`}>
-            <a href="/resume" target="_blank" rel="noreferrer noopener">
-              Resume
-            </a>
+            <Link href="/resume">Resume</Link>
+          </span>
+          <span className={`m-2`}>
+            <Link href="/play">Play</Link>
           </span>
         </Fragment>
       </div>
