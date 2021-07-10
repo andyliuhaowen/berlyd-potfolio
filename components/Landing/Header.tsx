@@ -6,13 +6,17 @@
 import Link from "next/link";
 import { Fragment } from "react";
 
-export default function Header() {
+interface HeaderProps {
+  color: "black" | "green" | "white" | "blue" | "pink";
+}
+
+export default function Header(props: HeaderProps) {
   return (
     <header className="absolute z-40 flex items-center w-full mt-4 h-36">
       <div className="w-24 ml-8 xl:ml-14">
         <Link href={`/#landing`}>
           <img
-            src="/logo.png"
+            src={`/logo_${props.color}.png`}
             alt="Logo"
             height={128}
             width={128}
@@ -20,7 +24,7 @@ export default function Header() {
           ></img>
         </Link>
       </div>
-      <div className="ml-auto mr-10 text-black xl:mr-16">
+      <div className={`ml-auto mr-10 text-${props.color} xl:mr-16`}>
         <Fragment>
           <span className={`mr-2`}>
             <Link href="/about">About</Link>

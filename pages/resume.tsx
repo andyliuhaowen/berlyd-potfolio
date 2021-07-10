@@ -9,7 +9,7 @@ import Header from "../components/Landing/Header";
 export default function Resume() {
   return (
     <>
-      <Header />
+      <Header color="black" />
       <main className="bg-white">
         <div className="relative pt-52" style={{ left: "15%", width: "70%" }}>
           <img src="/resume_en.png" alt="Resume" />

@@ -16,7 +16,7 @@ export default function About() {
       </Head>
       <div>
         <main className="bg-white overflow-auto min-h-screen">
-          <Header></Header>
+          <Header color="black"></Header>
           <div className="h-24"></div>
           <ImageAndText
             title="About Me"
