@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 
 interface IFrameAnimationProps {
   frames: string[];
-  frame_duration: number;
+  frameDuration: number;
   imageHeight: number;
   imageWidth: number;
 }
@@ -12,25 +12,25 @@ export default function FrameAnimation(props: IFrameAnimationProps) {
   const [frameNum, setFrameNum] = useState(0);
   const [increasing, setIncreasing] = useState(true);
   useEffect(() => {
-    let int = setInterval(() => {
+    const interval = setInterval(() => {
       if (increasing) {
-        if (frameNum == props.frames.length - 1) {
+        if (frameNum === props.frames.length - 1) {
           setIncreasing(false);
         } else {
           setFrameNum(frameNum + 1);
         }
       } else {
-        if (frameNum == 0) {
+        if (frameNum === 0) {
           setIncreasing(true);
         } else {
           setFrameNum(frameNum - 1);
         }
       }
-    }, props.frame_duration * 1000);
+    }, props.frameDuration * 1000);
 
     return () => {
-      if (int != undefined) {
-        clearInterval(int);
+      if (interval !== undefined) {
+        clearInterval(interval);
       }
     };
   }, [frameNum, increasing]);

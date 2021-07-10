@@ -32,6 +32,7 @@ export default function CaptionedImageList(props: IImageListProps) {
       break;
     case 4:
       widthClass += "md:w-1/4";
+      break;
     case 5:
       widthClass += "md:w-1/5";
   }
@@ -47,6 +48,7 @@ export default function CaptionedImageList(props: IImageListProps) {
       break;
     case 4:
       widthClass += " w-1/4";
+      break;
     case 5:
       widthClass += " w-1/5";
   }

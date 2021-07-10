@@ -679,7 +679,7 @@ export default function HiddenSeason() {
             "/hidden_season/animation_6_full",
             "/hidden_season/animation_7_full",
           ]}
-          frame_duration={0.5}
+          frameDuration={0.5}
           imageWidth={2560}
           imageHeight={1600}
         ></FrameAnimation>

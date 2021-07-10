@@ -1,6 +1,5 @@
 import Head from "next/head";
 import {
-  Common,
   Engine,
   Render,
   Bodies,
@@ -16,7 +15,7 @@ export default function Play() {
   const [dirty, setDirty] = useState(false);
   const [tooSmall, setTooSmall] = useState(false);
   const [background, setBackground] = useState("");
-  var renderBackground;
+  let renderBackground;
 
   useEffect(() => {
     if (window.innerWidth < 768) {
@@ -25,9 +24,8 @@ export default function Play() {
     } else {
       setTooSmall(false);
     }
-    var canvas = document.getElementById("canvas")!;
+    const canvas = document.getElementById("canvas")!;
 
-    //Common.setDecomp(require("poly-decomp"));
     const back = Math.floor(Math.random() * 3);
     const backgrounds = ["#111921", "#f4d4d6", "#5f8db5", "#035157"];
     while (true) {
@@ -45,9 +43,9 @@ export default function Play() {
     }
     setBackground(renderBackground);
 
-    var engine = Engine.create();
-    var world = engine.world;
-    var render = Render.create({
+    const engine = Engine.create();
+    const world = engine.world;
+    const render = Render.create({
       element: canvas,
       engine: engine,
       options: {
@@ -66,21 +64,21 @@ export default function Play() {
       frictionStatic: 3,
     };
 
-    var ground = Bodies.rectangle(
+    const ground = Bodies.rectangle(
       window.innerWidth / 2,
       window.innerHeight + 51,
       window.innerWidth,
       100,
       { isStatic: true, restitution: 0.5, friction: 0.3 }
     );
-    var wallLeft = Bodies.rectangle(
+    const wallLeft = Bodies.rectangle(
       -51,
       window.innerHeight / 2,
       100,
       window.innerHeight,
       { isStatic: true }
     );
-    var wallRight = Bodies.rectangle(
+    const wallRight = Bodies.rectangle(
       window.innerWidth + 51,
       window.innerHeight / 2,
       100,
@@ -88,7 +86,7 @@ export default function Play() {
       { isStatic: true }
     );
 
-    var bcard = Bodies.rectangle(
+    const bcard = Bodies.rectangle(
       Math.random() * window.innerWidth,
       -Math.random() * 1000,
       220,
@@ -105,8 +103,8 @@ export default function Play() {
       }
     );
 
-    var objList = [ground, wallRight, wallLeft, bcard];
-    var backTexture: string;
+    const objList = [ground, wallRight, wallLeft, bcard];
+    let backTexture: string;
     switch (back) {
       case 0: {
         backTexture = "/play/bcard_back1.png";
@@ -139,7 +137,7 @@ export default function Play() {
         }
       )
     );
-    for (var i = 0; i != 15; i++) {
+    for (let i = 0; i !== 15; i++) {
       switch (Math.floor(Math.random() * 4)) {
         case 0: {
           objList.push(
@@ -257,11 +255,11 @@ export default function Play() {
     World.add(world, objList);
     Render.run(render);
 
-    var runner = Runner.create();
+    const runner = Runner.create();
     Runner.run(runner, engine);
 
-    var mouse = Mouse.create(render.canvas);
-    var mouseConstraint = MouseConstraint.create(engine, {
+    const mouse = Mouse.create(render.canvas);
+    const mouseConstraint = MouseConstraint.create(engine, {
       mouse: mouse,
       constraint: {
         stiffness: 0.2,

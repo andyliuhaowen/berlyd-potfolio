@@ -3,6 +3,8 @@
  * Component for laying out a three-image group with text side by side.
  */
 
+import { FunctionComponent } from "react";
+
 interface IImageAndTextProps {
   title: string;
   color: string;
@@ -10,7 +12,7 @@ interface IImageAndTextProps {
   imageOnLeft: boolean;
 }
 
-const ThreeImageAndText: React.FunctionComponent<IImageAndTextProps> = (
+const ThreeImageAndText: FunctionComponent<IImageAndTextProps> = (
   props
 ) => {
   return (

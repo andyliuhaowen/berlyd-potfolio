@@ -180,7 +180,7 @@ export default function LandingMain() {
             velocity: 100,
           }}
         >
-          <Header />
+          <Header color="black" />
           {/* Intro page */}
           <div className="relative flex items-center h-screen bg-pink">
             <div className="hidden md:inline-block md:mx-auto lg:mr-0 lg:ml-60 xl:mx-0 xl:relative xl:left-1/5">

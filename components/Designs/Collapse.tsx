@@ -1,16 +1,16 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion";
-import { useState, useRef } from "react";
+import { useState, useRef, FunctionComponent } from "react";
 
 class CollapseProps {
   title: string = "";
   color: string = "";
 }
 
-const Collapse: React.FunctionComponent<CollapseProps> = (props) => {
-  let [show, setShow] = useState(false);
-  let titleElement = useRef<HTMLDivElement>(null);
+const Collapse: FunctionComponent<CollapseProps> = (props) => {
+  const [show, setShow] = useState(false);
+  const titleElement = useRef<HTMLDivElement>(null);
 
   return (
     <motion.div
