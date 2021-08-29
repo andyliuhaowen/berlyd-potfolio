@@ -10,7 +10,7 @@ const LandingMain = dynamic(() => import("../components/Landing/LandingMain"), {
   ssr: false,
 });
 
-export default function Home() {
+const Home: React.FC = () => {
   return (
     <>
       <Head>
@@ -24,4 +24,6 @@ export default function Home() {
       <footer></footer>
     </>
   );
-}
+};
+
+export default Home;

@@ -3,18 +3,14 @@
  * Component for laying out a three-image group with text side by side.
  */
 
-import { FunctionComponent } from "react";
-
-interface IImageAndTextProps {
+interface ImageAndTextProps {
   title: string;
   color: string;
   text: string[];
   imageOnLeft: boolean;
 }
 
-const ThreeImageAndText: FunctionComponent<IImageAndTextProps> = (
-  props
-) => {
+const ThreeImageAndText: React.FC<ImageAndTextProps> = (props) => {
   return (
     <div
       className={`mx-10 xl:mx-16 flex flex-col h-auto mt-28 md:mt-32 lg:h-fullsection_lg xl:h-fullsection ${

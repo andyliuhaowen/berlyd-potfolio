@@ -5,15 +5,15 @@
 
 import Image from "../Image";
 
-class FoldableImageProps {
-  image1: string = "";
-  image2: string = "";
-  alt: string = "";
-  imageHeight: number = 0;
-  imageWidth: number = 0;
+interface FoldableImageProps {
+  image1: string;
+  image2: string;
+  alt: string;
+  imageHeight: number;
+  imageWidth: number;
 }
 
-export default function FoldableImage(props: FoldableImageProps) {
+const FoldableImage: React.FC<FoldableImageProps> = (props) => {
   return (
     <div className="mx-10 xl:mx-16 flex flex-col md:flex-row">
       <div className="md:w-1/2">
@@ -36,4 +36,6 @@ export default function FoldableImage(props: FoldableImageProps) {
       </div>
     </div>
   );
-}
+};
+
+export default FoldableImage;

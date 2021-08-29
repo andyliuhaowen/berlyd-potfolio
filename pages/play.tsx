@@ -8,24 +8,25 @@ import {
   MouseConstraint,
   World,
 } from "matter-js";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import Header from "../components/Landing/Header";
-import { Width } from "../utils/global_types";
 
-export default function Play() {
+const Play: React.FC = () => {
   const [dirty, setDirty] = useState(false);
   const [tooSmall, setTooSmall] = useState(false);
   const [background, setBackground] = useState("");
-  let renderBackground;
+  const canvasRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (window.innerWidth < 1024 || window.innerHeight < 768) {
+    if (!canvasRef.current) return;
+    let renderBackground;
+    if (window.innerWidth < 1024 || window.innerHeight < 600) {
       setTooSmall(true);
       return;
     } else {
       setTooSmall(false);
     }
-    const canvas = document.getElementById("canvas")!;
+    const canvas = canvasRef.current;
 
     const back = Math.floor(Math.random() * 3);
     const backgrounds = ["#111921", "#f4d4d6", "#5f8db5", "#035157"];
@@ -119,6 +120,10 @@ export default function Play() {
         backTexture = "/play/bcard_back3.png";
         break;
       }
+      default: {
+        // Will never happen
+        backTexture = "";
+      }
     }
     objList.push(
       Bodies.rectangle(
@@ -129,7 +134,7 @@ export default function Play() {
         {
           render: {
             sprite: {
-              texture: backTexture!,
+              texture: backTexture,
               xScale: 0.38,
               yScale: 0.38,
             },
@@ -385,12 +390,10 @@ export default function Play() {
         render: {
           visible: false,
         },
-      } as any,
+      } as never,
     });
 
     World.add(world, mouseConstraint);
-
-    (render as any).mouse = mouse;
   }, []);
 
   return (
@@ -405,7 +408,7 @@ export default function Play() {
           {(background === "#5f8db5" || background === "#035157") && (
             <Header color="white" />
           )}
-          <div id="canvas" className="w-full h-full relative"></div>
+          <div ref={canvasRef} className="w-full h-full relative"></div>
         </>
       )}
       {dirty && (
@@ -421,4 +424,6 @@ export default function Play() {
       )}
     </>
   );
-}
+};
+
+export default Play;

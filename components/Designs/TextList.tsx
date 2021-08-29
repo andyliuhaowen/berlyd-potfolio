@@ -5,7 +5,7 @@
  * This is current assuming props.text is exactly 30 units long.
  */
 
-interface ITextListProps {
+interface TextListProps {
   text: string[];
   accent: number;
   caption: string;
@@ -16,7 +16,7 @@ interface ITextListProps {
   xl: number;
 }
 
-export default function TextList(props: ITextListProps) {
+const TextList: React.FC<TextListProps> = (props) => {
   return (
     <div
       className={`justify-between mx-10 xl:mx-16 grid grid-rows-${props.sm} md:grid-rows-${props.md} xl:grid-rows-${props.xl} grid-flow-col`}
@@ -40,4 +40,6 @@ export default function TextList(props: ITextListProps) {
       })}
     </div>
   );
-}
+};
+
+export default TextList;

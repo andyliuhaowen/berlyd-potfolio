@@ -3,6 +3,8 @@
  * Fun page.
  */
 
-export default function Fun() {
+const Fun: React.FC = () => {
   return <div className="">Site contrusting</div>;
-}
+};
+
+export default Fun;

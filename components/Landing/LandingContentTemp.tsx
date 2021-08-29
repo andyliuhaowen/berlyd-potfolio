@@ -7,19 +7,19 @@ import CustomButtonTemp from "../CustomButtonTemp";
 import Image from "../Image";
 import { motion } from "framer-motion";
 
-class LandingContentTempProps {
-  name: string = "";
-  title: string = "";
-  tagline: string = "";
-  desc: string = "";
-  image: string = "";
-  titleLong: boolean = false;
-  bgColor: string = "";
-  textColor: string = "";
-  tempLink: string = "";
+interface LandingContentTempProps {
+  name: string;
+  title: string;
+  tagline: string;
+  desc: string;
+  image: string;
+  titleLong: boolean;
+  bgColor: string;
+  textColor: string;
+  tempLink: string;
 }
 
-export default function LandingContentTemp(props: LandingContentTempProps) {
+const LandingContentTemp: React.FC<LandingContentTempProps> = (props) => {
   let textSize = "";
   if (props.titleLong) {
     textSize =
@@ -80,4 +80,6 @@ export default function LandingContentTemp(props: LandingContentTempProps) {
       </div>
     </div>
   );
-}
+};
+
+export default LandingContentTemp;

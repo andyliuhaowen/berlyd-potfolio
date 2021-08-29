@@ -10,9 +10,9 @@ import { motion } from "framer-motion";
 
 import styles from "../../styles/PageSelector.module.css";
 
-class PageSelectorProps {
-  page: number = 0;
-  setSection: (sec: number) => void = () => {};
+interface PageSelectorProps {
+  page: number;
+  setSection: (sec: number) => void;
 }
 
 const offsetMap = [5, 30, 38, 46, 71, 79, 87];
@@ -27,7 +27,9 @@ const colorMap = [
   "#5f8db5",
 ];
 
-export default function PageSelector(props: PageSelectorProps) {
+const PageSelector: React.FC<PageSelectorProps> = (
+  props: PageSelectorProps
+) => {
   return (
     <motion.div
       className="fixed bottom-0 z-10 transform left-1/2 translate-y-0 -translate-x-1/2 lg:left-0 lg:bottom-1/2 lg:translate-y-1/2 lg:translate-x-0"
@@ -127,4 +129,6 @@ export default function PageSelector(props: PageSelectorProps) {
       </div>
     </motion.div>
   );
-}
+};
+
+export default PageSelector;

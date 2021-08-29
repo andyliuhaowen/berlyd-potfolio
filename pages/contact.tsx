@@ -3,6 +3,8 @@
  * Contact page.
  */
 
-export default function Contact() {
+const Contact: React.FC = () => {
   return <div className="">Site constructing</div>;
-}
+};
+
+export default Contact;

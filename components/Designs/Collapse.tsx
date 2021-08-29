@@ -1,14 +1,19 @@
+/**
+ * Made by Haowen Liu in 2021
+ * Component for creating a collapsable section.
+ */
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion";
-import { useState, useRef, FunctionComponent } from "react";
+import { useState, useRef } from "react";
 
-class CollapseProps {
-  title: string = "";
-  color: string = "";
+interface CollapseProps {
+  title: string;
+  color: string;
 }
 
-const Collapse: FunctionComponent<CollapseProps> = (props) => {
+const Collapse: React.FC<CollapseProps> = (props) => {
   const [show, setShow] = useState(false);
   const titleElement = useRef<HTMLDivElement>(null);
 
@@ -30,10 +35,12 @@ const Collapse: FunctionComponent<CollapseProps> = (props) => {
         transition={{ type: "spring", duration: 1, bounce: 0.5 }}
         onClick={() => {
           setShow((origShow) => {
-            if (titleElement.current!.getBoundingClientRect().top < 0) {
-              titleElement.current!.scrollIntoView({
-                behavior: "smooth",
-              });
+            if (titleElement.current) {
+              if (titleElement.current.getBoundingClientRect().top < 0) {
+                titleElement.current.scrollIntoView({
+                  behavior: "smooth",
+                });
+              }
             }
             return !origShow;
           });

@@ -19,7 +19,7 @@ import { Cell, Legend, Pie, PieChart, ResponsiveContainer } from "recharts";
 import BottomNav from "../components/Designs/BottomNav";
 import styles from "../styles/ChocolitAnimation.module.css";
 
-export default function Chocolit() {
+const Chocolit: React.FC = () => {
   return (
     <main className="bg-white">
       <LogoHeader name="chocolit"></LogoHeader>
@@ -228,6 +228,7 @@ export default function Chocolit() {
             <img
               src="/arrow_up.svg"
               className="relative w-6 my-4 transform -translate-x-1/2 left-1/2"
+              alt="Upward arrow"
             ></img>
             <div>many virgin materials involved in the process</div>
           </div>
@@ -238,6 +239,7 @@ export default function Chocolit() {
             <img
               src="/arrow_up.svg"
               className="relative w-6 my-4 transform -translate-x-1/2 left-1/2"
+              alt="Upward arrow"
             ></img>
             <div>long-distance transportation</div>
           </div>
@@ -249,6 +251,7 @@ export default function Chocolit() {
             <img
               src="/arrow_down.svg"
               className="relative w-6 my-4 transform -translate-x-1/2 left-1/2"
+              alt="Downward arrow"
             ></img>
           </div>
           <div
@@ -259,6 +262,7 @@ export default function Chocolit() {
             <img
               src="/arrow_down.svg"
               className="relative w-6 my-4 transform -translate-x-1/2 left-1/2"
+              alt="Downard arrow"
             ></img>
           </div>
         </div>
@@ -429,4 +433,6 @@ export default function Chocolit() {
       ></BottomNav>
     </main>
   );
-}
+};
+
+export default Chocolit;

@@ -8,7 +8,7 @@ import FullScreenImage from "../components/Designs/FullScreenImage";
 import LogoHeader from "../components/Designs/LogoHeader";
 import { Height, Width } from "../utils/global_types";
 
-export default function MulticolorPen() {
+const MulticolorPen: React.FC = () => {
   return (
     <main>
       <LogoHeader name="multicolor_pen"></LogoHeader>
@@ -25,4 +25,6 @@ export default function MulticolorPen() {
       </AnimatePresence>
     </main>
   );
-}
+};
+
+export default MulticolorPen;

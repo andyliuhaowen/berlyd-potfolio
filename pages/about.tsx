@@ -8,7 +8,7 @@ import ImageAndText from "../components/Designs/ImageAndText";
 import Header from "../components/Landing/Header";
 import { Height } from "../utils/global_types";
 
-export default function About() {
+const About: React.FC = () => {
   return (
     <>
       <Head>
@@ -37,4 +37,6 @@ export default function About() {
       </div>
     </>
   );
-}
+};
+
+export default About;

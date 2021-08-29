@@ -12,14 +12,12 @@
 import { Fragment } from "react";
 import Image from "../Image";
 
-class StaticParallexProps {
-  images: string[] = [];
-  alts: string[] = [];
-  imageHeight: number = 0;
-  imageWidth: number = 0;
+interface StaticParallexProps {
+  images: string[];
+  alts: string[];
 }
 
-export default function StaticParallex(props: StaticParallexProps) {
+const StaticParallex: React.FC<StaticParallexProps> = (props) => {
   return (
     <Fragment>
       {props.images.map((image, index) => (
@@ -35,17 +33,13 @@ export default function StaticParallex(props: StaticParallexProps) {
               className="fixed top-0 w-full h-full"
               style={{ zIndex: -1, transform: "perspective(0px)" }}
             >
-              <Image
-                src={image}
-                alt={props.alts[index]}
-                layout="fill"
-                height={props.imageHeight}
-                width={props.imageWidth}
-              ></Image>
+              <Image src={image} alt={props.alts[index]} layout="fill"></Image>
             </div>
           </div>
         </div>
       ))}
     </Fragment>
   );
-}
+};
+
+export default StaticParallex;

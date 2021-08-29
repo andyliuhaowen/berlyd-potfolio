@@ -22,7 +22,7 @@ import VerticalSpacing from "../components/Designs/VerticalSpacing";
 import Image from "../components/Image";
 import BottomNav from "../components/Designs/BottomNav";
 
-export default function Mojo() {
+const Mojo: React.FC = () => {
   return (
     <>
       <Head>
@@ -82,6 +82,8 @@ export default function Mojo() {
           ]}
           height={Height.Full}
           imageOnLeft={false}
+          imageWidth={3910}
+          imageHeight={5167}
         ></ImageAndText>
 
         <ImageAndText
@@ -94,6 +96,8 @@ export default function Mojo() {
           ]}
           height={Height.Full}
           imageOnLeft={true}
+          imageWidth={1900}
+          imageHeight={1266}
         ></ImageAndText>
 
         <ThreeImageAndText
@@ -378,8 +382,6 @@ export default function Mojo() {
             "/mojo/flavor_3_full",
           ]}
           alts={["Mojo render", "Mojo render", "Mojo render"]}
-          imageHeight={1440}
-          imageWidth={2560}
         ></StaticParallex>
 
         <FullScreenImage
@@ -407,4 +409,6 @@ export default function Mojo() {
       />
     </>
   );
-}
+};
+
+export default Mojo;

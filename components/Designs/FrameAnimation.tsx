@@ -1,14 +1,20 @@
+/**
+ * Made by Haowen Liu in 2021
+ * Component for creating an animation out of image frames.
+ */
+
 import FullScreenImage from "./FullScreenImage";
 import { useEffect, useState } from "react";
+import { Height, Width } from "../../utils/global_types";
 
-interface IFrameAnimationProps {
+interface FrameAnimationProps {
   frames: string[];
   frameDuration: number;
   imageHeight: number;
   imageWidth: number;
 }
 
-export default function FrameAnimation(props: IFrameAnimationProps) {
+const FrameAnimation: React.FC<FrameAnimationProps> = (props) => {
   const [frameNum, setFrameNum] = useState(0);
   const [increasing, setIncreasing] = useState(true);
   useEffect(() => {
@@ -33,7 +39,7 @@ export default function FrameAnimation(props: IFrameAnimationProps) {
         clearInterval(interval);
       }
     };
-  }, [frameNum, increasing]);
+  }, [frameNum, increasing, props.frameDuration, props.frames.length]);
   return (
     <div
       className="relative h-auto"
@@ -49,11 +55,15 @@ export default function FrameAnimation(props: IFrameAnimationProps) {
           <FullScreenImage
             image={frame}
             alt={`Frame ${index}`}
-            height={props.imageHeight}
-            width={props.imageWidth}
+            imageHeight={props.imageHeight}
+            imageWidth={props.imageWidth}
+            width={Width.Full}
+            height={Height.Free}
           ></FullScreenImage>
         </div>
       ))}
     </div>
   );
-}
+};
+
+export default FrameAnimation;

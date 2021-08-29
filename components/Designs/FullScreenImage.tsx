@@ -12,17 +12,17 @@ import {
 import { motion } from "framer-motion";
 import Image from "../Image";
 
-class FullScreenImageProps {
-  image: string = "";
-  alt: string = "";
-  height: Height = Height.Free;
-  width: Width = Width.Padded;
+interface FullScreenImageProps {
+  image: string;
+  alt: string;
+  height: Height;
+  width: Width;
   layoutId?: string;
-  imageHeight?: number;
-  imageWidth?: number;
+  imageHeight: number;
+  imageWidth: number;
 }
 
-export default function FullScreenImage(props: FullScreenImageProps) {
+const FullScreenImage: React.FC<FullScreenImageProps> = (props) => {
   return (
     <motion.div
       className={`relative ${getMarginForWidth(props.width)} ${getRemHeight(
@@ -36,8 +36,8 @@ export default function FullScreenImage(props: FullScreenImageProps) {
           src={props.image}
           alt={props.alt}
           layout="responsive"
-          height={props.imageHeight!}
-          width={props.imageWidth!}
+          height={props.imageHeight}
+          width={props.imageWidth}
         ></Image>
       )}
       {props.height !== Height.Free && (
@@ -45,4 +45,6 @@ export default function FullScreenImage(props: FullScreenImageProps) {
       )}
     </motion.div>
   );
-}
+};
+
+export default FullScreenImage;

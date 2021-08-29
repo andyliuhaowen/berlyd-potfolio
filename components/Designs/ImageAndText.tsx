@@ -6,7 +6,7 @@
 import { Height } from "../../utils/global_types";
 import Image from "../Image";
 
-interface IImageAndTextProps {
+interface ImageAndTextProps {
   image: string;
   title: string;
   color: string;
@@ -14,11 +14,11 @@ interface IImageAndTextProps {
   text: string[];
   imageOnLeft: boolean;
   height: Height;
-  imageHeight?: number;
-  imageWidth?: number;
+  imageHeight: number;
+  imageWidth: number;
 }
 
-export default function ImageAndText(props: IImageAndTextProps) {
+const ImageAndText: React.FC<ImageAndTextProps> = (props) => {
   return (
     <div
       className={`mx-10 xl:mx-16 flex flex-col h-auto mt-28 md:mt-32 ${
@@ -77,4 +77,6 @@ export default function ImageAndText(props: IImageAndTextProps) {
       </div>
     </div>
   );
-}
+};
+
+export default ImageAndText;

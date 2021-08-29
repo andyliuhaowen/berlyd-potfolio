@@ -3,7 +3,7 @@
  * Component for creating a three-col project banner.
  */
 
-interface IProjectBannerProps {
+interface ProjectBannerProps {
   a: string;
   b: string;
   c: string;
@@ -11,7 +11,7 @@ interface IProjectBannerProps {
   textColor: string;
 }
 
-export default function ProjectBanner(props: IProjectBannerProps) {
+const ProjectBanner: React.FC<ProjectBannerProps> = (props) => {
   return (
     <div className="">
       <div
@@ -23,4 +23,6 @@ export default function ProjectBanner(props: IProjectBannerProps) {
       </div>
     </div>
   );
-}
+};
+
+export default ProjectBanner;

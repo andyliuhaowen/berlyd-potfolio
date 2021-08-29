@@ -8,18 +8,18 @@ import Image from "../Image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-class LandingContentProps {
-  name: string = "";
-  title: string = "";
-  tagline: string = "";
-  desc: string = "";
-  image: string = "";
-  titleLong: boolean = false;
-  bgColor: string = "";
-  textColor: string = "";
+interface LandingContentProps {
+  name: string;
+  title: string;
+  tagline: string;
+  desc: string;
+  image: string;
+  titleLong: boolean;
+  bgColor: string;
+  textColor: string;
 }
 
-export default function LandingContent(props: LandingContentProps) {
+const LandingContent: React.FC<LandingContentProps> = (props) => {
   let textSize = "";
   if (props.titleLong) {
     textSize =
@@ -66,7 +66,7 @@ export default function LandingContent(props: LandingContentProps) {
           className="relative flex-grow mx-10 xl:mx-16 h-65vh mt-8vh md:ml-0"
           layoutId={`${props.name}-image`}
         >
-          <Link href={props.name}>
+          <Link href={props.name} passHref>
             <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
               <Image
                 src={props.image}
@@ -80,4 +80,6 @@ export default function LandingContent(props: LandingContentProps) {
       </div>
     </div>
   );
-}
+};
+
+export default LandingContent;

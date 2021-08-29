@@ -6,7 +6,7 @@
 import Image from "../Image";
 import { Height } from "../../utils/global_types";
 
-interface ICaptionedImageProps {
+interface CaptionedImageProps {
   image: string;
   caption: string;
   height: Height;
@@ -14,15 +14,11 @@ interface ICaptionedImageProps {
   className?: string;
 }
 
-export default function CaptionedImage(props: ICaptionedImageProps) {
+const CaptionedImage: React.FC<CaptionedImageProps> = (props) => {
   return (
     <div className={`h-full w-full flex flex-col ${props.className}`}>
       {props.caption !== "" && (
-        <div
-          className={`text-black s_font mb-4 ${
-            props.textClass ?? ""
-          }`}
-        >
+        <div className={`text-black s_font mb-4 ${props.textClass ?? ""}`}>
           {props.caption}
         </div>
       )}
@@ -31,4 +27,6 @@ export default function CaptionedImage(props: ICaptionedImageProps) {
       </div>
     </div>
   );
-}
+};
+
+export default CaptionedImage;

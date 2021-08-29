@@ -3,14 +3,14 @@
  * Component of a customly styled button.
  */
 
-interface IButtonTempProps {
+interface ButtonTempProps {
   text: string;
   href: string;
   color: string;
   secondaryColor: string;
 }
 
-export default function CustomButton(props: IButtonTempProps) {
+const CustomButton: React.FC<ButtonTempProps> = (props) => {
   return (
     <a href={props.href} target="_blank" rel="noreferrer noopener">
       <div
@@ -20,4 +20,6 @@ export default function CustomButton(props: IButtonTempProps) {
       </div>
     </a>
   );
-}
+};
+
+export default CustomButton;

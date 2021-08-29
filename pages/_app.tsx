@@ -7,12 +7,12 @@ import "../styles/globals.css";
 import { AppProps } from "next/app";
 import { AnimateSharedLayout } from "framer-motion";
 
-function MyApp({ Component, pageProps }: AppProps) {
+const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   return (
     <AnimateSharedLayout type="crossfade">
       <Component {...pageProps} />
     </AnimateSharedLayout>
   );
-}
+};
 
 export default MyApp;

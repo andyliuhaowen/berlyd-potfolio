@@ -5,15 +5,13 @@
 
 import React from "react";
 
-interface ISectionHeaderProps {
+interface SectionHeaderProps {
   type: "normal" | "banner";
   color: "green" | "pink" | "black";
   bannerTextColor?: "black" | "white";
 }
 
-export default function Title(
-  props: React.PropsWithChildren<ISectionHeaderProps>
-) {
+const Title: React.FC<SectionHeaderProps> = (props) => {
   return (
     <>
       {props.type === "normal" && (
@@ -32,4 +30,6 @@ export default function Title(
       )}
     </>
   );
-}
+};
+
+export default Title;

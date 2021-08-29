@@ -1,13 +1,18 @@
+/**
+ * Made by Haowen Liu in 2021
+ * Component for laying out a grid of captioned images as a process showcase.
+ */
+
 import Image from "../Image";
 
-interface IProcessGalleryProps {
+interface ProcessGalleryProps {
   images: string[];
   captions: string[];
   imageHeight: number;
   imageWidth: number;
 }
 
-export default function ProcessGallery(props: IProcessGalleryProps) {
+const ProcessGallery: React.FC<ProcessGalleryProps> = (props) => {
   return (
     <div
       className={`justify-between mx-10 xl:mx-16 grid grid-cols-4 grid-flow-row gap-8 mt-8`}
@@ -26,4 +31,6 @@ export default function ProcessGallery(props: IProcessGalleryProps) {
       ))}
     </div>
   );
-}
+};
+
+export default ProcessGallery;

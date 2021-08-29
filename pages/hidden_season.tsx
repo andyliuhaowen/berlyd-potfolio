@@ -20,7 +20,7 @@ import FrameAnimation from "../components/Designs/FrameAnimation";
 import Head from "next/head";
 import BottomNav from "../components/Designs/BottomNav";
 
-export default function HiddenSeason() {
+const HiddenSeason: React.FC = () => {
   return (
     <>
       <Head>
@@ -75,6 +75,8 @@ export default function HiddenSeason() {
           ]}
           height={Height.Full}
           imageOnLeft={false}
+          imageHeight={2533}
+          imageWidth={3500}
         ></ImageAndText>
 
         <ImageAndText
@@ -87,6 +89,8 @@ export default function HiddenSeason() {
           ]}
           height={Height.Full}
           imageOnLeft={true}
+          imageWidth={800}
+          imageHeight={500}
         ></ImageAndText>
 
         <ThreeImageAndText
@@ -720,4 +724,6 @@ export default function HiddenSeason() {
       </main>
     </>
   );
-}
+};
+
+export default HiddenSeason;

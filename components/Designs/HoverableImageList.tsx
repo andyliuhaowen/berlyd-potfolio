@@ -1,14 +1,19 @@
+/**
+ * Made by Haowen Liu in 2021
+ * Component for creating images that displays texts when hovered.
+ */
+
 import { getRemHeight, Height } from "../../utils/global_types";
 import HoverableImage from "./HoverableImage";
 
-interface IHoverableImageListProps {
+interface HoverableImageListProps {
   images: string[];
   imagesHidden: string[];
   captions: string[];
   height: Height;
 }
 
-export default function HoverableImageList(props: IHoverableImageListProps) {
+const HoverableImageList: React.FC<HoverableImageListProps> = (props) => {
   return (
     <div
       className={`h-auto md:${getRemHeight(
@@ -31,4 +36,6 @@ export default function HoverableImageList(props: IHoverableImageListProps) {
       ))}
     </div>
   );
-}
+};
+
+export default HoverableImageList;

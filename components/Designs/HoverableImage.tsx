@@ -6,13 +6,13 @@
 import { motion } from "framer-motion";
 import Image from "../Image";
 
-interface IHoverableImageProps {
+interface HoverableImageProps {
   image: string;
   imageHidden: string;
   caption: string;
 }
 
-export default function HoverableImage(props: IHoverableImageProps) {
+const HoverableImage: React.FC<HoverableImageProps> = (props) => {
   return (
     <div className="flex flex-col w-full h-full">
       <div className="mx-0 mb-4 text-black md:mx-10 xl:mx-16 s_font">
@@ -37,4 +37,6 @@ export default function HoverableImage(props: IHoverableImageProps) {
       </div>
     </div>
   );
-}
+};
+
+export default HoverableImage;

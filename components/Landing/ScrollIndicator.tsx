@@ -7,7 +7,7 @@ import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 
 import { motion } from "framer-motion";
 
-export default function ScrollIndicator() {
+const ScrollIndicator: React.FC = () => {
   return (
     <div className="absolute w-8 h-8 text-black left-1/2 transform -translate-x-1/2 bottom-16p lg:bottom-8p">
       <motion.div
@@ -29,4 +29,6 @@ export default function ScrollIndicator() {
       </motion.div>
     </div>
   );
-}
+};
+
+export default ScrollIndicator;

@@ -9,7 +9,7 @@
 import CaptionedImage from "./CaptionedImage";
 import { getRemHeight, Height } from "../../utils/global_types";
 
-interface IImageListProps {
+interface ImageListProps {
   images: string[];
   captions: string[];
   height: Height;
@@ -18,7 +18,7 @@ interface IImageListProps {
   widthNarrow: number;
 }
 
-export default function CaptionedImageList(props: IImageListProps) {
+const CaptionedImageList: React.FC<ImageListProps> = (props) => {
   let widthClass = "";
   switch (props.widthWide) {
     case 1:
@@ -72,4 +72,6 @@ export default function CaptionedImageList(props: IImageListProps) {
       ))}
     </div>
   );
-}
+};
+
+export default CaptionedImageList;

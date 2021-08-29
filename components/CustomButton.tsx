@@ -5,16 +5,16 @@
 
 import Link from "next/link";
 
-interface IButtonProps {
+interface ButtonProps {
   text: string;
   href: string;
   color: string;
   secondaryColor: string;
 }
 
-export default function CustomButton(props: IButtonProps) {
+const CustomButton: React.FC<ButtonProps> = (props) => {
   return (
-    <Link href={props.href}>
+    <Link href={props.href} passHref>
       <div
         className={`border-${props.color} text-${props.color} hover:text-${props.secondaryColor} hover:bg-${props.color} transition-colors border-2 inline-block my-2 cursor-pointer`}
       >
@@ -22,4 +22,6 @@ export default function CustomButton(props: IButtonProps) {
       </div>
     </Link>
   );
-}
+};
+
+export default CustomButton;

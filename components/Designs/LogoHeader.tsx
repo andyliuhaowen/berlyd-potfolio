@@ -5,15 +5,15 @@
 
 import Link from "next/link";
 
-class LogoHeaderProps {
-  name: string = "";
+interface LogoHeaderProps {
+  name: string;
 }
 
-export default function LogoHeader(props: LogoHeaderProps) {
+const LogoHeader: React.FC<LogoHeaderProps> = (props) => {
   return (
     <header className="absolute z-40 items-center hidden w-full mt-4 md:flex h-36">
       <div className="w-24 ml-8 xl:ml-14">
-        <Link href={`/#${props.name}`}>
+        <Link href={`/#${props.name}`} passHref>
           <img
             src="/logo.png"
             alt="Logo"
@@ -25,4 +25,6 @@ export default function LogoHeader(props: LogoHeaderProps) {
       </div>
     </header>
   );
-}
+};
+
+export default LogoHeader;

@@ -49,7 +49,7 @@ function getScrollLineHeight() {
   return fontSize ? window.parseInt(fontSize) : undefined;
 }
 
-export default function LandingMain() {
+const LandingMain: React.FC = () => {
   const [delta, setDelta] = useState(0);
   const [lineHeight, setLineHeight] = useState<number | undefined>(undefined);
   const [transitioning, setTransitioning] = useState(false);
@@ -62,12 +62,12 @@ export default function LandingMain() {
 
   useEffect(() => {
     router.push({ pathname: "/", hash: names[section ?? 0] });
-  }, [section]);
+  }, [router, section]);
 
   const handleWheel = useCallback(
     (e: React.WheelEvent) => {
       if (transitioning) return;
-      let newDelta: number;
+      let newDelta = 0;
       switch (e.deltaMode) {
         case 0: {
           newDelta = delta + e.deltaY;
@@ -77,7 +77,9 @@ export default function LandingMain() {
           if (lineHeight === undefined) {
             const height = getScrollLineHeight();
             setLineHeight(height);
-            newDelta = delta + height! * e.deltaY;
+            if (height) {
+              newDelta = delta + height * e.deltaY;
+            }
           } else {
             newDelta = delta + lineHeight * e.deltaY;
           }
@@ -93,7 +95,7 @@ export default function LandingMain() {
         }
       }
 
-      if (newDelta! > THRESHOLD) {
+      if (newDelta > THRESHOLD) {
         setSection((orig) => {
           if (orig === undefined) {
             return 0;
@@ -109,7 +111,7 @@ export default function LandingMain() {
         setTimeout(() => {
           setTransitioning(false);
         }, 300);
-      } else if (newDelta! < -THRESHOLD) {
+      } else if (newDelta < -THRESHOLD) {
         setSection((orig) => {
           if (orig === undefined) {
             return 0;
@@ -127,7 +129,7 @@ export default function LandingMain() {
         }, 300);
       }
 
-      setDelta(newDelta!);
+      setDelta(newDelta);
     },
     [delta, lineHeight, transitioning]
   );
@@ -286,4 +288,6 @@ export default function LandingMain() {
       </div>
     </Fragment>
   );
-}
+};
+
+export default LandingMain;

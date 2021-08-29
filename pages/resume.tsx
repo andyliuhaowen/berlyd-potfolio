@@ -6,7 +6,7 @@
 import CustomButton from "../components/CustomButtonTemp";
 import Header from "../components/Landing/Header";
 
-export default function Resume() {
+const Resume: React.FC = () => {
   return (
     <>
       <Header color="black" />
@@ -31,4 +31,6 @@ export default function Resume() {
       </main>
     </>
   );
-}
+};
+
+export default Resume;

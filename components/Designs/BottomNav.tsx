@@ -1,15 +1,20 @@
+/**
+ * Made by Haowen Liu in 2021
+ * Component for creating navigations at the bottom.
+ */
+
 import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useRouter } from "next/dist/client/router";
 
-interface IBottomNav {
+interface BottomNav {
   leftName: string;
   leftLink: string;
   rightName: string;
   rightLink: string;
 }
 
-export default function BottomNav(props: IBottomNav) {
+const BottomNav: React.FC<BottomNav> = (props) => {
   const router = useRouter();
   return (
     <div className="flex p-16">
@@ -51,4 +56,6 @@ export default function BottomNav(props: IBottomNav) {
       )}
     </div>
   );
-}
+};
+
+export default BottomNav;

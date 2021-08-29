@@ -1,10 +1,15 @@
-class TitleAndTaglineProps {
-  title: string = "";
-  tagline: string = "";
-  color: string = "";
+/**
+ * Made by Haowen Liu in 2021
+ * Component for laying out a project title with tagline underneath.
+ */
+
+interface TitleAndTaglineProps {
+  title: string;
+  tagline: string;
+  color: string;
 }
 
-export default function TitleAndTagline(props: TitleAndTaglineProps) {
+const TitleAndTagline: React.FC<TitleAndTaglineProps> = (props) => {
   return (
     <div className="relative">
       <div
@@ -17,4 +22,6 @@ export default function TitleAndTagline(props: TitleAndTaglineProps) {
       </div>
     </div>
   );
-}
+};
+
+export default TitleAndTagline;

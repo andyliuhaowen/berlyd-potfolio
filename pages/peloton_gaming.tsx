@@ -7,7 +7,7 @@ import FullScreenImage from "../components/Designs/FullScreenImage";
 import LogoHeader from "../components/Designs/LogoHeader";
 import { Height, Width } from "../utils/global_types";
 
-export default function PelotonGaming() {
+const PelotonGaming: React.FC=()=> {
   return (
     <main>
       <LogoHeader name="peloton_gaming"></LogoHeader>
@@ -23,3 +23,5 @@ export default function PelotonGaming() {
     </main>
   );
 }
+
+export default PelotonGaming;

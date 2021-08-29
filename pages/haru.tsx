@@ -7,7 +7,7 @@ import LogoHeader from "../components/Designs/LogoHeader";
 import FullScreenImage from "../components/Designs/FullScreenImage";
 import { Height, Width } from "../utils/global_types";
 
-export default function Haru() {
+const Haru: React.FC = () => {
   return (
     <main>
       <LogoHeader name="haru"></LogoHeader>
@@ -22,4 +22,6 @@ export default function Haru() {
       ></FullScreenImage>
     </main>
   );
-}
+};
+
+export default Haru;

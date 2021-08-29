@@ -10,11 +10,11 @@ interface HeaderProps {
   color: "black" | "green" | "white" | "blue" | "pink";
 }
 
-export default function Header(props: HeaderProps) {
+const Header: React.FC<HeaderProps> = (props) => {
   return (
     <header className="absolute z-40 flex items-center w-full mt-4 h-36">
       <div className="w-24 ml-8 xl:ml-14">
-        <Link href={`/#landing`}>
+        <Link href={`/#landing`} passHref>
           <img
             src={`/logo_${props.color}.png`}
             alt="Logo"
@@ -39,4 +39,6 @@ export default function Header(props: HeaderProps) {
       </div>
     </header>
   );
-}
+};
+
+export default Header;
