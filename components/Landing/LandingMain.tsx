@@ -58,11 +58,13 @@ const LandingMain: React.FC = () => {
     nameMap.get(window.location.hash) ?? 0
   );
 
-  const router = useRouter();
+  const { push } = useRouter();
 
   useEffect(() => {
-    router.push({ pathname: "/", hash: names[section ?? 0] });
-  }, [router, section]);
+    push({ pathname: "/", hash: names[section ?? 0] });
+    // This effect modifies route. Router should not circularly trigger this effect.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [section]);
 
   const handleWheel = useCallback(
     (e: React.WheelEvent) => {
