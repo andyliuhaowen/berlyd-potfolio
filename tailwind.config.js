@@ -1,7 +1,10 @@
 module.exports = {
   important: true,
   purge: {
-    content: ["./pages/**/*.tsx", "./components/**/*.tsx"],
+    content: [
+      "./pages/**/*.{js,ts,jsx,tsx}",
+      "./components/**/*.{js,ts,jsx,tsx}",
+    ],
     options: {
       safelist: {
         standard: [
@@ -29,7 +32,7 @@ module.exports = {
       },
     },
   },
-  darkMode: false, // or 'media' or 'class'
+  darkMode: false,
   theme: {
     colors: {
       black: "#111921",
@@ -117,8 +120,4 @@ module.exports = {
       },
     },
   },
-  variants: {
-    extend: {},
-  },
-  plugins: [],
 };

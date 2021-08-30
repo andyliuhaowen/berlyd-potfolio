@@ -74,7 +74,7 @@ for dirpath, dirnames, filenames in os.walk(args.input_dir):
                     continue
 
             subprocess.call([
-                "convert",
+                "magick",
                 src,
                 "-strip",
                 "-interlace",
@@ -98,7 +98,7 @@ for dirpath, dirnames, filenames in os.walk(args.input_dir):
                     continue
 
             subprocess.call([
-                "convert",
+                "magick",
                 src,
                 "-strip",
                 "-quality",

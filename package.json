@@ -36,7 +36,7 @@
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-flip-page": "^1.6.4",
+    "react-pageflip": "^2.0.3",
     "react-swipeable": "^6.2.0",
     "recharts": "^2.1.2",
     "snyk": "^1.695.0",

@@ -35,6 +35,9 @@ const Header: React.FC<HeaderProps> = (props) => {
           <span className={`m-2`}>
             <Link href="/play">Play</Link>
           </span>
+          <span className={`m-2`}>
+            <Link href="/book">Book</Link>
+          </span>
         </Fragment>
       </div>
     </header>
