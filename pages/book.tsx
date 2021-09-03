@@ -14,7 +14,7 @@ const Book: React.FC = () => {
 
       <main className="pt-48 flex flex-col items-center bg-pink min-h-screen">
         <div className="max-w-3xl px-8 w-full">
-          <HTMLFlipBook
+          {/* <HTMLFlipBook
             width={500}
             height={657.421875}
             size="stretch"
@@ -90,7 +90,7 @@ const Book: React.FC = () => {
               alt="Book 1 page 1"
               data-density="hard"
             ></img>
-          </HTMLFlipBook>
+          </HTMLFlipBook> */}
         </div>
       </main>
     </>
