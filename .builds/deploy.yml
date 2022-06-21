@@ -3,7 +3,6 @@ packages:
   - python3
   - python3-pip
 secrets:
-  - 507029bf-c8c6-49a3-8c7f-ef10f730fb9d
   - c6787d79-3d59-4013-9488-52c03d64c105
 triggers:
   - action: email
