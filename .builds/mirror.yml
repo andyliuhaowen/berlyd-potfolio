@@ -7,5 +7,6 @@ triggers:
     to: Haowen Liu <lhw@lunacd.com>
 tasks:
   - mirror: |
+      cd berlyd-portfolio
       git remote add mirror git@github.com:andyliuhaowen/berlyd-potfolio.git
       git push --mirror mirror
