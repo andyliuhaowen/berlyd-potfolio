@@ -1,0 +1,11 @@
+image: rockylinux/latest
+secrets:
+  - 5c4d163b-247a-42ef-a017-f58c7494fd92
+triggers:
+  - action: email
+    condition: failure
+    to: Haowen Liu <lhw@lunacd.com>
+tasks:
+  - mirror: |
+      git remote add mirror git@github.com:andyliuhaowen/berlyd-potfolio.git
+      git push --mirror mirror

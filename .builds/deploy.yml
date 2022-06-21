@@ -1,0 +1,29 @@
+image: rockylinux/latest
+packages:
+  - python3
+  - python3-pip
+secrets:
+  - 507029bf-c8c6-49a3-8c7f-ef10f730fb9d
+  - c6787d79-3d59-4013-9488-52c03d64c105
+triggers:
+  - action: email
+    condition: failure
+    to: Haowen Liu <lhw@lunacd.com>
+tasks:
+  - setup: |
+      sudo dnf module -y install nodejs:14
+      sudo dnf install -y nodejs npm
+      npm config set loglevel warn
+      mkdir "${HOME}/.npm-packages"
+      npm config set prefix "${HOME}/.npm-packages"
+      npm install --quiet -g pnpm
+      sudo pip3 install -q awscli
+  - deploy: |
+      cd berlyd-portfolio
+      set +x
+      source ~/.berly_aws_key
+      set -x
+      ~/.npm-packages/bin/pnpm install --reporter=silent
+      ~/.npm-packages/bin/pnpx next build
+      ~/.npm-packages/bin/pnpx next export
+      aws s3 sync out s3://berlyd-website
