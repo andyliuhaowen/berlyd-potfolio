@@ -10,19 +10,16 @@ triggers:
     to: Haowen Liu <lhw@lunacd.com>
 tasks:
   - setup: |
-      sudo dnf module -y install nodejs:14
-      sudo dnf install -y nodejs npm
-      npm config set loglevel warn
-      mkdir "${HOME}/.npm-packages"
-      npm config set prefix "${HOME}/.npm-packages"
-      npm install --quiet -g pnpm
+      sudo dnf module -y install nodejs:16
+      sudo dnf install -y nodejs
+      sudo corepack enable
       sudo pip3 install -q awscli
   - deploy: |
       cd berlyd-portfolio
       set +x
       source ~/.berly_aws_key
       set -x
-      ~/.npm-packages/bin/pnpm install --reporter=silent
-      ~/.npm-packages/bin/pnpx next build
-      ~/.npm-packages/bin/pnpx next export
+      yarn
+      yarn next build
+      yarn next export
       aws s3 sync out s3://berlyd-website

@@ -6,14 +6,14 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion";
-import { useState, useRef } from "react";
+import { useState, useRef, PropsWithChildren } from "react";
 
 interface CollapseProps {
   title: string;
   color: string;
 }
 
-const Collapse: React.FC<CollapseProps> = (props) => {
+const Collapse: React.FC<PropsWithChildren<CollapseProps>> = (props) => {
   const [show, setShow] = useState(false);
   const titleElement = useRef<HTMLDivElement>(null);
 
@@ -25,9 +25,8 @@ const Collapse: React.FC<CollapseProps> = (props) => {
       className={`${show ? "" : "overflow-hidden"} relative`}
     >
       <motion.div
-        className={`sticky origin-center self-center inline-block ml-10 h-7.5 w-7.5 md:w-9 md:h-9 top-12 xl:ml-16 cursor-pointer ${
-          show ? "mt-12" : ""
-        }`}
+        className={`sticky origin-center self-center inline-block ml-10 h-7.5 w-7.5 md:w-9 md:h-9 top-12 xl:ml-16 cursor-pointer ${show ? "mt-12" : ""
+          }`}
         initial={{ transform: "rotate(0deg)" }}
         animate={{
           transform: show ? "rotate(45deg)" : "rotate(0deg)",

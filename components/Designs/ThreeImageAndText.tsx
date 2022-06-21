@@ -3,6 +3,8 @@
  * Component for laying out a three-image group with text side by side.
  */
 
+import { PropsWithChildren } from "react";
+
 interface ImageAndTextProps {
   title: string;
   color: string;
@@ -10,20 +12,18 @@ interface ImageAndTextProps {
   imageOnLeft: boolean;
 }
 
-const ThreeImageAndText: React.FC<ImageAndTextProps> = (props) => {
+const ThreeImageAndText: React.FC<PropsWithChildren<ImageAndTextProps>> = (props) => {
   return (
     <div
-      className={`mx-10 xl:mx-16 flex flex-col h-auto mt-28 md:mt-32 lg:h-fullsection_lg xl:h-fullsection ${
-        props.imageOnLeft ? "lg:flex-row" : "lg:flex-row-reverse"
-      }`}
+      className={`mx-10 xl:mx-16 flex flex-col h-auto mt-28 md:mt-32 lg:h-fullsection_lg xl:h-fullsection ${props.imageOnLeft ? "lg:flex-row" : "lg:flex-row-reverse"
+        }`}
     >
       <div className="relative mb-16 lg:w-2/3 h-fullsection_md lg:h-auto lg:mb-0">
         <div className="relative h-full">{props.children}</div>
       </div>
       <div
-        className={`lg:w-1/3 flex flex-col ${
-          props.imageOnLeft ? "lg:pl-16" : "lg:pr-16"
-        }`}
+        className={`lg:w-1/3 flex flex-col ${props.imageOnLeft ? "lg:pl-16" : "lg:pr-16"
+          }`}
       >
         <div className={`mb-12 font-bold text-${props.color} m_font`}>
           {props.title}

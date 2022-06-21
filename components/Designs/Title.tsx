@@ -3,7 +3,7 @@
  * Component for creating a title for content (normal or banner).
  */
 
-import React from "react";
+import React, { PropsWithChildren } from "react";
 
 interface SectionHeaderProps {
   type: "normal" | "banner";
@@ -11,7 +11,7 @@ interface SectionHeaderProps {
   bannerTextColor?: "black" | "white";
 }
 
-const Title: React.FC<SectionHeaderProps> = (props) => {
+const Title: React.FC<PropsWithChildren<SectionHeaderProps>> = (props) => {
   return (
     <>
       {props.type === "normal" && (
