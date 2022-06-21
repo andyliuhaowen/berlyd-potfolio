@@ -1,4 +1,4 @@
-image: rockylinux/latest
+image: rockylinux/8
 packages:
   - python3
   - python3-pip

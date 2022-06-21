@@ -1,4 +1,4 @@
-image: rockylinux/latest
+image: rockylinux/8
 secrets:
   - 5c4d163b-247a-42ef-a017-f58c7494fd92
 triggers:
@@ -8,5 +8,5 @@ triggers:
 tasks:
   - mirror: |
       cd berlyd-portfolio
-      git remote add mirror git@github.com:andyliuhaowen/berlyd-potfolio.git
+      git remote add mirror git@github.com:andyliuhaowen/berlyd-portfolio.git
       GIT_SSH_COMMAND='ssh -i ~/.ssh/id_rsa -o "StrictHostKeyChecking=no"' git push --mirror mirror
