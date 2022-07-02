@@ -56,6 +56,17 @@ const Chocolit: React.FC = () => {
         imageHeight={1080}
       ></FullScreenImage>
 
+      <div className="m-10 xl:m-16 relative h-0" style={{ paddingTop: "56.25%" }}>
+        <iframe
+          src="https://www.youtube.com/embed/lbAYcGFva3U?autoplay=1"
+          title="YouTube video player"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+          className="w-full h-full absolute top-0 left-0"
+        ></iframe>
+      </div>
+
       <Title type="banner" color="pink" bannerTextColor="black">
         Research
       </Title>
