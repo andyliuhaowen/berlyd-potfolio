@@ -14,6 +14,8 @@ tasks:
       sudo dnf install -y nodejs
       sudo corepack enable
       sudo pip3 install -q awscli
+  - fetch_assets: |
+      aws s3 sync s3://berlyd-assets/public public
   - deploy: |
       cd berlyd-portfolio
       set +x
