@@ -13,6 +13,7 @@ const About: React.FC = () => {
     <>
       <Head>
         <title>About - Berly Dai</title>
+        <link rel="icon" href="/favicon.png" />
       </Head>
       <div>
         <main className="bg-white overflow-auto min-h-screen">

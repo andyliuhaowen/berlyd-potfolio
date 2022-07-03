@@ -3,12 +3,17 @@
  * Resume page.
  */
 
+import Head from "next/head";
 import CustomButton from "../components/CustomButtonTemp";
 import Header from "../components/Landing/Header";
 
 const Resume: React.FC = () => {
   return (
     <>
+      <Head>
+        <title>Resume - Berly Dai</title>
+        <link rel="icon" href="/favicon.png" />
+      </Head>
       <Header color="black" />
       <main className="bg-white">
         <div className="relative pt-52" style={{ left: "15%", width: "70%" }}>

@@ -6,21 +6,28 @@
 import LogoHeader from "../components/Designs/LogoHeader";
 import FullScreenImage from "../components/Designs/FullScreenImage";
 import { Height, Width } from "../utils/global_types";
+import Head from "next/head";
 
 const Haru: React.FC = () => {
   return (
-    <main>
-      <LogoHeader name="haru"></LogoHeader>
-      <FullScreenImage
-        image="/haru/main_full"
-        alt="Haru photo"
-        height={Height.Free}
-        width={Width.Full}
-        layoutId="haru-image"
-        imageHeight={1656}
-        imageWidth={2560}
-      ></FullScreenImage>
-    </main>
+    <>
+      <Head>
+        <title>Haru - Berly Dai</title>
+        <link rel="icon" href="/favicon.png" />
+      </Head>
+      <main>
+        <LogoHeader name="haru"></LogoHeader>
+        <FullScreenImage
+          image="/haru/main_full"
+          alt="Haru photo"
+          height={Height.Free}
+          width={Width.Full}
+          layoutId="haru-image"
+          imageHeight={1656}
+          imageWidth={2560}
+        ></FullScreenImage>
+      </main>
+    </>
   );
 };
 

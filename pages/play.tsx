@@ -400,6 +400,7 @@ const Play: React.FC = () => {
     <>
       <Head>
         <title>Play - Berly Dai</title>
+        <link rel="icon" href="/favicon.png" />
       </Head>
       {!tooSmall && !dirty && (
         <>

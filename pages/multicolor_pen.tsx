@@ -4,26 +4,33 @@
  */
 
 import { AnimatePresence } from "framer-motion";
+import Head from "next/head";
 import FullScreenImage from "../components/Designs/FullScreenImage";
 import LogoHeader from "../components/Designs/LogoHeader";
 import { Height, Width } from "../utils/global_types";
 
 const MulticolorPen: React.FC = () => {
   return (
-    <main>
-      <LogoHeader name="multicolor_pen"></LogoHeader>
-      <AnimatePresence>
-        <FullScreenImage
-          image="/multicolor_pen/main_full"
-          alt="Multicolor Pen photo"
-          width={Width.Full}
-          height={Height.Free}
-          imageHeight={2098}
-          imageWidth={2560}
-          layoutId="multicolor_pen-image"
-        ></FullScreenImage>
-      </AnimatePresence>
-    </main>
+    <>
+      <Head>
+        <title>Multicolor Pen - Berly Dai</title>
+        <link rel="icon" href="/favicon.png" />
+      </Head>
+      <main>
+        <LogoHeader name="multicolor_pen"></LogoHeader>
+        <AnimatePresence>
+          <FullScreenImage
+            image="/multicolor_pen/main_full"
+            alt="Multicolor Pen photo"
+            width={Width.Full}
+            height={Height.Free}
+            imageHeight={2098}
+            imageWidth={2560}
+            layoutId="multicolor_pen-image"
+          ></FullScreenImage>
+        </AnimatePresence>
+      </main>
+    </>
   );
 };
 

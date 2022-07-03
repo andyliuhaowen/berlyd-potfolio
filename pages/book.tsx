@@ -8,6 +8,7 @@ const Book: React.FC = () => {
     <>
       <Head>
         <title>Book - Berly Dai</title>
+        <link rel="icon" href="/favicon.png" />
       </Head>
 
       <Header color="black" />
