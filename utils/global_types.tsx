@@ -1,6 +1,6 @@
 /**
  * Made by Haowen Liu in 2021
- * Define global types used accross the project.
+ * Define global types used across the project.
  */
 
 export enum Height {

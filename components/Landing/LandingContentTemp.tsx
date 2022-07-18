@@ -34,7 +34,7 @@ const LandingContentTemp: React.FC<LandingContentTempProps> = (props) => {
           <div className="flex flex-col h-full">
             <div
               className={
-                `text-${props.textColor} font-calson z-50 relative w-0 leading-tight md:leading-none transform translate-x-16 md:transform-none ` +
+                `text-${props.textColor} font-caslon z-50 relative w-0 leading-tight md:leading-none transform translate-x-16 md:transform-none ` +
                 textSize
               }
             >

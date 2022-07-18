@@ -13,7 +13,7 @@ const TitleAndTagline: React.FC<TitleAndTaglineProps> = (props) => {
   return (
     <div className="relative">
       <div
-        className={`absolute ml-10 -top-4 sm:-top-8 md:-top-12 lg:-top-20 xl:ml-16 text-${props.color} font-calson font-bold xl_font`}
+        className={`absolute ml-10 -top-4 sm:-top-8 md:-top-12 lg:-top-20 xl:ml-16 text-${props.color} font-caslon font-bold xl_font`}
       >
         {props.title}
       </div>

@@ -39,7 +39,7 @@ const Image: React.FC<ImagePropsResponsive | ImagePropsFill> = (props) => {
           <img
             srcSet={`${props.src}_2k.jpg 2560w, ${props.src}_1080p.jpg 1920w, ${props.src}_720p.jpg 1280w`}
             alt={props.alt}
-            className={`${props.className} block absolute min-w-full min-h-full max-h-full max-w-full top-0 left-0 bottom-0 right-0 m-auto`}
+            className={`${props.className ? props.className : ''} block absolute min-w-full min-h-full max-h-full max-w-full top-0 left-0 bottom-0 right-0 m-auto`}
             sizes="100vw"
             decoding="async"
           ></img>
@@ -54,7 +54,7 @@ const Image: React.FC<ImagePropsResponsive | ImagePropsFill> = (props) => {
           <img
             srcSet={`${props.src}_2k.jpg 2560w, ${props.src}_1080p.jpg 1920w, ${props.src}_720p.jpg 1280w`}
             alt={props.alt}
-            className={`object-cover object-center h-auto w-full ${props.className}`}
+            className={`object-cover object-center h-auto w-full ${props.className ? props.className : ''}`}
             decoding="async"
           ></img>
         </picture>
