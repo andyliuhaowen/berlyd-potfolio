@@ -21,7 +21,6 @@ const hoverVariants = {
 const Collapse: React.FC<PropsWithChildren<CollapseProps>> = (props) => {
   const [show, setShow] = useState(false);
   const [hover, setHover] = useState(false);
-  const titleElement = useRef<HTMLDivElement>(null);
 
   return (
     <motion.div
@@ -35,7 +34,7 @@ const Collapse: React.FC<PropsWithChildren<CollapseProps>> = (props) => {
       <motion.div
         animate={hover ? "hover" : "default"}
         variants={hoverVariants}
-        className={`absolute top-0 left-0 w-full h-full border-${props.color} border-t-2 border-b-2`}>
+        className={`absolute top-4 bottom-4 left-0 w-full border-${props.color} border-t-2 border-b-2 origin-left`}>
       </motion.div>
       <motion.div
         className={`sticky origin-center self-center inline-block ml-10 h-7.5 w-7.5 md:w-9 md:h-9 top-12 xl:ml-16 cursor-pointer ${show ? "mt-12" : ""
@@ -47,13 +46,6 @@ const Collapse: React.FC<PropsWithChildren<CollapseProps>> = (props) => {
         transition={{ type: "spring", duration: 1, bounce: 0.5 }}
         onClick={() => {
           setShow((origShow) => {
-            if (titleElement.current) {
-              if (titleElement.current.getBoundingClientRect().top < 0) {
-                titleElement.current.scrollIntoView({
-                  behavior: "smooth",
-                });
-              }
-            }
             return !origShow;
           });
         }}
@@ -68,12 +60,11 @@ const Collapse: React.FC<PropsWithChildren<CollapseProps>> = (props) => {
         onClick={() => {
           setShow((origShow) => !origShow);
         }}
-        ref={titleElement}
       >
         {props.title}
       </div>
       <div
-        className={`mx-20 overflow-auto xl:mx-28 ${show ? "mt-12" : "mt-24"}`}
+        className={`mx-20 overflow-auto xl:mx-28 pb-8 ${show ? "mt-12" : "mt-24"}`}
       >
         {props.children}
       </div>
