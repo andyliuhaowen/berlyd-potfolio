@@ -15,6 +15,7 @@ import ScrollIndicator from "./ScrollIndicator";
 import LandingContent from "./LandingContent";
 import Image from "../Image";
 import LandingContentTemp from "./LandingContentTemp";
+import Play from "../../pages/play";
 
 const nameMap = new Map([
   ["#landing", 0],
@@ -168,7 +169,7 @@ const LandingMain: React.FC = () => {
       <PageSelector page={section} setSection={setSection}></PageSelector>
 
       <div
-        className="relative w-screen h-screen overflow-hidden"
+        className="relative h-screen w-screen overflow-hidden"
         onWheel={handleWheel}
         {...swipeHandlers}
       >
@@ -186,9 +187,15 @@ const LandingMain: React.FC = () => {
         >
           <Header color="black" />
           {/* Intro page */}
-          <div className="relative flex items-center h-screen bg-pink">
-            <div className="hidden md:inline-block md:mx-auto lg:mr-0 lg:ml-60 xl:mx-0 xl:relative xl:left-1/5">
-              <div className="w-3/4 h-24 lg:h-32 xl:h-36">
+          <div className="relative flex h-screen items-center bg-pink">
+            <div className="absolute left-0 top-0 h-full w-full">
+              <Play />
+            </div>
+            <div
+              className="hidden overflow-visible md:mx-auto md:inline-block lg:mr-0 lg:ml-60 xl:relative xl:left-1/5 xl:mx-0"
+              style={{ pointerEvents: "none" }}
+            >
+              <div className="h-24 w-3/4 lg:h-32 xl:h-36">
                 <Image
                   src="/berlyd_full"
                   alt="Berly Dai"
@@ -201,8 +208,8 @@ const LandingMain: React.FC = () => {
                 I&apos;m a creator, designer, and a life lover.
               </div>
             </div>
-            <div className="block mx-auto md:hidden">
-              <div className="w-full h-32 lg:h-36">
+            <div className="mx-auto block md:hidden">
+              <div className="h-32 w-full lg:h-36">
                 <Image
                   src="/berlyd_half"
                   alt="Berly Dai"
@@ -211,7 +218,7 @@ const LandingMain: React.FC = () => {
                   width={1099}
                 />
               </div>
-              <div className="text-lg text-center text-black">
+              <div className="text-center text-lg text-black">
                 designer &#183; creator &#183; life lover
               </div>
             </div>

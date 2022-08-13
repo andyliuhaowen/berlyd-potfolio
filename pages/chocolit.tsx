@@ -63,14 +63,17 @@ const Chocolit: React.FC = () => {
           imageHeight={1080}
         ></FullScreenImage>
 
-        <div className="m-10 xl:m-16 relative h-0" style={{ paddingTop: "56.25%" }}>
+        <div
+          className="relative m-10 h-0 xl:m-16"
+          style={{ paddingTop: "56.25%" }}
+        >
           <iframe
             src="https://www.youtube.com/embed/lbAYcGFva3U?autoplay=1"
             title="YouTube video player"
-            frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
-            className="w-full h-full absolute top-0 left-0"
+            className="absolute top-0 left-0 h-full w-full"
+            style={{ border: "0" }}
           ></iframe>
         </div>
 
@@ -82,7 +85,7 @@ const Chocolit: React.FC = () => {
           Focus
         </Title>
 
-        <div className="mx-10 s_font xl:mx-16">
+        <div className="s_font mx-10 xl:mx-16">
           Combine the taste and play together to create a delightful daily life.
         </div>
 
@@ -125,7 +128,7 @@ const Chocolit: React.FC = () => {
           ]}
           imageOnLeft={true}
         >
-          <div className="relative flex items-center w-full h-full">
+          <div className="relative flex h-full w-full items-center">
             <ResponsiveContainer height="100%" width="100%">
               <PieChart>
                 <Pie
@@ -241,45 +244,45 @@ const Chocolit: React.FC = () => {
               className={`absolute top-0 left-0 right-0 bg-white opacity-80 ${styles.bot_animation}`}
             ></div>
             <div
-              className={`absolute transform -translate-x-1/2 left-1/2 top-1/5 m_font ${styles.caption1}`}
+              className={`m_font absolute left-1/2 top-1/5 -translate-x-1/2 transform ${styles.caption1}`}
             >
               <img
                 src="/arrow_up.svg"
-                className="relative w-6 my-4 transform -translate-x-1/2 left-1/2"
+                className="relative left-1/2 my-4 w-6 -translate-x-1/2 transform"
                 alt="Upward arrow"
               ></img>
               <div>many virgin materials involved in the process</div>
             </div>
             <div
-              className={`absolute transform -translate-x-1/2 m_font ${styles.caption2}`}
+              className={`m_font absolute -translate-x-1/2 transform ${styles.caption2}`}
               style={{ top: "70%", left: "57.2%" }}
             >
               <img
                 src="/arrow_up.svg"
-                className="relative w-6 my-4 transform -translate-x-1/2 left-1/2"
+                className="relative left-1/2 my-4 w-6 -translate-x-1/2 transform"
                 alt="Upward arrow"
               ></img>
               <div>long-distance transportation</div>
             </div>
             <div
-              className={`absolute transform -translate-x-1/2 m_font ${styles.caption3}`}
+              className={`m_font absolute -translate-x-1/2 transform ${styles.caption3}`}
               style={{ bottom: "30%", left: "57.2%" }}
             >
               <div>short lifespan</div>
               <img
                 src="/arrow_down.svg"
-                className="relative w-6 my-4 transform -translate-x-1/2 left-1/2"
+                className="relative left-1/2 my-4 w-6 -translate-x-1/2 transform"
                 alt="Downward arrow"
               ></img>
             </div>
             <div
-              className={`absolute transform -translate-x-1/2 m_font ${styles.caption4}`}
+              className={`m_font absolute -translate-x-1/2 transform ${styles.caption4}`}
               style={{ bottom: "8%", left: "57.2%" }}
             >
               <div>parts are too small to recycle</div>
               <img
                 src="/arrow_down.svg"
-                className="relative w-6 my-4 transform -translate-x-1/2 left-1/2"
+                className="relative left-1/2 my-4 w-6 -translate-x-1/2 transform"
                 alt="Downard arrow"
               ></img>
             </div>
@@ -378,7 +381,7 @@ const Chocolit: React.FC = () => {
               ></Image>
             </div>
           </div>
-          <div className="absolute top-0 bottom-0 w-2/5 left-2/5">
+          <div className="absolute top-0 bottom-0 left-2/5 w-2/5">
             <div className="absolute top-1 left-1 right-1 bottom-1">
               <Image
                 src="/chocolit/aesthetic_2_half"

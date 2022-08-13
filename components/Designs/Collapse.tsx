@@ -6,7 +6,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion";
-import { useState, useRef, PropsWithChildren } from "react";
+import React, { useState, PropsWithChildren } from "react";
 
 interface CollapseProps {
   title: string;

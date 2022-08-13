@@ -8,18 +8,18 @@ import {
   MouseConstraint,
   World,
 } from "matter-js";
-import { useEffect, useState, useRef } from "react";
-import Header from "../components/Landing/Header";
+import React, { useEffect, useState, useRef } from "react";
+// import Header from "../components/Landing/Header";
 
 const Play: React.FC = () => {
   const [dirty, setDirty] = useState(false);
   const [tooSmall, setTooSmall] = useState(false);
-  const [background, setBackground] = useState("");
+  // const [background, setBackground] = useState("");
   const canvasRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (!canvasRef.current) return;
-    let renderBackground;
+    // let renderBackground;
     if (window.innerWidth < 1024 || window.innerHeight < 600) {
       setTooSmall(true);
       return;
@@ -29,21 +29,21 @@ const Play: React.FC = () => {
     const canvas = canvasRef.current;
 
     const back = Math.floor(Math.random() * 3);
-    const backgrounds = ["#111921", "#f4d4d6", "#5f8db5", "#035157"];
-    while (true) {
-      renderBackground =
-        backgrounds[Math.floor(Math.random() * backgrounds.length)];
-      if (
-        !(
-          (renderBackground === "#f4d4d6" && back === 0) ||
-          (renderBackground === "#035157" && back === 1) ||
-          (renderBackground === "#5f8db5" && back === 2)
-        )
-      ) {
-        break;
-      }
-    }
-    setBackground(renderBackground);
+    // const backgrounds = ["#111921", "#f4d4d6", "#5f8db5", "#035157"];
+    // while (true) {
+    //   renderBackground =
+    //     backgrounds[Math.floor(Math.random() * backgrounds.length)];
+    //   if (
+    //     !(
+    //       (renderBackground === "#f4d4d6" && back === 0) ||
+    //       (renderBackground === "#035157" && back === 1) ||
+    //       (renderBackground === "#5f8db5" && back === 2)
+    //     )
+    //   ) {
+    //     break;
+    //   }
+    // }
+    // setBackground(renderBackground);
 
     const engine = Engine.create();
     const world = engine.world;
@@ -53,7 +53,7 @@ const Play: React.FC = () => {
       options: {
         width: window.innerWidth,
         height: window.innerHeight,
-        background: renderBackground,
+        background: "transparent",
         wireframes: false,
       },
     });
@@ -404,21 +404,21 @@ const Play: React.FC = () => {
       </Head>
       {!tooSmall && !dirty && (
         <>
-          {background === "#111921" && <Header color="pink" />}
-          {background === "#f4d4d6" && <Header color="black" />}
-          {(background === "#5f8db5" || background === "#035157") && (
-            <Header color="white" />
-          )}
-          <div ref={canvasRef} className="w-full h-full relative"></div>
+          {/*{background === "#111921" && <Header color="pink" />}*/}
+          {/*{background === "#f4d4d6" && <Header color="black" />}*/}
+          {/*{(background === "#5f8db5" || background === "#035157") && (*/}
+          {/*  <Header color="white" />*/}
+          {/*)}*/}
+          <div ref={canvasRef} className="relative h-full w-full"></div>
         </>
       )}
       {dirty && (
-        <div className="font-roboto text-center mt-32">
+        <div className="mt-32 text-center font-roboto">
           Canvas size has changed. Refresh to update the scene.
         </div>
       )}
       {tooSmall && (
-        <div className="font-roboto text-center mt-32">
+        <div className="mt-32 text-center font-roboto">
           Your screen is too small. Resize your window or try again on another
           device.
         </div>

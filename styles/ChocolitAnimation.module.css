@@ -104,11 +104,11 @@
 
 @keyframes caption1_keyframes {
   0% {
-    opacity: 0%;
+    opacity: 0;
   }
 
   4.55% {
-    opacity: 0%;
+    opacity: 0;
   }
 
   9.09% {
@@ -120,11 +120,11 @@
   }
 
   31.82% {
-    opacity: 0%;
+    opacity: 0;
   }
 
   100% {
-    opacity: 0%;
+    opacity: 0;
   }
 }
 
@@ -136,11 +136,11 @@
 
 @keyframes caption2_keyframes {
   0% {
-    opacity: 0%;
+    opacity: 0;
   }
 
   27.27% {
-    opacity: 0%;
+    opacity: 0;
   }
 
   31.82% {
@@ -152,11 +152,11 @@
   }
 
   54.55% {
-    opacity: 0%;
+    opacity: 0;
   }
 
   100% {
-    opacity: 0%;
+    opacity: 0;
   }
 }
 
@@ -168,11 +168,11 @@
 
 @keyframes caption3_keyframes {
   0% {
-    opacity: 0%;
+    opacity: 0;
   }
 
   50% {
-    opacity: 0%;
+    opacity: 0;
   }
 
   54.55% {
@@ -184,11 +184,11 @@
   }
 
   77.27% {
-    opacity: 0%;
+    opacity: 0;
   }
 
   100% {
-    opacity: 0%;
+    opacity: 0;
   }
 }
 
@@ -199,11 +199,11 @@
 }
 @keyframes caption4_keyframes {
   0% {
-    opacity: 0%;
+    opacity: 0;
   }
 
   72.73% {
-    opacity: 0%;
+    opacity: 0;
   }
 
   77.27% {
@@ -215,7 +215,7 @@
   }
 
   100% {
-    opacity: 0%;
+    opacity: 0;
   }
 }
 

@@ -6,10 +6,11 @@ import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
  */
 
 import { motion } from "framer-motion";
+import React from "react";
 
 const ScrollIndicator: React.FC = () => {
   return (
-    <div className="absolute w-8 h-8 text-black left-1/2 transform -translate-x-1/2 bottom-16p lg:bottom-8p">
+    <div className="absolute left-1/2 bottom-16p h-8 w-8 -translate-x-1/2 transform text-black lg:bottom-8p">
       <motion.div
         transition={{
           duration: 0.8,
@@ -17,14 +18,14 @@ const ScrollIndicator: React.FC = () => {
           repeatType: "reverse",
           ease: "easeOut",
         }}
-        className="relative w-full h-full"
+        className="relative h-full w-full"
         animate={{
           y: ["40%", "-40%"],
         }}
       >
         <FontAwesomeIcon
           icon={faAngleDown}
-          className="absolute top-0 left-0 w-full h-full"
+          className="absolute top-0 left-0 h-full w-full"
         ></FontAwesomeIcon>
       </motion.div>
     </div>
