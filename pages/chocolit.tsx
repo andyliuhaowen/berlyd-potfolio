@@ -19,6 +19,7 @@ import ProcessGallery from "../components/Designs/ProcessGallery";
 import { Cell, Legend, Pie, PieChart, ResponsiveContainer } from "recharts";
 import BottomNav from "../components/Designs/BottomNav";
 import styles from "../styles/ChocolitAnimation.module.css";
+import React from "react";
 
 const Chocolit: React.FC = () => {
   return (
@@ -244,46 +245,46 @@ const Chocolit: React.FC = () => {
               className={`absolute top-0 left-0 right-0 bg-white opacity-80 ${styles.bot_animation}`}
             ></div>
             <div
-              className={`m_font absolute left-1/2 top-1/5 -translate-x-1/2 transform ${styles.caption1}`}
+              className={`m_font absolute left-1/2 top-1/5 -translate-x-1/2 ${styles.caption1}`}
             >
               <img
                 src="/arrow_up.svg"
-                className="relative left-1/2 my-4 w-6 -translate-x-1/2 transform"
+                className="relative left-1/2 my-4 w-6 -translate-x-1/2"
                 alt="Upward arrow"
               ></img>
               <div>many virgin materials involved in the process</div>
             </div>
             <div
-              className={`m_font absolute -translate-x-1/2 transform ${styles.caption2}`}
+              className={`m_font absolute -translate-x-1/2 ${styles.caption2}`}
               style={{ top: "70%", left: "57.2%" }}
             >
               <img
                 src="/arrow_up.svg"
-                className="relative left-1/2 my-4 w-6 -translate-x-1/2 transform"
+                className="relative left-1/2 my-4 w-6 -translate-x-1/2"
                 alt="Upward arrow"
               ></img>
               <div>long-distance transportation</div>
             </div>
             <div
-              className={`m_font absolute -translate-x-1/2 transform ${styles.caption3}`}
+              className={`m_font absolute -translate-x-1/2 ${styles.caption3}`}
               style={{ bottom: "30%", left: "57.2%" }}
             >
               <div>short lifespan</div>
               <img
                 src="/arrow_down.svg"
-                className="relative left-1/2 my-4 w-6 -translate-x-1/2 transform"
+                className="relative left-1/2 my-4 w-6 -translate-x-1/2"
                 alt="Downward arrow"
               ></img>
             </div>
             <div
-              className={`m_font absolute -translate-x-1/2 transform ${styles.caption4}`}
+              className={`m_font absolute -translate-x-1/2 ${styles.caption4}`}
               style={{ bottom: "8%", left: "57.2%" }}
             >
               <div>parts are too small to recycle</div>
               <img
                 src="/arrow_down.svg"
-                className="relative left-1/2 my-4 w-6 -translate-x-1/2 transform"
-                alt="Downard arrow"
+                className="relative left-1/2 my-4 w-6 -translate-x-1/2"
+                alt="Downward arrow"
               ></img>
             </div>
           </div>

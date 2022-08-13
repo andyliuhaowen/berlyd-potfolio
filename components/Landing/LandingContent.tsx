@@ -7,6 +7,7 @@ import CustomButton from "../CustomButton";
 import Image from "../Image";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import React from "react";
 
 interface LandingContentProps {
   name: string;
@@ -20,7 +21,7 @@ interface LandingContentProps {
 }
 
 const LandingContent: React.FC<LandingContentProps> = (props) => {
-  let textSize = "";
+  let textSize: string;
   if (props.titleLong) {
     textSize =
       "whitespace-normal text-20 md:whitespace-nowrap md:text-24 lg:text-24 xl:text-28 2xl:text-32";
@@ -28,26 +29,26 @@ const LandingContent: React.FC<LandingContentProps> = (props) => {
     textSize = "text-28 lg:text-32 xl:text-36 2xl:text-40 whitespace-nowrap";
   }
   return (
-    <div className={`bg-${props.bgColor} h-screen relative flex items-center`}>
+    <div className={`bg-${props.bgColor} relative flex h-screen items-center`}>
       <div className="flex w-full">
         <div className="flex flex-col items-center pl-10 md:w-7/20 lg:pl-40 xl:pl-48 2xl:pl-52">
-          <div className="flex flex-col h-full">
+          <div className="flex h-full flex-col">
             <div
               className={
-                `text-${props.textColor} font-caslon z-50 relative w-0 leading-tight md:leading-none transform translate-x-16 md:transform-none ` +
+                `text-${props.textColor} relative z-50 w-0 translate-x-16 font-caslon leading-tight md:transform-none md:leading-none ` +
                 textSize
               }
             >
               {props.title}
             </div>
-            <div className="flex-col justify-center flex-grow hidden md:flex">
+            <div className="hidden flex-grow flex-col justify-center md:flex">
               <div
-                className={`text-${props.textColor} text-3xl xl:text-4xl 2xl:text-5xl mb-2`}
+                className={`text-${props.textColor} mb-2 text-3xl xl:text-4xl 2xl:text-5xl`}
               >
                 {props.tagline}
               </div>
               <div
-                className={`text-${props.textColor} text-base 2xl:text-lg my-2 w-60 xl:w-64 2xl:w-80`}
+                className={`text-${props.textColor} my-2 w-60 text-base xl:w-64 2xl:w-80 2xl:text-lg`}
               >
                 {props.desc}
               </div>
@@ -63,11 +64,11 @@ const LandingContent: React.FC<LandingContentProps> = (props) => {
           </div>
         </div>
         <motion.div
-          className="relative flex-grow mx-10 xl:mx-16 h-65vh mt-8vh md:ml-0"
+          className="relative mx-10 mt-8vh h-65vh flex-grow md:ml-0 xl:mx-16"
           layoutId={`${props.name}-image`}
         >
           <Link href={props.name} passHref>
-            <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
+            <div className="absolute top-0 left-0 h-full w-full overflow-hidden">
               <Image
                 src={props.image}
                 alt={props.title}

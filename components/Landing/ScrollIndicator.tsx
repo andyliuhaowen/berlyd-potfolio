@@ -1,16 +1,17 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 /**
  * Made by Haowen Liu in 2021
  * Component for creating a bumping scroll indicator.
  */
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 
 import { motion } from "framer-motion";
 import React from "react";
 
 const ScrollIndicator: React.FC = () => {
   return (
-    <div className="absolute left-1/2 bottom-16p h-8 w-8 -translate-x-1/2 transform text-black lg:bottom-8p">
+    <div className="absolute left-1/2 bottom-16p h-8 w-8 -translate-x-1/2 text-black lg:bottom-8p">
       <motion.div
         transition={{
           duration: 0.8,

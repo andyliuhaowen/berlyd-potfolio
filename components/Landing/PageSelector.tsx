@@ -33,7 +33,7 @@ const PageSelector: React.FC<PageSelectorProps> = (
 ) => {
   return (
     <motion.div
-      className="fixed bottom-0 left-1/2 z-10 translate-y-0 -translate-x-1/2 transform lg:left-0 lg:bottom-1/2 lg:translate-y-1/2 lg:translate-x-0"
+      className="fixed bottom-0 left-1/2 z-10 translate-y-0 -translate-x-1/2 lg:left-0 lg:bottom-1/2 lg:translate-y-1/2 lg:translate-x-0"
       initial={false}
       animate={{ color: colorMap[props.page] }}
     >
