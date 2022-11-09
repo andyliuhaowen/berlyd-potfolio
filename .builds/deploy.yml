@@ -2,6 +2,7 @@ image: rockylinux/9
 packages:
   - python3
   - python3-pip
+  - nodejs
 secrets:
   - c6787d79-3d59-4013-9488-52c03d64c105
 triggers:
@@ -10,7 +11,6 @@ triggers:
     to: Haowen Liu <lhw@lunacd.com>
 tasks:
   - setup: |
-      sudo dnf install -y nodejs
       sudo npm i -g corepack
       sudo pip3 install -q awscli
   - fetch_assets: |
