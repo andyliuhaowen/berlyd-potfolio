@@ -5,32 +5,6 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx,html}",
     "./utils/**/*.{js,ts,jsx,tsx}",
   ],
-  // options: {
-  //   safelist: {
-  //     standard: [
-  //       /black$/,
-  //       /white$/,
-  //       /pink$/,
-  //       /blue$/,
-  //       /green$/,
-  //       /mojo_accent$/,
-  //       /hidden_season_accent$/,
-  //       "top-5",
-  //       "top-30",
-  //       "top-38",
-  //       "top-46",
-  //       "top-71",
-  //       "top-79",
-  //       "top-87",
-  //       /h-extralarge$/,
-  //       /h-fullsection$/,
-  //       /h-mediumsection$/,
-  //       /h-shortsection$/,
-  //       /grid-rows/,
-  //       /roboto/,
-  //     ],
-  //   },
-  // },
   theme: {
     colors: {
       black: "#111921",

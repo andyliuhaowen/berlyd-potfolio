@@ -19,6 +19,7 @@ import Collapse from "../components/Designs/Collapse";
 import FrameAnimation from "../components/Designs/FrameAnimation";
 import Head from "next/head";
 import BottomNav from "../components/Designs/BottomNav";
+import React from "react";
 
 const HiddenSeason: React.FC = () => {
   return (

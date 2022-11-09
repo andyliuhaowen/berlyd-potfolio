@@ -7,6 +7,7 @@ import Head from "next/head";
 import FullScreenImage from "../components/Designs/FullScreenImage";
 import LogoHeader from "../components/Designs/LogoHeader";
 import { Height, Width } from "../utils/global_types";
+import React from "react";
 
 const PelotonGaming: React.FC = () => {
   return (

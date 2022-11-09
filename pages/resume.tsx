@@ -6,6 +6,7 @@
 import Head from "next/head";
 import CustomButton from "../components/CustomButtonTemp";
 import Header from "../components/Landing/Header";
+import React from "react";
 
 const Resume: React.FC = () => {
   return (

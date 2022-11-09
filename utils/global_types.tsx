@@ -29,19 +29,6 @@ export function getRemHeight(height: Height) {
   }
 }
 
-export function getGridHeight(height: Height) {
-  switch (height) {
-    case Height.Full:
-      return "auto-rows-fullsection_md lg:auto-rows-fullsection";
-    case Height.Medium:
-      return "auto-rows-mediumsection_md lg:auto-rows-mediumsection";
-    case Height.Short:
-      return "auto-rows-shortsection_md lg:auto-rows-mediumsection";
-    default:
-      return "";
-  }
-}
-
 export function getMarginForWidth(width: Width) {
   switch (width) {
     case Width.Full:

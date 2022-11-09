@@ -1,7 +1,10 @@
+// noinspection RequiredAttributes
+
 import Head from "next/head";
 import HTMLFlipBook from "react-pageflip";
 
 import Header from "../components/Landing/Header";
+import React from "react";
 
 const Book: React.FC = () => {
   return (

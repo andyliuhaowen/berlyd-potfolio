@@ -1,11 +1,11 @@
 /**
  * Made by Haowen Liu in 2021
- * This is an replacement for next/image using images optimized and on build time.
+ * This is a replacement for next/image using images optimized and on build time.
  *
  * Design is inspired by next/image.
  */
 
-import { Fragment } from "react";
+import React, { Fragment } from "react";
 
 interface ImagePropsResponsive {
   src: string;

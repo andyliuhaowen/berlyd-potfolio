@@ -7,6 +7,7 @@ import LogoHeader from "../components/Designs/LogoHeader";
 import FullScreenImage from "../components/Designs/FullScreenImage";
 import { Height, Width } from "../utils/global_types";
 import Head from "next/head";
+import React from "react";
 
 const Haru: React.FC = () => {
   return (
