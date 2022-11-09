@@ -21,9 +21,9 @@ import { Height, Width } from "../utils/global_types";
 import VerticalSpacing from "../components/Designs/VerticalSpacing";
 import Image from "../components/Image";
 import BottomNav from "../components/Designs/BottomNav";
-import React from "react";
+import { NextPage } from "next";
 
-const Mojo: React.FC = () => {
+const Mojo: NextPage = () => {
   return (
     <>
       <Head>

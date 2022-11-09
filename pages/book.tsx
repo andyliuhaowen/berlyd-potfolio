@@ -4,9 +4,9 @@ import Head from "next/head";
 import HTMLFlipBook from "react-pageflip";
 
 import Header from "../components/Landing/Header";
-import React from "react";
+import { NextPage } from "next";
 
-const Book: React.FC = () => {
+const Book: NextPage = () => {
   return (
     <>
       <Head>

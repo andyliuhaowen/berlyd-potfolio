@@ -8,9 +8,9 @@ import Head from "next/head";
 import FullScreenImage from "../components/Designs/FullScreenImage";
 import LogoHeader from "../components/Designs/LogoHeader";
 import { Height, Width } from "../utils/global_types";
-import React from "react";
+import { NextPage } from "next";
 
-const MulticolorPen: React.FC = () => {
+const MulticolorPen: NextPage = () => {
   return (
     <>
       <Head>

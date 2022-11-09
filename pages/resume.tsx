@@ -6,9 +6,9 @@
 import Head from "next/head";
 import CustomButton from "../components/CustomButtonTemp";
 import Header from "../components/Landing/Header";
-import React from "react";
+import { NextPage } from "next";
 
-const Resume: React.FC = () => {
+const Resume: NextPage = () => {
   return (
     <>
       <Head>

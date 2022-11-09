@@ -7,9 +7,9 @@ import LogoHeader from "../components/Designs/LogoHeader";
 import FullScreenImage from "../components/Designs/FullScreenImage";
 import { Height, Width } from "../utils/global_types";
 import Head from "next/head";
-import React from "react";
+import { NextPage } from "next";
 
-const Haru: React.FC = () => {
+const Haru: NextPage = () => {
   return (
     <>
       <Head>

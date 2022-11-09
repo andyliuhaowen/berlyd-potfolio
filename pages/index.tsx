@@ -5,13 +5,13 @@
 
 import dynamic from "next/dynamic";
 import Head from "next/head";
-import React from "react";
+import { NextPage } from "next";
 
 const LandingMain = dynamic(() => import("../components/Landing/LandingMain"), {
   ssr: false,
 });
 
-const Home: React.FC = () => {
+const Home: NextPage = () => {
   return (
     <>
       <Head>

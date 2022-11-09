@@ -19,9 +19,9 @@ import Collapse from "../components/Designs/Collapse";
 import FrameAnimation from "../components/Designs/FrameAnimation";
 import Head from "next/head";
 import BottomNav from "../components/Designs/BottomNav";
-import React from "react";
+import { NextPage } from "next";
 
-const HiddenSeason: React.FC = () => {
+const HiddenSeason: NextPage = () => {
   return (
     <>
       <Head>

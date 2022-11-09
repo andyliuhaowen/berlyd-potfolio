@@ -19,9 +19,9 @@ import ProcessGallery from "../components/Designs/ProcessGallery";
 import { Cell, Legend, Pie, PieChart, ResponsiveContainer } from "recharts";
 import BottomNav from "../components/Designs/BottomNav";
 import styles from "../styles/ChocolitAnimation.module.css";
-import React from "react";
+import { NextPage } from "next";
 
-const Chocolit: React.FC = () => {
+const Chocolit: NextPage = () => {
   return (
     <>
       <Head>

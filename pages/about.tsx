@@ -7,9 +7,9 @@ import Head from "next/head";
 import ImageAndText from "../components/Designs/ImageAndText";
 import Header from "../components/Landing/Header";
 import { Height } from "../utils/global_types";
-import React from "react";
+import { NextPage } from "next";
 
-const About: React.FC = () => {
+const About: NextPage = () => {
   return (
     <>
       <Head>

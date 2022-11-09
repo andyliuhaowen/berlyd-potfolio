@@ -2,9 +2,9 @@
  * Made by Haowen Liu in 2021
  * Fun page.
  */
-import React from "react";
+import { NextPage } from "next";
 
-const Fun: React.FC = () => {
+const Fun: NextPage = () => {
   return <div className="">Site constructing</div>;
 };
 
