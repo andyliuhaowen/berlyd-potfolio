@@ -12,8 +12,8 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = (props) => {
   return (
-    <header className="absolute z-40 flex items-center w-full mt-4 h-36">
-      <div className="w-24 ml-8 xl:ml-14">
+    <header className="absolute z-40 mt-4 flex h-36 w-full items-center">
+      <div className="ml-8 w-24 xl:ml-14">
         <Link href={`/#landing`} passHref>
           <img
             src={`/logo_${props.color}.png`}

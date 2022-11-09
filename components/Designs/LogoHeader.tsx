@@ -11,8 +11,8 @@ interface LogoHeaderProps {
 
 const LogoHeader: React.FC<LogoHeaderProps> = (props) => {
   return (
-    <header className="absolute z-40 items-center hidden w-full mt-4 md:flex h-36">
-      <div className="w-24 ml-8 xl:ml-14">
+    <header className="absolute z-40 mt-4 hidden h-36 w-full items-center md:flex">
+      <div className="ml-8 w-24 xl:ml-14">
         <Link href={`/#${props.name}`} passHref>
           <img
             src="/logo.png"

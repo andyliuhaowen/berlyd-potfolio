@@ -24,6 +24,5 @@ tasks:
       set -x
       cd berlyd-portfolio
       yarn
-      yarn next build
-      yarn next export
+      yarn export
       aws s3 sync out s3://berlyd-website

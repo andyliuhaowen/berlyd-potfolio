@@ -105,7 +105,7 @@ const HiddenSeason: React.FC = () => {
           ]}
           imageOnLeft={false}
         >
-          <div className="absolute top-0 left-0 w-2/3 h-2/3">
+          <div className="absolute top-0 left-0 h-2/3 w-2/3">
             <div className="absolute top-1 left-1 right-1 bottom-1">
               <Image
                 src="/hidden_season/three_1_half"
@@ -114,7 +114,7 @@ const HiddenSeason: React.FC = () => {
               ></Image>
             </div>
           </div>
-          <div className="absolute top-0 right-0 w-1/3 h-2/3">
+          <div className="absolute top-0 right-0 h-2/3 w-1/3">
             <div className="absolute top-1 left-1 right-1 bottom-1">
               <Image
                 src="/hidden_season/three_2_half"
@@ -179,7 +179,7 @@ const HiddenSeason: React.FC = () => {
               ></Image>
             </div>
           </div>
-          <div className="absolute top-0 bottom-0 w-1/3 left-1/3">
+          <div className="absolute top-0 bottom-0 left-1/3 w-1/3">
             <div className="absolute top-1 left-1 right-1 bottom-1">
               <Image
                 src="/hidden_season/vivian_2_small"
@@ -188,7 +188,7 @@ const HiddenSeason: React.FC = () => {
               ></Image>
             </div>
           </div>
-          <div className="absolute top-0 right-0 w-1/3 h-1/2">
+          <div className="absolute top-0 right-0 h-1/2 w-1/3">
             <div className="absolute top-1 left-1 right-1 bottom-1">
               <Image
                 src="/hidden_season/vivian_3_small"
@@ -197,7 +197,7 @@ const HiddenSeason: React.FC = () => {
               ></Image>
             </div>
           </div>
-          <div className="absolute bottom-0 right-0 w-1/3 h-1/2">
+          <div className="absolute bottom-0 right-0 h-1/2 w-1/3">
             <div className="absolute top-1 left-1 right-1 bottom-1">
               <Image
                 src="/hidden_season/vivian_4_small"
@@ -478,7 +478,7 @@ const HiddenSeason: React.FC = () => {
             color="green"
             imageOnLeft={false}
           >
-            <div className="absolute top-0 left-0 w-1/3 h-1/2">
+            <div className="absolute top-0 left-0 h-1/2 w-1/3">
               <div className="absolute top-1 left-1 right-1 bottom-1">
                 <Image
                   src="/hidden_season/por_1_small"
@@ -487,7 +487,7 @@ const HiddenSeason: React.FC = () => {
                 ></Image>
               </div>
             </div>
-            <div className="absolute top-0 w-1/3 left-1/3 h-1/2">
+            <div className="absolute top-0 left-1/3 h-1/2 w-1/3">
               <div className="absolute top-1 left-1 right-1 bottom-1">
                 <Image
                   src="/hidden_season/por_2_small"
@@ -496,7 +496,7 @@ const HiddenSeason: React.FC = () => {
                 ></Image>
               </div>
             </div>
-            <div className="absolute top-0 right-0 w-1/3 h-1/2">
+            <div className="absolute top-0 right-0 h-1/2 w-1/3">
               <div className="absolute top-1 left-1 right-1 bottom-1">
                 <Image
                   src="/hidden_season/por_3_small"
@@ -505,7 +505,7 @@ const HiddenSeason: React.FC = () => {
                 ></Image>
               </div>
             </div>
-            <div className="absolute bottom-0 left-0 w-1/3 h-1/2">
+            <div className="absolute bottom-0 left-0 h-1/2 w-1/3">
               <div className="absolute top-1 left-1 right-1 bottom-1">
                 <Image
                   src="/hidden_season/por_4_small"
@@ -514,7 +514,7 @@ const HiddenSeason: React.FC = () => {
                 ></Image>
               </div>
             </div>
-            <div className="absolute bottom-0 w-1/3 left-1/3 h-1/2">
+            <div className="absolute bottom-0 left-1/3 h-1/2 w-1/3">
               <div className="absolute top-1 left-1 right-1 bottom-1">
                 <Image
                   src="/hidden_season/por_5_small"
@@ -523,7 +523,7 @@ const HiddenSeason: React.FC = () => {
                 ></Image>
               </div>
             </div>
-            <div className="absolute bottom-0 right-0 w-1/3 h-1/2">
+            <div className="absolute bottom-0 right-0 h-1/2 w-1/3">
               <div className="absolute top-1 left-1 right-1 bottom-1">
                 <Image
                   src="/hidden_season/por_6_small"

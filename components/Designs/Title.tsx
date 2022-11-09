@@ -16,14 +16,14 @@ const Title: React.FC<PropsWithChildren<SectionHeaderProps>> = (props) => {
     <>
       {props.type === "normal" && (
         <div
-          className={`mt-16 mb-12 font-bold mx-10 xl:mx-16 md:mt-20 md:mb-16 text-${props.color} m_font`}
+          className={`mx-10 mt-16 mb-12 font-bold md:mt-20 md:mb-16 xl:mx-16 text-${props.color} m_font`}
         >
           {props.children}
         </div>
       )}
       {props.type === "banner" && (
         <div
-          className={`font-bold px-10 xl:px-16 py-12 text-${props.bannerTextColor} bg-${props.color} l_font`}
+          className={`px-10 py-12 font-bold xl:px-16 text-${props.bannerTextColor} bg-${props.color} l_font`}
         >
           {props.children}
         </div>

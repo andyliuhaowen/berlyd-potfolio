@@ -27,7 +27,7 @@ const Image: React.FC<ImagePropsResponsive | ImagePropsFill> = (props) => {
   return (
     <Fragment>
       {props.layout === "responsive" && (
-        <picture className="block relative overflow-hidden">
+        <picture className="relative block overflow-hidden">
           <div
             className="block"
             style={{ paddingTop: `${(100 / props.width) * props.height}%` }}
@@ -39,14 +39,16 @@ const Image: React.FC<ImagePropsResponsive | ImagePropsFill> = (props) => {
           <img
             srcSet={`${props.src}_2k.jpg 2560w, ${props.src}_1080p.jpg 1920w, ${props.src}_720p.jpg 1280w`}
             alt={props.alt}
-            className={`${props.className ? props.className : ''} block absolute min-w-full min-h-full max-h-full max-w-full top-0 left-0 bottom-0 right-0 m-auto`}
+            className={`${
+              props.className ? props.className : ""
+            } absolute top-0 left-0 bottom-0 right-0 m-auto block max-h-full min-h-full min-w-full max-w-full`}
             sizes="100vw"
             decoding="async"
           ></img>
         </picture>
       )}
       {props.layout === "fill" && (
-        <picture className="h-full w-full flex overflow-hidden">
+        <picture className="flex h-full w-full overflow-hidden">
           <source
             type="image/webp"
             srcSet={`${props.src}_2k.webp 2560w, ${props.src}_1080p.webp 1920w, ${props.src}_720p.webp 1280w`}
@@ -54,7 +56,9 @@ const Image: React.FC<ImagePropsResponsive | ImagePropsFill> = (props) => {
           <img
             srcSet={`${props.src}_2k.jpg 2560w, ${props.src}_1080p.jpg 1920w, ${props.src}_720p.jpg 1280w`}
             alt={props.alt}
-            className={`object-cover object-center h-auto w-full ${props.className ? props.className : ''}`}
+            className={`h-auto w-full object-cover object-center ${
+              props.className ? props.className : ""
+            }`}
             decoding="async"
           ></img>
         </picture>

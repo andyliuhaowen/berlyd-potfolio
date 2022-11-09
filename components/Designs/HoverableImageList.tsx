@@ -24,7 +24,7 @@ const HoverableImageList: React.FC<HoverableImageListProps> = (props) => {
         <div
           className={`flex-grow ${getRemHeight(
             props.height
-          )} md:h-auto mb-8 mx-16 md:mb-0 md:mx-0`}
+          )} mx-16 mb-8 md:mx-0 md:mb-0 md:h-auto`}
           key={index}
         >
           <HoverableImage

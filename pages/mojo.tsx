@@ -117,7 +117,7 @@ const Mojo: React.FC = () => {
               ></Image>
             </div>
           </div>
-          <div className="absolute top-0 right-0 w-1/2 h-1/3">
+          <div className="absolute top-0 right-0 h-1/3 w-1/2">
             <div className="absolute top-1 left-1 right-1 bottom-1">
               <Image
                 src="/mojo/target_2_small"
@@ -126,7 +126,7 @@ const Mojo: React.FC = () => {
               ></Image>
             </div>
           </div>
-          <div className="absolute bottom-0 right-0 w-1/2 h-2/3">
+          <div className="absolute bottom-0 right-0 h-2/3 w-1/2">
             <div className="absolute top-1 left-1 right-1 bottom-1">
               <Image
                 src="/mojo/target_3_small"

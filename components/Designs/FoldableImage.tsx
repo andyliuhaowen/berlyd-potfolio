@@ -15,7 +15,7 @@ interface FoldableImageProps {
 
 const FoldableImage: React.FC<FoldableImageProps> = (props) => {
   return (
-    <div className="mx-10 xl:mx-16 flex flex-col md:flex-row">
+    <div className="mx-10 flex flex-col md:flex-row xl:mx-16">
       <div className="md:w-1/2">
         <Image
           src={props.image1}

@@ -16,7 +16,7 @@ interface CollapseProps {
 const hoverVariants = {
   default: { scaleX: 0 },
   hovered: { scaleX: 1 },
-}
+};
 
 const Collapse: React.FC<PropsWithChildren<CollapseProps>> = (props) => {
   const [show, setShow] = useState(false);
@@ -34,11 +34,12 @@ const Collapse: React.FC<PropsWithChildren<CollapseProps>> = (props) => {
       <motion.div
         animate={hover ? "hover" : "default"}
         variants={hoverVariants}
-        className={`absolute top-8 bottom-4 left-0 w-full border-${props.color} border-t-2 border-b-2 origin-left`}>
-      </motion.div>
+        className={`absolute top-8 bottom-4 left-0 w-full border-${props.color} origin-left border-t-2 border-b-2`}
+      ></motion.div>
       <motion.div
-        className={`sticky origin-center self-center inline-block ml-10 h-7.5 w-7.5 md:w-9 md:h-9 top-16 xl:ml-16 cursor-pointer ${show ? "mt-16" : ""
-          }`}
+        className={`sticky top-16 ml-10 inline-block h-7.5 w-7.5 origin-center cursor-pointer self-center md:h-9 md:w-9 xl:ml-16 ${
+          show ? "mt-16" : ""
+        }`}
         initial={{ transform: "rotate(0deg)" }}
         animate={{
           transform: show ? "rotate(45deg)" : "rotate(0deg)",
@@ -56,7 +57,7 @@ const Collapse: React.FC<PropsWithChildren<CollapseProps>> = (props) => {
         ></FontAwesomeIcon>
       </motion.div>
       <div
-        className={`align-top inline-block relative top-16 pl-6 font-bold self-center text-${props.color} cursor-pointer leading-none md:leading-none m_font`}
+        className={`relative top-16 inline-block self-center pl-6 align-top font-bold text-${props.color} m_font cursor-pointer leading-none md:leading-none`}
         onClick={() => {
           setShow((origShow) => !origShow);
         }}
@@ -64,7 +65,9 @@ const Collapse: React.FC<PropsWithChildren<CollapseProps>> = (props) => {
         {props.title}
       </div>
       <div
-        className={`mx-20 overflow-auto xl:mx-28 pb-12 ${show ? "mt-12" : "mt-24"}`}
+        className={`mx-20 overflow-auto pb-12 xl:mx-28 ${
+          show ? "mt-12" : "mt-24"
+        }`}
       >
         {props.children}
       </div>

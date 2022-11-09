@@ -7,7 +7,7 @@
 @layer base {
   html,
   body {
-    @apply p-0 m-0 font-roboto;
+    @apply m-0 p-0 font-roboto;
   }
 
   a {
@@ -32,6 +32,6 @@
   }
 
   .s_font {
-    @apply text-base leading-loose md:text-lg md:leading-loose 2xl:leading-loose 2xl:text-xl;
+    @apply text-base leading-loose md:text-lg md:leading-loose 2xl:text-xl 2xl:leading-loose;
   }
 }

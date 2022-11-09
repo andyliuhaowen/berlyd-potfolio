@@ -16,13 +16,17 @@ interface CaptionedImageProps {
 
 const CaptionedImage: React.FC<CaptionedImageProps> = (props) => {
   return (
-    <div className={`h-full w-full flex flex-col ${props.className ? props.className : ''}`}>
+    <div
+      className={`flex h-full w-full flex-col ${
+        props.className ? props.className : ""
+      }`}
+    >
       {props.caption !== "" && (
-        <div className={`text-black s_font mb-4 ${props.textClass ?? ""}`}>
+        <div className={`s_font mb-4 text-black ${props.textClass ?? ""}`}>
           {props.caption}
         </div>
       )}
-      <div className="relative flex-grow flex-shrink w-full min-h-0">
+      <div className="relative min-h-0 w-full flex-shrink flex-grow">
         <Image src={props.image} alt={props.caption} layout="fill"></Image>
       </div>
     </div>

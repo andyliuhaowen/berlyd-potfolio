@@ -20,36 +20,36 @@ const BottomNav: React.FC<BottomNav> = (props) => {
     <div className="flex p-16">
       {props.leftName !== "" && (
         <div
-          className="flex items-center cursor-pointer"
+          className="flex cursor-pointer items-center"
           onClick={() => {
             router.push(props.leftLink);
           }}
         >
-          <div className="relative w-12 h-12 text-black">
+          <div className="relative h-12 w-12 text-black">
             <FontAwesomeIcon
               icon={faAngleLeft}
-              className="absolute top-0 left-0 w-full h-full"
+              className="absolute top-0 left-0 h-full w-full"
             ></FontAwesomeIcon>
           </div>
-          <div className="ml-4 font-bold text-black s_font">
+          <div className="s_font ml-4 font-bold text-black">
             {props.leftName}
           </div>
         </div>
       )}
       {props.rightName !== "" && (
         <div
-          className="flex items-center ml-auto cursor-pointer"
+          className="ml-auto flex cursor-pointer items-center"
           onClick={() => {
             router.push(props.rightLink);
           }}
         >
-          <div className="mr-4 font-bold text-black s_font">
+          <div className="s_font mr-4 font-bold text-black">
             {props.rightName}
           </div>
-          <div className="relative w-12 h-12 text-black">
+          <div className="relative h-12 w-12 text-black">
             <FontAwesomeIcon
               icon={faAngleRight}
-              className="absolute top-0 left-0 w-full h-full"
+              className="absolute top-0 left-0 h-full w-full"
             ></FontAwesomeIcon>
           </div>
         </div>

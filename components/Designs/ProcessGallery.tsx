@@ -15,10 +15,10 @@ interface ProcessGalleryProps {
 const ProcessGallery: React.FC<ProcessGalleryProps> = (props) => {
   return (
     <div
-      className={`justify-between mx-10 xl:mx-16 grid grid-cols-4 grid-flow-row gap-8 mt-8`}
+      className={`mx-10 mt-8 grid grid-flow-row grid-cols-4 justify-between gap-8 xl:mx-16`}
     >
       {props.images.map((image, index) => (
-        <div key={index} className="flex flex-col s_font">
+        <div key={index} className="s_font flex flex-col">
           <Image
             src={image}
             alt={`Process ${index}`}

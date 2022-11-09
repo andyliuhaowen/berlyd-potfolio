@@ -16,7 +16,7 @@ const About: React.FC = () => {
         <link rel="icon" href="/favicon.png" />
       </Head>
       <div>
-        <main className="bg-white overflow-auto min-h-screen">
+        <main className="min-h-screen overflow-auto bg-white">
           <Header color="black"></Header>
           <div className="h-24"></div>
           <ImageAndText

@@ -29,6 +29,6 @@ const PelotonGaming: React.FC = () => {
       </main>
     </>
   );
-}
+};
 
 export default PelotonGaming;

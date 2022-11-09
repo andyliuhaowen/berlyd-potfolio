@@ -19,7 +19,7 @@ interface TextListProps {
 const TextList: React.FC<TextListProps> = (props) => {
   return (
     <div
-      className={`justify-between mx-10 xl:mx-16 grid grid-rows-${props.sm} md:grid-rows-${props.md} xl:grid-rows-${props.xl} grid-flow-col`}
+      className={`mx-10 grid justify-between xl:mx-16 grid-rows-${props.sm} md:grid-rows-${props.md} xl:grid-rows-${props.xl} grid-flow-col`}
     >
       {props.text.map((str, index) => {
         if (index === props.accent) {
@@ -33,7 +33,7 @@ const TextList: React.FC<TextListProps> = (props) => {
           );
         }
         return (
-          <div key={index} className="px-2 s_font">
+          <div key={index} className="s_font px-2">
             {str}
           </div>
         );

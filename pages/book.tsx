@@ -13,8 +13,8 @@ const Book: React.FC = () => {
 
       <Header color="black" />
 
-      <main className="pt-48 flex flex-col items-center bg-pink min-h-screen">
-        <div className="max-w-3xl px-8 w-full">
+      <main className="flex min-h-screen flex-col items-center bg-pink pt-48">
+        <div className="w-full max-w-3xl px-8">
           {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
           {/* @ts-ignore */}
           <HTMLFlipBook

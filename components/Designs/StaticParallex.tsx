@@ -26,11 +26,11 @@ const StaticParallex: React.FC<StaticParallexProps> = (props) => {
           key={index}
         >
           <div
-            className="absolute w-full h-full overflow-hidden"
+            className="absolute h-full w-full overflow-hidden"
             style={{ clip: "rect(0 auto auto 0)" }}
           >
             <div
-              className="fixed top-0 w-full h-full"
+              className="fixed top-0 h-full w-full"
               style={{ zIndex: -1, transform: "perspective(0px)" }}
             >
               <Image src={image} alt={props.alts[index]} layout="fill"></Image>

@@ -14,16 +14,16 @@ interface HoverableImageProps {
 
 const HoverableImage: React.FC<HoverableImageProps> = (props) => {
   return (
-    <div className="flex flex-col w-full h-full">
-      <div className="mx-0 mb-4 text-black md:mx-10 xl:mx-16 s_font">
+    <div className="flex h-full w-full flex-col">
+      <div className="s_font mx-0 mb-4 text-black md:mx-10 xl:mx-16">
         {props.caption}
       </div>
       <div className="relative flex-grow">
-        <div className="absolute top-0 left-0 w-full h-full">
+        <div className="absolute top-0 left-0 h-full w-full">
           <Image src={props.image} alt={props.caption} layout="fill"></Image>
         </div>
         <motion.div
-          className="absolute top-0 left-0 w-full h-full bg-white"
+          className="absolute top-0 left-0 h-full w-full bg-white"
           initial={{ opacity: 0 }}
           whileHover={{ opacity: 1 }}
           transition={{ duration: 0.6 }}
