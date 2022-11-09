@@ -9,12 +9,10 @@ import {
   World,
 } from "matter-js";
 import React, { useEffect, useState, useRef } from "react";
-// import Header from "../components/Landing/Header";
 
 const Play: React.FC = () => {
   const [dirty, setDirty] = useState(false);
   const [tooSmall, setTooSmall] = useState(false);
-  // const [background, setBackground] = useState("");
   const canvasRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -27,23 +25,6 @@ const Play: React.FC = () => {
       setTooSmall(false);
     }
     const canvas = canvasRef.current;
-
-    const back = Math.floor(Math.random() * 3);
-    // const backgrounds = ["#111921", "#f4d4d6", "#5f8db5", "#035157"];
-    // while (true) {
-    //   renderBackground =
-    //     backgrounds[Math.floor(Math.random() * backgrounds.length)];
-    //   if (
-    //     !(
-    //       (renderBackground === "#f4d4d6" && back === 0) ||
-    //       (renderBackground === "#035157" && back === 1) ||
-    //       (renderBackground === "#5f8db5" && back === 2)
-    //     )
-    //   ) {
-    //     break;
-    //   }
-    // }
-    // setBackground(renderBackground);
 
     const engine = Engine.create();
     const world = engine.world;
@@ -88,61 +69,7 @@ const Play: React.FC = () => {
       { isStatic: true }
     );
 
-    const bcard = Bodies.rectangle(
-      Math.random() * window.innerWidth,
-      -Math.random() * 1000,
-      220,
-      220 * 1.74611399,
-      {
-        render: {
-          sprite: {
-            texture: "/play/bcard.png",
-            xScale: 0.38,
-            yScale: 0.38,
-          },
-        },
-        ...flowerOptions,
-      }
-    );
-
-    const objList = [ground, wallRight, wallLeft, bcard];
-    let backTexture: string;
-    switch (back) {
-      case 0: {
-        backTexture = "/play/bcard_back1.png";
-        break;
-      }
-      case 1: {
-        backTexture = "/play/bcard_back2.png";
-        break;
-      }
-      case 2: {
-        backTexture = "/play/bcard_back3.png";
-        break;
-      }
-      default: {
-        // Will never happen
-        backTexture = "";
-      }
-    }
-    objList.push(
-      Bodies.rectangle(
-        Math.random() * window.innerWidth,
-        -Math.random() * 1000,
-        220,
-        220 * 1.74611399,
-        {
-          render: {
-            sprite: {
-              texture: backTexture,
-              xScale: 0.38,
-              yScale: 0.38,
-            },
-          },
-          ...flowerOptions,
-        }
-      )
-    );
+    const objList = [ground, wallRight, wallLeft];
     for (let i = 0; i !== 15; i++) {
       switch (Math.floor(Math.random() * 4)) {
         case 0: {

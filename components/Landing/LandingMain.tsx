@@ -15,7 +15,7 @@ import ScrollIndicator from "./ScrollIndicator";
 import LandingContent from "./LandingContent";
 import Image from "../Image";
 import LandingContentTemp from "./LandingContentTemp";
-import Play from "../../pages/play";
+import Play from "./play";
 
 const nameMap = new Map([
   ["#landing", 0],
