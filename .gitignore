@@ -43,5 +43,6 @@ yarn-error.log*
 
 # Stored in S3
 public/
+images/
 
 .idea/

@@ -247,7 +247,7 @@ const LandingMain: React.FC = () => {
             bgColor="green"
           />
 
-          <LandingContent
+          <LandingContentTemp
             name="chocolit"
             title="Chocolit"
             tagline="Toy &amp; Treat"
@@ -256,6 +256,7 @@ const LandingMain: React.FC = () => {
             titleLong={true}
             bgColor="pink"
             textColor="black"
+            tempLink="https://www.berlyd.com/chocolit"
           />
 
           <LandingContentTemp
