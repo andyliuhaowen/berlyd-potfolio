@@ -19,11 +19,11 @@ const HoverableImage: React.FC<HoverableImageProps> = (props) => {
         {props.caption}
       </div>
       <div className="relative flex-grow">
-        <div className="absolute top-0 left-0 h-full w-full">
+        <div className="absolute left-0 top-0 h-full w-full">
           <Image src={props.image} alt={props.caption} layout="fill"></Image>
         </div>
         <motion.div
-          className="absolute top-0 left-0 h-full w-full bg-white"
+          className="absolute left-0 top-0 h-full w-full bg-white"
           initial={{ opacity: 0 }}
           whileHover={{ opacity: 1 }}
           transition={{ duration: 0.6 }}

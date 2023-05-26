@@ -192,7 +192,7 @@ const LandingMain: React.FC = () => {
               <Play />
             </div>
             <div
-              className="hidden overflow-visible md:mx-auto md:inline-block lg:mr-0 lg:ml-60 xl:relative xl:left-1/5 xl:mx-0"
+              className="hidden overflow-visible md:mx-auto md:inline-block lg:ml-60 lg:mr-0 xl:relative xl:left-1/5 xl:mx-0"
               style={{ pointerEvents: "none" }}
             >
               <div className="h-24 w-3/4 lg:h-32 xl:h-36">

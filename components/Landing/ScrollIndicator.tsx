@@ -11,7 +11,7 @@ import React from "react";
 
 const ScrollIndicator: React.FC = () => {
   return (
-    <div className="absolute left-1/2 bottom-16p h-8 w-8 -translate-x-1/2 text-black lg:bottom-8p">
+    <div className="absolute bottom-16p left-1/2 h-8 w-8 -translate-x-1/2 text-black lg:bottom-8p">
       <motion.div
         transition={{
           duration: 0.8,
@@ -26,7 +26,7 @@ const ScrollIndicator: React.FC = () => {
       >
         <FontAwesomeIcon
           icon={faAngleDown}
-          className="absolute top-0 left-0 h-full w-full"
+          className="absolute left-0 top-0 h-full w-full"
         ></FontAwesomeIcon>
       </motion.div>
     </div>

@@ -41,7 +41,7 @@ const Image: React.FC<ImagePropsResponsive | ImagePropsFill> = (props) => {
             alt={props.alt}
             className={`${
               props.className ? props.className : ""
-            } absolute top-0 left-0 bottom-0 right-0 m-auto block max-h-full min-h-full min-w-full max-w-full`}
+            } absolute bottom-0 left-0 right-0 top-0 m-auto block max-h-full min-h-full min-w-full max-w-full`}
             sizes="100vw"
             decoding="async"
           ></img>

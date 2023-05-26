@@ -49,7 +49,7 @@ const FrameAnimation: React.FC<FrameAnimationProps> = (props) => {
         <div
           className={`${
             index <= frameNum ? "opacity-100" : "opacity-0"
-          } absolute top-0 left-0 right-0`}
+          } absolute left-0 right-0 top-0`}
           key={index}
         >
           <FullScreenImage

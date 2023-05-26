@@ -28,7 +28,7 @@ const BottomNav: React.FC<BottomNav> = (props) => {
           <div className="relative h-12 w-12 text-black">
             <FontAwesomeIcon
               icon={faAngleLeft}
-              className="absolute top-0 left-0 h-full w-full"
+              className="absolute left-0 top-0 h-full w-full"
             ></FontAwesomeIcon>
           </div>
           <div className="s_font ml-4 font-bold text-black">
@@ -49,7 +49,7 @@ const BottomNav: React.FC<BottomNav> = (props) => {
           <div className="relative h-12 w-12 text-black">
             <FontAwesomeIcon
               icon={faAngleRight}
-              className="absolute top-0 left-0 h-full w-full"
+              className="absolute left-0 top-0 h-full w-full"
             ></FontAwesomeIcon>
           </div>
         </div>

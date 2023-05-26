@@ -68,7 +68,7 @@ const LandingContent: React.FC<LandingContentProps> = (props) => {
           layoutId={`${props.name}-image`}
         >
           <Link href={props.name} passHref>
-            <div className="absolute top-0 left-0 h-full w-full overflow-hidden">
+            <div className="absolute left-0 top-0 h-full w-full overflow-hidden">
               <Image
                 src={props.image}
                 alt={props.title}

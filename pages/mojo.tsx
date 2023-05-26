@@ -109,8 +109,8 @@ const Mojo: NextPage = () => {
             "Natasha is a party girl. She enjoys the summer most and loves to hang out with friends. She has friends all over the world and loves to visit them when she is free.",
           ]}
         >
-          <div className="absolute top-0 bottom-0 left-0 w-1/2">
-            <div className="absolute top-1 left-1 right-1 bottom-1">
+          <div className="absolute bottom-0 left-0 top-0 w-1/2">
+            <div className="absolute bottom-1 left-1 right-1 top-1">
               <Image
                 src="/mojo/target_1_small"
                 alt="Picture of Natasha"
@@ -118,8 +118,8 @@ const Mojo: NextPage = () => {
               ></Image>
             </div>
           </div>
-          <div className="absolute top-0 right-0 h-1/3 w-1/2">
-            <div className="absolute top-1 left-1 right-1 bottom-1">
+          <div className="absolute right-0 top-0 h-1/3 w-1/2">
+            <div className="absolute bottom-1 left-1 right-1 top-1">
               <Image
                 src="/mojo/target_2_small"
                 alt="Picture of partying people"
@@ -128,7 +128,7 @@ const Mojo: NextPage = () => {
             </div>
           </div>
           <div className="absolute bottom-0 right-0 h-2/3 w-1/2">
-            <div className="absolute top-1 left-1 right-1 bottom-1">
+            <div className="absolute bottom-1 left-1 right-1 top-1">
               <Image
                 src="/mojo/target_3_small"
                 alt="Picture of suitcase"

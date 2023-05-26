@@ -106,8 +106,8 @@ const HiddenSeason: NextPage = () => {
           ]}
           imageOnLeft={false}
         >
-          <div className="absolute top-0 left-0 h-2/3 w-2/3">
-            <div className="absolute top-1 left-1 right-1 bottom-1">
+          <div className="absolute left-0 top-0 h-2/3 w-2/3">
+            <div className="absolute bottom-1 left-1 right-1 top-1">
               <Image
                 src="/hidden_season/three_1_half"
                 alt="Chinese Makeup"
@@ -115,8 +115,8 @@ const HiddenSeason: NextPage = () => {
               ></Image>
             </div>
           </div>
-          <div className="absolute top-0 right-0 h-2/3 w-1/3">
-            <div className="absolute top-1 left-1 right-1 bottom-1">
+          <div className="absolute right-0 top-0 h-2/3 w-1/3">
+            <div className="absolute bottom-1 left-1 right-1 top-1">
               <Image
                 src="/hidden_season/three_2_half"
                 alt="Chinese Makeup"
@@ -125,7 +125,7 @@ const HiddenSeason: NextPage = () => {
             </div>
           </div>
           <div className="absolute bottom-0 left-0 right-0 h-1/3">
-            <div className="absolute top-1 left-1 right-1 bottom-1">
+            <div className="absolute bottom-1 left-1 right-1 top-1">
               <Image
                 src="/hidden_season/three_3_full"
                 alt="Chinese Makeup"
@@ -171,8 +171,8 @@ const HiddenSeason: NextPage = () => {
           ]}
           imageOnLeft={true}
         >
-          <div className="absolute top-0 bottom-0 left-0 w-1/3">
-            <div className="absolute top-1 left-1 right-1 bottom-1">
+          <div className="absolute bottom-0 left-0 top-0 w-1/3">
+            <div className="absolute bottom-1 left-1 right-1 top-1">
               <Image
                 src="/hidden_season/vivian_1_small"
                 alt="Picture of Vivian"
@@ -180,8 +180,8 @@ const HiddenSeason: NextPage = () => {
               ></Image>
             </div>
           </div>
-          <div className="absolute top-0 bottom-0 left-1/3 w-1/3">
-            <div className="absolute top-1 left-1 right-1 bottom-1">
+          <div className="absolute bottom-0 left-1/3 top-0 w-1/3">
+            <div className="absolute bottom-1 left-1 right-1 top-1">
               <Image
                 src="/hidden_season/vivian_2_small"
                 alt="Picture of Vivian"
@@ -189,8 +189,8 @@ const HiddenSeason: NextPage = () => {
               ></Image>
             </div>
           </div>
-          <div className="absolute top-0 right-0 h-1/2 w-1/3">
-            <div className="absolute top-1 left-1 right-1 bottom-1">
+          <div className="absolute right-0 top-0 h-1/2 w-1/3">
+            <div className="absolute bottom-1 left-1 right-1 top-1">
               <Image
                 src="/hidden_season/vivian_3_small"
                 alt="Vivian Airport"
@@ -199,7 +199,7 @@ const HiddenSeason: NextPage = () => {
             </div>
           </div>
           <div className="absolute bottom-0 right-0 h-1/2 w-1/3">
-            <div className="absolute top-1 left-1 right-1 bottom-1">
+            <div className="absolute bottom-1 left-1 right-1 top-1">
               <Image
                 src="/hidden_season/vivian_4_small"
                 alt="Vivian's makeup"
@@ -426,8 +426,8 @@ const HiddenSeason: NextPage = () => {
             color="green"
             imageOnLeft={false}
           >
-            <div className="absolute top-0 bottom-0 left-0 w-1/3">
-              <div className="absolute top-1 left-1 right-1 bottom-1">
+            <div className="absolute bottom-0 left-0 top-0 w-1/3">
+              <div className="absolute bottom-1 left-1 right-1 top-1">
                 <Image
                   src="/hidden_season/snuff_1_half"
                   alt="Snuff bottle"
@@ -435,8 +435,8 @@ const HiddenSeason: NextPage = () => {
                 ></Image>
               </div>
             </div>
-            <div className="absolute top-0 bottom-0 right-0 w-2/3">
-              <div className="absolute top-1 left-1 right-1 bottom-1">
+            <div className="absolute bottom-0 right-0 top-0 w-2/3">
+              <div className="absolute bottom-1 left-1 right-1 top-1">
                 <Image
                   src="/hidden_season/snuff_2_half"
                   alt="Snuff bottle"
@@ -479,8 +479,8 @@ const HiddenSeason: NextPage = () => {
             color="green"
             imageOnLeft={false}
           >
-            <div className="absolute top-0 left-0 h-1/2 w-1/3">
-              <div className="absolute top-1 left-1 right-1 bottom-1">
+            <div className="absolute left-0 top-0 h-1/2 w-1/3">
+              <div className="absolute bottom-1 left-1 right-1 top-1">
                 <Image
                   src="/hidden_season/por_1_small"
                   alt="Porcelain"
@@ -488,8 +488,8 @@ const HiddenSeason: NextPage = () => {
                 ></Image>
               </div>
             </div>
-            <div className="absolute top-0 left-1/3 h-1/2 w-1/3">
-              <div className="absolute top-1 left-1 right-1 bottom-1">
+            <div className="absolute left-1/3 top-0 h-1/2 w-1/3">
+              <div className="absolute bottom-1 left-1 right-1 top-1">
                 <Image
                   src="/hidden_season/por_2_small"
                   alt="Porcelain"
@@ -497,8 +497,8 @@ const HiddenSeason: NextPage = () => {
                 ></Image>
               </div>
             </div>
-            <div className="absolute top-0 right-0 h-1/2 w-1/3">
-              <div className="absolute top-1 left-1 right-1 bottom-1">
+            <div className="absolute right-0 top-0 h-1/2 w-1/3">
+              <div className="absolute bottom-1 left-1 right-1 top-1">
                 <Image
                   src="/hidden_season/por_3_small"
                   alt="Porcelain"
@@ -507,7 +507,7 @@ const HiddenSeason: NextPage = () => {
               </div>
             </div>
             <div className="absolute bottom-0 left-0 h-1/2 w-1/3">
-              <div className="absolute top-1 left-1 right-1 bottom-1">
+              <div className="absolute bottom-1 left-1 right-1 top-1">
                 <Image
                   src="/hidden_season/por_4_small"
                   alt="Porcelain"
@@ -516,7 +516,7 @@ const HiddenSeason: NextPage = () => {
               </div>
             </div>
             <div className="absolute bottom-0 left-1/3 h-1/2 w-1/3">
-              <div className="absolute top-1 left-1 right-1 bottom-1">
+              <div className="absolute bottom-1 left-1 right-1 top-1">
                 <Image
                   src="/hidden_season/por_5_small"
                   alt="Porcelain"
@@ -525,7 +525,7 @@ const HiddenSeason: NextPage = () => {
               </div>
             </div>
             <div className="absolute bottom-0 right-0 h-1/2 w-1/3">
-              <div className="absolute top-1 left-1 right-1 bottom-1">
+              <div className="absolute bottom-1 left-1 right-1 top-1">
                 <Image
                   src="/hidden_season/por_6_small"
                   alt="Porcelain"

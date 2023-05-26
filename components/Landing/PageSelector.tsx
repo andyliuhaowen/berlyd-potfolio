@@ -33,7 +33,7 @@ const PageSelector: React.FC<PageSelectorProps> = (
 ) => {
   return (
     <motion.div
-      className="fixed bottom-0 left-1/2 z-10 translate-y-0 -translate-x-1/2 lg:left-0 lg:bottom-1/2 lg:translate-y-1/2 lg:translate-x-0"
+      className="fixed bottom-0 left-1/2 z-10 -translate-x-1/2 translate-y-0 lg:bottom-1/2 lg:left-0 lg:translate-x-0 lg:translate-y-1/2"
       initial={false}
       animate={{ color: colorMap[props.page] }}
     >
@@ -51,16 +51,16 @@ const PageSelector: React.FC<PageSelectorProps> = (
         <div className="relative h-3 w-3">
           <FontAwesomeIcon
             icon={faCircle}
-            className="absolute top-0 left-0 h-full w-full"
+            className="absolute left-0 top-0 h-full w-full"
           ></FontAwesomeIcon>
         </div>
       </motion.div>
       <div className="flex w-min flex-row lg:flex-col">
         <div className="mx-2 my-0 mb-8 lg:my-2 lg:ml-10 lg:mr-0 xl:ml-16">
-          <div className="relative mt-0 ml-3 h-5 w-5 lg:mt-3 lg:ml-0">
+          <div className="relative ml-3 mt-0 h-5 w-5 lg:ml-0 lg:mt-3">
             <FontAwesomeIcon
               icon={farCircle}
-              className="absolute top-0 left-0 h-full w-full cursor-pointer"
+              className="absolute left-0 top-0 h-full w-full cursor-pointer"
               onClick={() => {
                 props.setSection(0);
               }}
@@ -69,28 +69,28 @@ const PageSelector: React.FC<PageSelectorProps> = (
         </div>
         <div className="mx-2 my-0 mb-8 flex flex-row lg:my-2 lg:ml-10 lg:mr-0 lg:flex-col xl:ml-16">
           <div className={"my-4 hidden text-sm lg:block"}>Packaging</div>
-          <div className="relative mt-0 ml-3 h-5 w-5 lg:mt-3 lg:ml-0">
+          <div className="relative ml-3 mt-0 h-5 w-5 lg:ml-0 lg:mt-3">
             <FontAwesomeIcon
               icon={farCircle}
-              className="absolute top-0 left-0 h-full w-full cursor-pointer"
+              className="absolute left-0 top-0 h-full w-full cursor-pointer"
               onClick={() => {
                 props.setSection(1);
               }}
             ></FontAwesomeIcon>
           </div>
-          <div className="relative mt-0 ml-3 h-5 w-5 lg:mt-3 lg:ml-0">
+          <div className="relative ml-3 mt-0 h-5 w-5 lg:ml-0 lg:mt-3">
             <FontAwesomeIcon
               icon={farCircle}
-              className="absolute top-0 left-0 h-full w-full cursor-pointer"
+              className="absolute left-0 top-0 h-full w-full cursor-pointer"
               onClick={() => {
                 props.setSection(2);
               }}
             ></FontAwesomeIcon>
           </div>
-          <div className="relative mt-0 ml-3 h-5 w-5 lg:mt-3 lg:ml-0">
+          <div className="relative ml-3 mt-0 h-5 w-5 lg:ml-0 lg:mt-3">
             <FontAwesomeIcon
               icon={farCircle}
-              className="absolute top-0 left-0 h-full w-full cursor-pointer"
+              className="absolute left-0 top-0 h-full w-full cursor-pointer"
               onClick={() => {
                 props.setSection(3);
               }}
@@ -99,28 +99,28 @@ const PageSelector: React.FC<PageSelectorProps> = (
         </div>
         <div className="mx-2 my-0 mb-8 flex flex-row lg:my-2 lg:ml-10 lg:mr-0 lg:flex-col xl:ml-16">
           <div className={"my-4 hidden text-sm lg:block"}>Product</div>
-          <div className="relative mt-0 ml-3 h-5 w-5 lg:mt-3 lg:ml-0">
+          <div className="relative ml-3 mt-0 h-5 w-5 lg:ml-0 lg:mt-3">
             <FontAwesomeIcon
               icon={farCircle}
-              className="absolute top-0 left-0 h-full w-full cursor-pointer"
+              className="absolute left-0 top-0 h-full w-full cursor-pointer"
               onClick={() => {
                 props.setSection(4);
               }}
             ></FontAwesomeIcon>
           </div>
-          <div className="relative mt-0 ml-3 h-5 w-5 lg:mt-3 lg:ml-0">
+          <div className="relative ml-3 mt-0 h-5 w-5 lg:ml-0 lg:mt-3">
             <FontAwesomeIcon
               icon={farCircle}
-              className="absolute top-0 left-0 h-full w-full cursor-pointer"
+              className="absolute left-0 top-0 h-full w-full cursor-pointer"
               onClick={() => {
                 props.setSection(5);
               }}
             ></FontAwesomeIcon>
           </div>
-          <div className="relative mt-0 ml-3 h-5 w-5 lg:mt-3 lg:ml-0">
+          <div className="relative ml-3 mt-0 h-5 w-5 lg:ml-0 lg:mt-3">
             <FontAwesomeIcon
               icon={farCircle}
-              className="absolute top-0 left-0 h-full w-full cursor-pointer"
+              className="absolute left-0 top-0 h-full w-full cursor-pointer"
               onClick={() => {
                 props.setSection(6);
               }}

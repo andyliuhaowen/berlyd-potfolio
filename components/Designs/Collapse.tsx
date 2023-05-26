@@ -34,7 +34,7 @@ const Collapse: React.FC<PropsWithChildren<CollapseProps>> = (props) => {
       <motion.div
         animate={hover ? "hover" : "default"}
         variants={hoverVariants}
-        className={`absolute top-8 bottom-4 left-0 w-full border-${props.color} origin-left border-t-2 border-b-2`}
+        className={`absolute bottom-4 left-0 top-8 w-full border-${props.color} origin-left border-b-2 border-t-2`}
       ></motion.div>
       <motion.div
         className={`sticky top-16 ml-10 inline-block h-7.5 w-7.5 origin-center cursor-pointer self-center md:h-9 md:w-9 xl:ml-16 ${

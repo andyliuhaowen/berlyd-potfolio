@@ -5,14 +5,9 @@
 
 import "../styles/globals.css";
 import { AppProps } from "next/app";
-import React, { useEffect } from "react";
-import checkCSS from "checkcss";
+import React from "react";
 
 const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
-  useEffect(() => {
-    checkCSS();
-  }, []);
-
   return <Component {...pageProps} />;
 };
 

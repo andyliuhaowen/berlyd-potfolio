@@ -73,7 +73,7 @@ const Chocolit: NextPage = () => {
             title="YouTube video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
-            className="absolute top-0 left-0 h-full w-full"
+            className="absolute left-0 top-0 h-full w-full"
             style={{ border: "0" }}
           ></iframe>
         </div>
@@ -101,8 +101,8 @@ const Chocolit: NextPage = () => {
           ]}
           imageOnLeft={false}
         >
-          <div className="absolute top-0 bottom-0 left-0 w-1/3">
-            <div className="absolute top-1 left-1 right-1 bottom-1">
+          <div className="absolute bottom-0 left-0 top-0 w-1/3">
+            <div className="absolute bottom-1 left-1 right-1 top-1">
               <Image
                 src="/chocolit/target_user_1_half"
                 alt="Target user"
@@ -110,8 +110,8 @@ const Chocolit: NextPage = () => {
               ></Image>
             </div>
           </div>
-          <div className="absolute top-0 bottom-0 right-0 w-2/3">
-            <div className="absolute top-1 left-1 right-1 bottom-1">
+          <div className="absolute bottom-0 right-0 top-0 w-2/3">
+            <div className="absolute bottom-1 left-1 right-1 top-1">
               <Image
                 src="/chocolit/target_user_2_half"
                 alt="Target user"
@@ -242,7 +242,7 @@ const Chocolit: NextPage = () => {
               className={`absolute bottom-0 left-0 right-0 bg-white opacity-80 ${styles.top_animation}`}
             ></div>
             <div
-              className={`absolute top-0 left-0 right-0 bg-white opacity-80 ${styles.bot_animation}`}
+              className={`absolute left-0 right-0 top-0 bg-white opacity-80 ${styles.bot_animation}`}
             ></div>
             <div
               className={`m_font absolute left-1/2 top-1/5 -translate-x-1/2 ${styles.caption1}`}
@@ -306,8 +306,8 @@ const Chocolit: NextPage = () => {
           ]}
           imageOnLeft={false}
         >
-          <div className="absolute top-0 left-0 right-0 h-1/3">
-            <div className="absolute top-1 left-1 right-1 bottom-1">
+          <div className="absolute left-0 right-0 top-0 h-1/3">
+            <div className="absolute bottom-1 left-1 right-1 top-1">
               <Image
                 src="/chocolit/design_goals_1_half"
                 alt="Design goals"
@@ -316,7 +316,7 @@ const Chocolit: NextPage = () => {
             </div>
           </div>
           <div className="absolute left-0 right-0 top-1/3 h-1/3">
-            <div className="absolute top-1 left-1 right-1 bottom-1">
+            <div className="absolute bottom-1 left-1 right-1 top-1">
               <Image
                 src="/chocolit/design_goals_2_half"
                 alt="Design goals"
@@ -325,7 +325,7 @@ const Chocolit: NextPage = () => {
             </div>
           </div>
           <div className="absolute bottom-0 left-0 right-0 h-1/3">
-            <div className="absolute top-1 left-1 right-1 bottom-1">
+            <div className="absolute bottom-1 left-1 right-1 top-1">
               <Image
                 src="/chocolit/design_goals_3_half"
                 alt="Design goals"
@@ -347,8 +347,8 @@ const Chocolit: NextPage = () => {
           ]}
           imageOnLeft={true}
         >
-          <div className="absolute top-0 bottom-0 left-0 w-1/2">
-            <div className="absolute top-1 left-1 right-1 bottom-1">
+          <div className="absolute bottom-0 left-0 top-0 w-1/2">
+            <div className="absolute bottom-1 left-1 right-1 top-1">
               <Image
                 src="/chocolit/health_1_half"
                 alt="Health"
@@ -356,8 +356,8 @@ const Chocolit: NextPage = () => {
               ></Image>
             </div>
           </div>
-          <div className="absolute top-0 bottom-0 right-0 w-1/2">
-            <div className="absolute top-1 left-1 right-1 bottom-1">
+          <div className="absolute bottom-0 right-0 top-0 w-1/2">
+            <div className="absolute bottom-1 left-1 right-1 top-1">
               <Image
                 src="/chocolit/health_2_half"
                 alt="Health"
@@ -373,8 +373,8 @@ const Chocolit: NextPage = () => {
           text={["Sophisticated", "Neutral"]}
           imageOnLeft={false}
         >
-          <div className="absolute top-0 bottom-0 left-0 w-2/5">
-            <div className="absolute top-1 left-1 right-1 bottom-1">
+          <div className="absolute bottom-0 left-0 top-0 w-2/5">
+            <div className="absolute bottom-1 left-1 right-1 top-1">
               <Image
                 src="/chocolit/aesthetic_1_half"
                 alt="Aesthetic"
@@ -382,8 +382,8 @@ const Chocolit: NextPage = () => {
               ></Image>
             </div>
           </div>
-          <div className="absolute top-0 bottom-0 left-2/5 w-2/5">
-            <div className="absolute top-1 left-1 right-1 bottom-1">
+          <div className="absolute bottom-0 left-2/5 top-0 w-2/5">
+            <div className="absolute bottom-1 left-1 right-1 top-1">
               <Image
                 src="/chocolit/aesthetic_2_half"
                 alt="Aesthetic"
@@ -391,8 +391,8 @@ const Chocolit: NextPage = () => {
               ></Image>
             </div>
           </div>
-          <div className="absolute top-0 bottom-0 right-0 w-1/5">
-            <div className="absolute top-1 left-1 right-1 bottom-1">
+          <div className="absolute bottom-0 right-0 top-0 w-1/5">
+            <div className="absolute bottom-1 left-1 right-1 top-1">
               <Image
                 src="/chocolit/aesthetic_3_small"
                 alt="Aesthetic"

@@ -17,7 +17,7 @@ const TitleAndTagline: React.FC<TitleAndTaglineProps> = (props) => {
       >
         {props.title}
       </div>
-      <div className="m_font relative ml-10 inline-block pt-20 pb-12 text-left sm:pt-24 lg:left-1/2 lg:ml-0 lg:pt-28">
+      <div className="m_font relative ml-10 inline-block pb-12 pt-20 text-left sm:pt-24 lg:left-1/2 lg:ml-0 lg:pt-28">
         {props.tagline}
       </div>
     </div>

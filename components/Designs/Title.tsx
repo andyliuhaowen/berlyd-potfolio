@@ -16,7 +16,7 @@ const Title: React.FC<PropsWithChildren<SectionHeaderProps>> = (props) => {
     <>
       {props.type === "normal" && (
         <div
-          className={`mx-10 mt-16 mb-12 font-bold md:mt-20 md:mb-16 xl:mx-16 text-${props.color} m_font`}
+          className={`mx-10 mb-12 mt-16 font-bold md:mb-16 md:mt-20 xl:mx-16 text-${props.color} m_font`}
         >
           {props.children}
         </div>
